@@ -1,0 +1,183 @@
+.App {
+  text-align: center;
+}
+
+.folder {
+  display: flex;
+  position: fixed;
+  bottom: -15%;
+  left: 10%;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.file {
+  box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.10);
+  color: black;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 230px;
+  max-width: 500px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  height: 300px;
+}
+
+.file.blue {
+  background-color: rgb(176, 176, 218);
+  z-index: 1500;
+  transform: rotate(10deg);
+  left: 0;
+  top: 50px;
+}
+
+.file.blue:hover {
+  transform: rotate(5deg);
+  top: 0px;
+  cursor: pointer;
+}
+
+.file.green {
+  background-color: rgb(158, 246, 158);
+  z-index: 1100;
+  transform: rotate(-15deg);
+  left: -200px;
+  top: -50px;
+}
+
+.file.green:hover {
+  transform: rotate(-10deg);
+  top: -125px;
+  cursor: pointer;
+}
+
+.file.pink {
+  background-color: rgb(228, 188, 188);
+  z-index: 1200;
+  transform: rotate(-15deg);
+  left: -350px;
+  top: 0;
+}
+
+.file.pink:hover {
+  transform: rotate(-10deg);
+  top: -75px;
+  cursor: pointer;
+}
+
+.file.white {
+  background-color: white;
+  z-index: 1300;
+  transform: rotate(-15deg);
+  left: -500px;
+  top: 40px;
+}
+
+.file.white:hover {
+  transform: rotate(-10deg);
+  top: -35px;
+  cursor: pointer;
+}
+
+.resume {
+  position: fixed;
+  bottom: -100px;
+  right: 7vw;
+  z-index: 3000;
+  background-color: rgb(226, 226, 226);
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  border-radius: 5px;
+  height: 150px;
+  transform: rotate(10deg);
+  transition: all 0.3s ease-in-out;
+}
+
+.resume:hover {
+  transform: rotate(5deg);
+  bottom: -50px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+  .folder {
+    bottom: -10%;
+  }
+
+  .file {
+    height: 250px;
+    min-width: 250px;
+  }
+
+  .file.blue {
+    top: 45px;
+  }
+  
+  .file.pink {
+    transform: rotate(-10deg);
+  }
+  
+  .file.pink:hover {
+    transform: rotate(-5deg);
+  }
+  
+  .file.white {
+    transform: rotate(-5deg);
+  }
+  
+  .file.white:hover {
+    transform: rotate(0deg);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .folder {
+    bottom: -10%;
+    margin-left: 7vw;
+    margin-right: 7vw;
+  }
+
+  .file {
+    height: 270px;
+    min-width: 200px;
+  }
+
+  .file.blue {
+    left: -60px;
+    top: 50px;
+  }
+  
+  .file.blue:hover {
+    top: 0;
+  }
+  
+  .file.green {
+    left: -250px;
+    top: -100px;
+  }
+  
+  .file.green:hover {
+    top: -150px;
+  }
+  
+  .file.pink {
+    top: -70px;
+  }
+  
+  .file.pink:hover {
+    top: -120px;
+  }
+  
+  .file.white {
+    left: -500px;
+    top: -20px;
+  }
+  
+  .file.white:hover {
+    top: -70px;
+    cursor: pointer;
+  }
+}
