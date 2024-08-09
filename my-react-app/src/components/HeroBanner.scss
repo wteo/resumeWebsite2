@@ -1,16 +1,59 @@
 .hero {
-    background-color: rgba(0, 0, 0, 0.3);
-    padding: 40px;
-    background-image: url('../assets/placeholder.webp');
+    background-color: rgba(255, 255, 255, 0.7);
+    background-image: url('../assets/pen.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 500px;
-    font-size: xx-large;
+    font-size: 2.75rem;
+    padding: 40px;
 
     &__content {
-        margin-top: 100px;
         text-align: left;
-        width: 70%;
+        width: 65%;
+
+        &-title {
+
+            span {
+                font-size: 3.5rem;
+                font-weight: 900;
+                text-decoration: underline;
+            }
+
+            span:hover {
+                cursor: pointer;
+                color: rgb(32, 32, 187);
+            }
+        }
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .hero {
+        font-size: 2.0rem;
+        height: 450px;
+    
+        &__content-title span {
+            font-size: 3.0rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .hero {
+        font-size: 1.75rem;
+        height: 400px;
+        padding-left: 20px;
+
+        &__content {
+
+            width: 70%;
+
+            &-title span {
+                font-size: 2.5rem;
+            }
+        }
+    
     }
 }

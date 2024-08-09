@@ -5,9 +5,9 @@ function HeroBanner() {
     return (
         <section className="hero">
             <div className="hero__content">
-                <h1 className="hero__content-title">Add a title here</h1>
-                <h3 className="hero__content-subtitle">Add a subtitle here</h3>
-                <button>Add link here</button>
+                <p className="hero__content-title">
+                    <span>Full Stack Developer</span> crafting <span>custom web solutions</span> with frontend expertise
+                </p>
             </div>
         </section>
     );
