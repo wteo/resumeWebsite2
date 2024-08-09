@@ -1,0 +1,30 @@
+.experience {
+    text-align: left;
+    padding: 40px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.experience__content-accordion {
+
+    .accordion-item {
+        margin-bottom: 10px;
+
+        .accordion-title {
+            cursor: pointer;
+            background: #f0f0f0;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+
+            &.active {
+                max-height: 200px; /* Adjust based on content size */
+            }
+        }
+    }
+}

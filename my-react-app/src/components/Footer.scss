@@ -1,0 +1,19 @@
+.footer {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 40px;
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    
+        .footer__menu {
+            list-style: none;
+            padding-inline-start: 0;
+        }
+    
+        @media (max-width: 768px) {
+        }
+    }
+}
