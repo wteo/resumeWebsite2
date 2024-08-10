@@ -4,8 +4,12 @@
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.6;
-    padding: 40px;
+    padding: 50px;
     background-color: $primary-bg-color;
+
+    &__content-title {
+        margin: 0;
+    }
 }
 
 .experience__content-accordion {
@@ -29,5 +33,11 @@
                 max-height: 200px; /* Adjust based on content size */
             }
         }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .experience {
+        padding: 20px;
     }
 }

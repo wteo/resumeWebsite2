@@ -19,7 +19,6 @@
   justify-content: center;
   align-items: center;
   padding: 5px;
-  border-radius: 5px;
   width: 100%;
   min-width: 230px;
   max-width: 500px;
@@ -28,57 +27,74 @@
   height: 300px;
 }
 
-.file.blue {
-  background-color: rgb(176, 176, 218);
+.file.yellow {
+  background-color: #FFD54F;
   z-index: 1500;
   transform: rotate(10deg);
   left: 0;
   top: 50px;
 }
 
-.file.blue:hover {
+.file.yellow:hover {
   transform: rotate(5deg);
   top: 0px;
   cursor: pointer;
 }
 
-.file.green {
-  background-color: rgb(158, 246, 158);
+.file.forest {
+  background-color: #388E3C;
+  color: #ffffff;
   z-index: 1100;
   transform: rotate(-15deg);
   left: -200px;
   top: -50px;
+
+  h3, p {
+    color: #ffffff;
+  }
+
+  hr {
+    border: 0.5px dashed #73bc76;
+  }
 }
 
-.file.green:hover {
+.file.forest:hover {
   transform: rotate(-10deg);
   top: -125px;
   cursor: pointer;
 }
 
-.file.pink {
-  background-color: rgb(228, 188, 188);
+.file.coral {
+  background-color: #FF6F61;
   z-index: 1200;
   transform: rotate(-15deg);
   left: -350px;
   top: 0;
+
+  h3, p {
+    color: #ffffff;
+  }
+
+  hr {
+    border: 0.5px dashed #f1a59e;
+  }
 }
 
-.file.pink:hover {
+.file.coral:hover {
   transform: rotate(-10deg);
   top: -75px;
   cursor: pointer;
 }
 
-.file.white {
-  background-color: white;
+.file.lime {
+  background-color: #CDDC39;
   z-index: 1300;
   transform: rotate(-15deg);
   left: -500px;
   top: 40px;
 }
 
-.file.white:hover {
+.file.lime:hover {
   transform: rotate(-10deg);
   top: -35px;
   cursor: pointer;
@@ -89,10 +105,9 @@
   bottom: -100px;
   right: 7vw;
   z-index: 3000;
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   padding: 10px;
-  border-radius: 5px;
   height: 150px;
   transform: rotate(10deg);
   transition: all 0.3s ease-in-out;
@@ -114,23 +129,23 @@
     min-width: 250px;
   }
 
-  .file.blue {
+  .file.yellow {
     top: 45px;
   }
   
-  .file.pink {
+  .file.coral {
     transform: rotate(-10deg);
   }
   
-  .file.pink:hover {
+  .file.coral:hover {
     transform: rotate(-5deg);
   }
   
-  .file.white {
+  .file.lime {
     transform: rotate(-5deg);
   }
   
-  .file.white:hover {
+  .file.lime:hover {
     transform: rotate(0deg);
   }
 }
@@ -147,38 +162,38 @@
     min-width: 200px;
   }
 
-  .file.blue {
+  .file.yellow {
     left: -60px;
     top: 50px;
   }
   
-  .file.blue:hover {
+  .file.yellow:hover {
     top: 0;
   }
   
-  .file.green {
+  .file.forest {
     left: -250px;
     top: -100px;
   }
   
-  .file.green:hover {
+  .file.forest:hover {
     top: -150px;
   }
   
-  .file.pink {
+  .file.coral {
     top: -70px;
   }
   
-  .file.pink:hover {
+  .file.coral:hover {
     top: -120px;
   }
   
-  .file.white {
+  .file.lime {
     left: -500px;
     top: -20px;
   }
   
-  .file.white:hover {
+  .file.lime:hover {
     top: -70px;
     cursor: pointer;
   }
