@@ -3,7 +3,7 @@ import './Tools.scss';
 
 function Tools() {
     return (
-        <footer className="tools">
+        <section className="tools">
             <h1>Tools</h1>
             <hr />
             <div className="tools__content">
@@ -26,7 +26,7 @@ function Tools() {
                     <li className="tools__content-item">Item 4</li>
                 </ul>
             </div>
-        </footer>
+        </section>
     );
 }
 

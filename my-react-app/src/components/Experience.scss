@@ -1,8 +1,11 @@
+@import '../sass/variables';
+
 .experience {
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.6;
     padding: 40px;
+    background-color: $primary-bg-color;
 }
 
 .experience__content-accordion {

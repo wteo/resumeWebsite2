@@ -1,39 +1,56 @@
+@import '../sass/variables';
+
 .about {
     text-align: left;
-    padding: 40px;
+    padding: 80px 50px;
+    background-color: $primary-bg-color;
 
     &__title {
         font-weight: 900;
-        font-size: 2.5rem;
-        margin-bottom: 20px;
+        font-size: 4rem;
+        font-family: 'Cabin Sketch';
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__divider {
+        border-bottom: 1px double $border-color;
     }
 
     &__content {
         display: grid;
+        justify-content: center;
+        align-items: start;
         grid-template-columns: 1fr 1fr; 
         gap: 50px; 
+        margin-top: 30px;
     }
 
     &__description {
         font-size: 1.2rem;
         line-height: 1.6;
+
+        h1 {
+            margin: 0;
+        }
     }
 
     &__image-wrapper {
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #a0a0a0;
         width: 100%;
-        max-width: 500px;
+        max-width: 600px;
         overflow: hidden;
         height: auto;
+        max-height: 750px;
         border-radius: 7.5px;
 
         &__image {
             width: 100%;
             height: auto;
-            object-fit: cover;
+            object-fit: contain;
         }
     }
 
@@ -44,6 +61,25 @@
 
         &__image-wrapper {
             max-width: 100%; 
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .about {
+
+        &__title {
+            font-size: 3.25rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .about {
+        padding: 50px 20px;
+
+        &__title {
+            font-size: 2.5rem;
         }
     }
 }

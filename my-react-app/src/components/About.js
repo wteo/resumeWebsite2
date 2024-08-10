@@ -1,13 +1,16 @@
 import React from 'react';
 import './About.scss';
-import placeholder from '../assets/placeholder.webp';
+import profile from '../assets/profile.webp';
 
 function About() {
     return (
         <section className="about">
-            <h1 className="about__title">About Me</h1>
+            <h1 className="about__title">Wendy Teo</h1>
+            <hr className="about__divider" />
+            <hr className="about__divider" />
             <div className="about__content">
                 <div className="about__description">
+                    <h1>About Me</h1>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula neque in arcu interdum,
                         sit amet malesuada nunc facilisis. Aenean sit amet leo id odio efficitur dapibus.
@@ -20,10 +23,10 @@ function About() {
                         Praesent venenatis magna ut eros pharetra, sit amet dictum dolor varius.
                         Proin sit amet mi et elit dictum sollicitudin vel ac justo. Integer suscipit enim vel gravida dictum.
                     </p>
-                    <button>Learn More</button>
+                    <a href="/">Learn More</a>
                 </div>
                 <div className="about__image-wrapper">
-                    <img src={ placeholder } alt="Profile" className="about__image" />
+                    <img src={ profile } alt="Profile" className="about__image" />
                 </div>
             </div>
         </section>

@@ -1,4 +1,26 @@
+@import './sass/variables';
+
 body {
     margin: 0;
     font-family: 'Averia Serif Libre', 'Georgia', 'Times New Roman';
+    background-color: $primary-bg-color;
+    color: $primary-text-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: $alternate-text-color;
+}
+
+a {
+    color: $primary-text-color;
+}
+
+button {
+    background-color: $cta-color;
+    color: #ffffff;
+}
+
+hr {
+    border: none;
+    border-bottom: 1.5px dashed $border-color;
 }
