@@ -14,23 +14,48 @@
 
 .experience__content-accordion {
 
+    border-bottom: 1px solid $border-color;
+    margin-top: 10px;
+
     .accordion-item {
-        margin-bottom: 10px;
 
         .accordion-title {
             cursor: pointer;
-            background: #f0f0f0;
-            padding: 10px;
-            border: 1px solid #ddd;
+            margin: 0;
+            padding: 0px 10px 0;
+            border: none;
+            border-top: 1px solid $border-color;
+            display: flex;
+            justify-content: space-between;
+            justify-items: center;
+            align-items: center;
+
+            h3, span {
+                margin: 15px 0;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        .accordion-title:hover h3, .accordion-title:hover span {
+            color: $cta-color;
+        }
+
+        .accordion-title:hover span {
+            transform: scale(1.5);
         }
 
         .accordion-content {
+            margin: 0px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease;
+            transition: all 0.3s ease;
+            padding-left: 10px;
+            padding-right: 10px;
 
             &.active {
                 max-height: 200px; /* Adjust based on content size */
+                padding-top: 0px;
+                padding-bottom: 15px;
             }
         }
     }
@@ -38,6 +63,6 @@
 
 @media only screen and (max-width: 650px) {
     .experience {
-        padding: 20px;
+        padding: 50px 20px;
     }
 }

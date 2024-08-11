@@ -17,6 +17,14 @@ function Experience() {
             title: "Experience 3", 
             content: "Details about experience 3"
         },
+        {
+            title: "Experience 4",
+            content: "Details about experience 4"
+        },
+        {
+            title: "Experience 5", 
+            content: "Details about experience 5"
+        },
     ];
 
     const toggleAccordion = (index) => {
@@ -27,16 +35,16 @@ function Experience() {
         <section className="experience">
             <div className="experience__content">
                 <h1 className="experience__content-title">My Experience</h1>
-                <hr />
                 <div className="experience__content-accordion">
                     {experiences.map((exp, index) => (
                         <div key={index} className="accordion-item">
-                            <h2
+                            <div
                                 className="accordion-title"
                                 onClick={() => toggleAccordion(index)}
                             >
-                                {exp.title}
-                            </h2>
+                                <h3>{exp.title}</h3>
+                                <span>+</span>
+                            </div>
                             <p className={ `accordion-content ${activeIndex === index ? 'active' : '' }`}>
                                 {exp.content}
                             </p>
