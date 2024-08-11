@@ -1,0 +1,36 @@
+@import '../sass/variables';
+
+.resume {
+    font-family: 'Cabin Sketch', 'Georgia', 'Times New Roman';
+    font-weight: 600;
+    position: fixed;
+    bottom: -100px;
+    right: 8.75vw;
+    z-index: 3000;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    height: 150px;
+    transform: rotate(10deg);
+    transition: all 0.3s ease-in-out;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.10);
+}
+
+.resume:hover {
+    transform: rotate(5deg);
+    bottom: -50px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1200px) {
+    .resume {
+        right: 5vw;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .resume {
+        right: 4vw;
+    }
+}
