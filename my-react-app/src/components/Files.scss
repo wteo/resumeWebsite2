@@ -14,21 +14,26 @@
     color: black;
     justify-content: center;
     align-items: center;
-    padding: 5px 15px 20px;
+    padding: 5px 20px 20px;
     flex: 1;
     position: relative;
     transition: all 0.3s ease-in-out;
-    font-size: 1rem;
-    line-height: 1.5;
+    font-size: 1.3rem;
+    line-height: 1.6;
     font-weight: 300;
     height: 400px;
     overflow: hidden;
     border-radius: 3px;
     text-align: left;
+    max-width: 500px;;
 
     &__title {
         font-weight: 600;
-        margin: 15px 0px 5px;
+        margin: 15px 0px 10px;
+    }
+
+    &__content {
+        margin: 0;
     }
 }
 
@@ -129,7 +134,8 @@
     }
 
     .file {
-        min-width: 250px;
+        min-width: 240px;
+        font-size: 1.15rem;
     }
 }
 
@@ -142,7 +148,8 @@
 
     .file {
         height: 400px;
-        min-width: 275px;
+        min-width: 265px;
+        font-size: 0.95rem;
     }
 
     .file.yellow {
@@ -196,7 +203,7 @@
     }
 
     .file {
-        min-width: 250px;
+        min-width: 240px;
     }
 
     .file.coral {

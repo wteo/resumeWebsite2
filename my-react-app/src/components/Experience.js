@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+
+import ContentWrapper from '../ui/ContentWrapper';
+
 import './Experience.scss';
 
 function Experience() {
@@ -33,25 +36,27 @@ function Experience() {
 
     return (
         <section className="experience">
-            <div className="experience__content">
-                <h1 className="experience__content-title">My Experience</h1>
-                <div className="experience__content-accordion">
-                    {experiences.map((exp, index) => (
-                        <div key={index} className="accordion-item">
-                            <div
-                                className="accordion-title"
-                                onClick={() => toggleAccordion(index)}
-                            >
-                                <h3>{exp.title}</h3>
-                                <span>+</span>
+            <ContentWrapper>
+                <div className="experience__content">
+                    <h1 className="experience__content-title">My Experience</h1>
+                    <div className="experience__content-accordion">
+                        {experiences.map((exp, index) => (
+                            <div key={index} className="accordion-item">
+                                <div
+                                    className="accordion-title"
+                                    onClick={() => toggleAccordion(index)}
+                                >
+                                    <h3>{exp.title}</h3>
+                                    <span>+</span>
+                                </div>
+                                <p className={ `accordion-content ${activeIndex === index ? 'active' : '' }`}>
+                                    {exp.content}
+                                </p>
                             </div>
-                            <p className={ `accordion-content ${activeIndex === index ? 'active' : '' }`}>
-                                {exp.content}
-                            </p>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </ContentWrapper>
         </section>
     );
 }

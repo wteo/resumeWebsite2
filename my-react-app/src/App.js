@@ -1,6 +1,5 @@
 import Files from './components/Files';
 import Resume from './components/Resume';
-import ContentContainer from './ui/ContentContainer';
 import About from './components/About';
 import Footer from './components/Footer';
 import HeroBanner from './components/HeroBanner';
@@ -17,13 +16,11 @@ function App() {
       </header>
       <Files />
       <Resume />
-      <ContentContainer>
-        <HeroBanner />
-        <About />
-        <Experience />
-        <Skills />
-        <Footer />
-      </ContentContainer>
+      <HeroBanner />
+      <About />
+      <Experience />
+      <Skills />
+      <Footer />
     </div>
   );
 }

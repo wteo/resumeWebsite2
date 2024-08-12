@@ -1,4 +1,7 @@
 import React from 'react';
+
+import ContentWrapper from '../ui/ContentWrapper';
+
 import './Skills.scss';
 
 import placeholder from '../assets/placeholder.webp';
@@ -35,25 +38,27 @@ function Tools() {
 
     return (
         <section className="skills">
-            <h1 className="skills__title">Skills</h1>
-            <hr />
-            <div className="skills__group">
-                {
-                    categories.map((category, categoryIndex) => (
-                        <div className="skills__item" key={categoryIndex}>
-                            <h4 className="skills__category">{category.category}</h4>
-                            <p className="skills__description">{ category.description }</p>
-                            <ul className="skills__list">Tools Used: 
-                                {category.tools.map((tool, toolIndex) => <li key={toolIndex}>{tool}</li>)}
-                            </ul>
-                            <div className="skills__image-wrapper">
-                                <img className="skills__image" src={ placeholder } alt="Case Study" />
+            <ContentWrapper>
+                <h1 className="skills__title">Skills</h1>
+                <hr />
+                <div className="skills__group">
+                    {
+                        categories.map((category, categoryIndex) => (
+                            <div className="skills__item" key={categoryIndex}>
+                                <h4 className="skills__category">{category.category}</h4>
+                                <p className="skills__description">{category.description}</p>
+                                <ul className="skills__list">Tools Used:
+                                    {category.tools.map((tool, toolIndex) => <li key={toolIndex}>{tool}</li>)}
+                                </ul>
+                                <div className="skills__image-wrapper">
+                                    <img className="skills__image" src={placeholder} alt="Case Study" />
+                                </div>
+                                <a className="skills__link" href="/">Learn More</a>
                             </div>
-                            <a className="skills__link" href="/">Learn More</a>
-                        </div>
-                    ))
-                }
-            </div>
+                        ))
+                    }
+                </div>
+            </ContentWrapper>
         </section>
     );
 }

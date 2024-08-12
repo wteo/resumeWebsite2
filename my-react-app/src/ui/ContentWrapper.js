@@ -1,7 +1,7 @@
 import React from 'react';
-import './ContentContainer.scss';
+import './ContentWrapper.scss';
 
-function ContentContainer({ children }) {
+function ContentWrapper({ children }) {
     return (
         <div className="content__wrapper">
             <div className="content__container">
@@ -11,5 +11,5 @@ function ContentContainer({ children }) {
     );
 }
 
-export default ContentContainer;
+export default ContentWrapper;
 
