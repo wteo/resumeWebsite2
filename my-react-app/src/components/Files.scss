@@ -18,7 +18,7 @@
     flex: 1;
     position: relative;
     transition: all 0.3s ease-in-out;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     line-height: 1.6;
     font-weight: 300;
     height: 400px;
@@ -28,8 +28,9 @@
     max-width: 500px;;
 
     &__title {
-        font-weight: 600;
+        font-weight: 900;
         margin: 15px 0px 10px;
+        font-family: 'Cabin Sketch';
     }
 
     &__content {
@@ -135,7 +136,7 @@
 
     .file {
         min-width: 240px;
-        font-size: 1.15rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -149,7 +150,6 @@
     .file {
         height: 400px;
         min-width: 265px;
-        font-size: 0.95rem;
     }
 
     .file.yellow {
