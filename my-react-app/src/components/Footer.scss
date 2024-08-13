@@ -4,7 +4,7 @@
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.6;
-    padding: 40px;
+    padding: 50px;
     background-color: $primary-bg-color;
 
     &__content {
@@ -15,8 +15,11 @@
             list-style: none;
             padding-inline-start: 0;
         }
-    
-        @media (max-width: 768px) {
-        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .footer {
+        padding: 50px 20px;
     }
 }

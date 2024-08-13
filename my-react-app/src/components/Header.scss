@@ -1,0 +1,151 @@
+@import '../sass/variables';
+
+.header {
+    padding: 10px 40px;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        font-weight: 900;
+        font-size: 3rem;
+        line-height: 1.6;
+        font-family: 'Georgia', 'Times New Roman';
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__menu-list {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__menu-item {
+        margin-left: 40px;
+        font-size: 1rem;
+        font-weight: 500;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:hover {
+            color: $cta-color;
+        }
+    }
+
+    &__mobile-bar {
+        display: none;
+        z-index: 9000;
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        height: 97px;
+        backdrop-filter: blur(5px);
+        background-color: $header-bar-color;
+    }
+
+    &__hamburger {
+        display: none;
+        position: fixed;
+        top: 10px;
+        right: 15px;
+        font-size: 3rem;
+        z-index: 15000;
+        padding: 7.5px 20px;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    
+
+    &__mobile-menu {
+        display: none;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 50%;
+        background-color: $alternate-bg-color;
+        margin: 0;
+        z-index: 10000;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    &__mobile-menu-list {
+        margin-top: 15vh;
+    }
+
+    &__mobile-menu-item {
+        padding-top: 30px;
+        list-style: none;
+
+        &:hover {
+            cursor: pointer;
+            color: $cta-color;
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 1000px) {
+
+    .header {
+
+        margin-top: 77px;
+
+        &__title {
+            position: fixed;
+            z-index: 10000;
+            top: 10px;
+        }
+
+        &__menu-list {
+            display: none;
+        }
+
+        &__mobile-bar, &__hamburger {
+            display: block;
+        }
+
+        &__mobile-menu {
+            display: block;
+        }
+    }
+
+}
+
+@media only screen and (max-width: 650px) {
+    .header {
+        padding: 0px 20px 10px;
+        margin-top: 70px;
+
+        &__title {
+            font-size: 2.0rem;
+            top: 15px;
+        }
+
+        &__mobile-bar  {
+            height: 80px;
+        }
+
+        &__hamburger {
+            top: 0px;
+            right: -5px;
+        }
+
+        &__mobile-menu {
+            left: 30%;
+        }
+    }
+}

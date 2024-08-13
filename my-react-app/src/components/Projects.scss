@@ -4,7 +4,7 @@
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.6;
-    padding: 40px;
+    padding: 0px 40px 0px;
     z-index: 1;
 
     &__content {
@@ -15,6 +15,8 @@
     &__group {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 40px;
+        margin-bottom: 40px;
         gap: 20px;
     }
 
@@ -94,7 +96,7 @@
 
 @media only screen and (max-width: 650px) {
     .projects {
-        padding: 50px 20px;
+        padding: 0px 20px 0px;
 
         &__group {
             grid-template-columns: 1fr;
