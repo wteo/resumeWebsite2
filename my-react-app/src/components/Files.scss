@@ -18,7 +18,7 @@
     flex: 1;
     position: relative;
     transition: all 0.3s ease-in-out;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.6;
     font-weight: 300;
     height: 400px;
@@ -30,8 +30,6 @@
     &__title {
         font-weight: 900;
         margin: 15px 0px 10px;
-        font-family: 'Cabin Sketch';
-        letter-spacing: 1px;
         text-transform: uppercase;
     }
 
@@ -138,7 +136,7 @@
 
     .file {
         min-width: 240px;
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 

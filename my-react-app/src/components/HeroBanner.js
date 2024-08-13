@@ -1,6 +1,8 @@
 import React from 'react';
-import './HeroBanner.scss';
+
 import ContentContainer from '../ui/ContentWrapper';
+
+import './HeroBanner.scss';
 
 function HeroBanner() {
     return (

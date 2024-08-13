@@ -1,0 +1,117 @@
+@import '../sass/variables';
+
+.projects {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 40px;
+    z-index: 1;
+
+    &__content {
+        background-color: $alternate-bg-color;
+        padding: 20px;
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+
+    &__image-wrapper,
+    &__image-wrapper--large,
+    &__image-wrapper--narrow {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        position: relative; 
+        width: 100%;
+        height: 250px;
+        border-radius: 5px;
+        background-color: rgba(0, 0, 0, 0.1);
+        filter: grayscale(100%); 
+
+        &--large, &--narrow { 
+            grid-row: span 2;
+            height: 520px;
+        }
+
+        &--large {
+            grid-column: span 2;
+        }
+
+        &--narrow {
+            grid-column: span 1;
+        }
+
+        &:hover {
+            filter: grayscale(0%); 
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        &:hover .projects__image {
+            transform: scale(1.25);
+            transition: all 0.3s ease-in-out;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__image-description {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .projects {
+        &__group {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        &__image-wrapper--large {
+            height: 400px;
+        }
+
+        &__image-wrapper,
+        &__image-wrapper--narrow {
+            height: 250px;
+        }
+    
+        &__image-wrapper--narrow {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .projects {
+        padding: 50px 20px;
+
+        &__group {
+            grid-template-columns: 1fr;
+        }
+
+        &__title {
+            font-size: 2.5rem;
+        }
+
+        &__image-wrapper--large {
+            height: 250px;
+        }
+
+        &__image-wrapper--large,
+        &__image-wrapper--narrow {
+            grid-column: span 1;
+            grid-row: span 1;
+        }
+    }
+}
