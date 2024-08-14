@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import HeroBanner from './components/HeroBanner';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+
+import FullProfile from './components/FullProfile';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
@@ -15,26 +17,23 @@ import './App.scss';
 
 function App() {
 
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [url, setUrl] = useState('home'); // This state manages the url route 
 
-  const toggleMenu = () => setMenuOpen(!menuOpen);
+  const routeHandler = (newUrl) => setUrl(newUrl);
 
   return (
     <div className="App">
-      <Header />
-        <Files />
-        <Resume />
-        <HeroBanner />
-        <About />
-        <Experience />
-        <Skills />
-        { 
-          /* 
-        <Projects />
-        <Contact />
-          */
-        }
-      <Footer />
+      {url !== 'home' && <Header routeHandler={routeHandler} />}
+      {url === 'home' && <Files routeHandler={routeHandler} />}
+      <Resume />
+      {url === 'home' && <HeroBanner />}
+      {url === 'home' && <About /> }
+      {url === 'home' && <Experience />}
+      {url === 'home' && <Skills />}
+      {url === 'profile' && <FullProfile />}
+      {url === 'projects' && <Projects />}
+      {url === 'contact' && <Contact />}
+      <Footer routeHandler={routeHandler} />
     </div>
   );
 }

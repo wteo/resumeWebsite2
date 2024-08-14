@@ -4,23 +4,29 @@ import ContentWrapper from '../ui/ContentWrapper';
 
 import './Header.scss';
 
-function Header() {
+function Header({ routeHandler }) {
+
     const [menuOpen, setMenuOpen] = React.useState(false);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
+    const homeRouteHandler = () => routeHandler('home');
+    const profileRouteHandler = () => routeHandler('profile');
+    const projectsRouteHandler = () => routeHandler('projects');
+    const contactRouteHandler = () => routeHandler('contact');
+
     return (
         <>
             <header className="header">
                 <ContentWrapper>
                     <div className="header__container">
-                        <h1 className="header__title">Wendy Teo</h1>
+                        <h1 className="header__title" onClick={homeRouteHandler}>Wendy Teo</h1>
                         <ul className="header__menu-list">
-                            <li className="header__menu-item">About Me</li>
-                            <li className="header__menu-item">Selected Works</li>
-                            <li className="header__menu-item">Work with Me</li>
+                            <li className="header__menu-item" onClick={profileRouteHandler}>About Me</li>
+                            <li className="header__menu-item" onClick={projectsRouteHandler}>Selected Works</li>
+                            <li className="header__menu-item" onClick={contactRouteHandler}>Work with Me</li>
                             <li className="header__menu-item">Blogs</li>
                         </ul>
                     </div>
@@ -35,9 +41,9 @@ function Header() {
                     menuOpen && (
                         <div className="header__mobile-menu">
                             <ul className="header__mobile-menu-list">
-                                <li className="header__mobile-menu-item">About Me</li>
-                                <li className="header__mobile-menu-item">Selected Works</li>
-                                <li className="header__mobile-menu-item">Work with Me</li>
+                                <li className="header__mobile-menu-item" onClick={profileRouteHandler}>About Me</li>
+                                <li className="header__mobile-menu-item" onClick={projectsRouteHandler}>Selected Works</li>
+                                <li className="header__mobile-menu-item" onClick={contactRouteHandler}>Work with Me</li>
                                 <li className="header__mobile-menu-item">Read my Blogs</li>
                             </ul>
                         </div>

@@ -5,7 +5,7 @@ import Form from './Form';
 
 import './Files.scss';
 
-function Files() {
+function Files({ routeHandler }) {
 
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -36,15 +36,15 @@ function Files() {
                 <p className="file__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, ligula eget bibendum fermentum, nulla metus facilisis enim, in efficitur eros purus in nisl. Vivamus interdum, felis id consequat ullamcorper, dui elit tincidunt velit, at efficitur sem orci sit amet lorem. Fusce euismod, mauris id convallis facilisis, erat orci congue neque, in sagittis mauris nulla non felis. Curabitur id dictum est, non varius turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Duis nec nisi at orci feugiat gravida.</p>
                 <p>Suspendisse potenti. Nam a ligula nec risus vehicula venenatis. Fusce dignissim tristique augue, a hendrerit lorem interdum et. Curabitur at dapibus nisi. Mauris sodales, velit nec egestas vehicula, augue tortor fermentum erat, ac consequat magna nunc ut justo. Aenean tincidunt semper ipsum non facilisis. Aenean quis suscipit lorem.</p>
             </div>
-            <div className="file forest">
+            <div id="file__form" className="file forest" onClick={ () => routeHandler('contact') }>
                 <Form />
             </div>
-            <div className="file coral">
+            <div className="file coral" onClick={ () => routeHandler('projects') }>
                 <h3 className="file__title">My Selected Works</h3>
                 <hr className="file__divider" />
                 <p className="file__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, ligula eget bibendum fermentum, nulla metus facilisis enim, in efficitur eros purus in nisl. Vivamus interdum, felis id consequat ullamcorper, dui elit tincidunt velit, at efficitur sem orci sit amet lorem. Fusce euismod, mauris id convallis facilisis, erat orci congue neque, in sagittis mauris nulla non felis. Curabitur id dictum est, non varius turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Duis nec nisi at orci feugiat gravida.</p>
             </div>
-            <div className="file lime">
+            <div className="file lime" onClick={ () => routeHandler('profile') }>
                 <h3 className="file__title">About Me</h3>
                 <hr className="file__divider" />
                 <p className="file__content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vehicula, ligula eget bibendum fermentum, nulla metus facilisis enim, in efficitur eros purus in nisl. Vivamus interdum, felis id consequat ullamcorper, dui elit tincidunt velit, at efficitur sem orci sit amet lorem. Fusce euismod, mauris id convallis facilisis, erat orci congue neque, in sagittis mauris nulla non felis. Curabitur id dictum est, non varius turpis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam erat volutpat. Duis nec nisi at orci feugiat gravida.</p>

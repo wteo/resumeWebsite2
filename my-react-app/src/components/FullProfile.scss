@@ -1,0 +1,44 @@
+@import '../sass/variables';
+
+.profile {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0px 40px 0px;
+    z-index: 1;
+
+    &__content {
+        background-color: $file-text-color;
+        padding: 5px 20px 60px;
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .profile {
+        &__group {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .profile {
+        padding: 0px 20px 0px;
+        font-size: 1rem;
+
+        &__group {
+            gap: 10px;
+        }
+    }
+
+    .form__wrapper {
+        padding: 15px;
+    }
+}

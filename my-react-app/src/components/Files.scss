@@ -73,14 +73,17 @@
     .file__title,
     .file__content {
         color: $primary-bg-color;
-        ;
     }
 
     .file__divider {
         border: 0.5px dashed $primary-bg-color;
-        ;
+    }
+
+    input {
+        cursor: pointer;
     }
 }
+
 
 .file.forest:hover {
     transform: rotate(-10deg);
