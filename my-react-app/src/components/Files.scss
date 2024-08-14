@@ -39,7 +39,7 @@
 
 .file.yellow {
     flex: 0.75;
-    background-color: #FFD54F;
+    background-color: $yellow;
     z-index: 1500;
     transform: rotate(10deg);
     left: -30px;
@@ -112,7 +112,7 @@
 }
 
 .file.lime {
-    background-color: #CDDC39;
+    background-color: $lime;
     z-index: 1300;
     transform: rotate(-5deg);
     left: -530px;

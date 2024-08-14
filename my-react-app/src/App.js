@@ -23,18 +23,17 @@ function App() {
     <div className="App">
       <Header />
         <Files />
-        { 
-          /* 
-        <Files />
         <Resume />
         <HeroBanner />
         <About />
         <Experience />
         <Skills />
+        { 
+          /* 
         <Projects />
+        <Contact />
           */
         }
-        <Contact />
       <Footer />
     </div>
   );
