@@ -14,16 +14,46 @@
 
     &__group {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
+        grid-template-columns: 1fr 1.25fr;
+        justify-content: center;
+        align-items: start;
+        gap: 50px;
+    }
+
+    &__image-wrapper {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        overflow: hidden;
+        height: auto;
+        max-height: 550px;
+        border-radius: 7.5px;
+
+        &__image {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    &__description {
+        font-weight: 300;
     }
 }
 
 
 @media only screen and (max-width: 1000px) {
     .profile {
+        &__description {
+            max-height: 650px;
+            overflow: scroll;
+        }
+
         &__group {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
         }
     }
 }
@@ -34,6 +64,7 @@
         font-size: 1rem;
 
         &__group {
+            grid-template-columns: 1fr;
             gap: 10px;
         }
     }

@@ -9,25 +9,40 @@ function Experience() {
 
     const experiences = [
         {
-            title: "Web Developer | Jan 2020 to Present",
-            content: "Details about experience 2"
+            title: 'Web Developer, Freelancer',
+            duration: 'Jul 2023 to Present',
+            job: [{
+                description: 'Plico Energy',
+                tasks: ['task 1', 'item 2', 'item 3']
+            }, {
+                description: 'Play Innovation',
+                tasks: ['task 1', 'item 2', 'item 3']
+            }, {
+                description: 'Ettikette Candles',
+                tasks: ['task 1', 'item 2', 'item 3']
+            }]
         },
         {
-            title: "Experience 2",
-            content: "Details about experience 2"
+            title: 'Web Developer Intern, Insurance Australia Group',
+            duration: 'Jan 2023 to Jul 2023',
+            job: [{
+                description: '',
+                tasks: [
+                    'Developed & maintained responsive web pages & components using HTML, CSS, & JavaScript. Participated in Agile development processes, including daily stand-ups & sprint planning meetings. Collaborated with UI/UX designers, content creators, product owners & full stack developers to implement updates & maintain NRMA website.', 
+                    'Managed website with CMS Drupal 7 & refactored legacy scripts in preparation for migration to Adobe Experience Manager. i.e Refactored an accordion component from ES5 with JQuery to just JavaScript ES6, reducing code lines by 45%.', 
+                    'Optimized website performance through techniques such as code spliting, compression, & browser caching. i.e utilized Webpack to split React & non-React code for the NRMA branch finder page, improving loading speed by 20%.',
+                    'Conducted cross-browser & device testing for consistent presentation & functionality across different platforms & screen sizes.'
+                ]
+            }]
         },
         {
-            title: "Experience 3", 
-            content: "Details about experience 3"
-        },
-        {
-            title: "Experience 4",
-            content: "Details about experience 4"
-        },
-        {
-            title: "Experience 5", 
-            content: "Details about experience 5"
-        },
+            title: 'Finance Roles',
+            duration: 'Before 2023',
+            job: [{
+                description: 'Accumulated 10 years of experience in financial roles, developing key skills in account management, credit control, & process automation in companies including IBM, Samsung Electronics, Hanson Constructions & Link Group.',
+                tasks: []
+            }],
+        }
     ];
 
     const toggleAccordion = (index) => {
@@ -46,12 +61,22 @@ function Experience() {
                                     className="accordion-title"
                                     onClick={() => toggleAccordion(index)}
                                 >
-                                    <h3>{exp.title}</h3>
+                                        <div>
+                                        <h3>{exp.title}</h3>
+                                        <h5>{exp.duration}</h5>
+                                    </div>
                                     <span>+</span>
                                 </div>
-                                <p className={ `accordion-content ${activeIndex === index ? 'active' : '' }`}>
-                                    {exp.content}
-                                </p>
+                                <div className={ `accordion-content ${activeIndex === index ? 'active' : '' }`}>
+                                    { exp.job.map((item, intemIndex) => 
+                                    <div className="job" key={intemIndex}>
+                                        <p className="job__description">{item.description}</p>
+                                        <ul className="job__list">
+                                            {item.tasks.map((task, taskIndex) => <li key={taskIndex}>{task}</li>)}
+                                        </ul>
+                                    </div>
+                                    ) }
+                                </div>
                             </div>
                         ))}
                     </div>

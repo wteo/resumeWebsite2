@@ -27,7 +27,7 @@ function App() {
       {url === 'home' && <Files routeHandler={routeHandler} />}
       <Resume />
       {url === 'home' && <HeroBanner />}
-      {url === 'home' && <About /> }
+      {url === 'home' && <About routeHandler={routeHandler} /> }
       {url === 'home' && <Experience />}
       {url === 'home' && <Skills />}
       {url === 'profile' && <FullProfile />}

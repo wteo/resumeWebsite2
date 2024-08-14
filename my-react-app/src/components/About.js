@@ -6,7 +6,7 @@ import './About.scss';
 
 import profile from '../assets/profile.webp';
 
-function About() {
+function About({ routeHandler }) {
     return (
         <section className="about">
             <ContentWrapper>
@@ -15,20 +15,11 @@ function About() {
                 <hr className="about__divider" />
                 <div className="about__content">
                     <div className="about__description">
-                        <h1>About Me</h1>
+                        <h1>Quick Profile</h1>
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vehicula neque in arcu interdum,
-                            sit amet malesuada nunc facilisis. Aenean sit amet leo id odio efficitur dapibus.
-                            Vivamus convallis ex a felis fermentum, ac laoreet lacus volutpat. Suspendisse potenti.
-                            Maecenas sed tortor odio. Cras ac lectus risus. Pellentesque at sagittis neque, in suscipit urna.
+                            I’m Wendy Teo, a web developer with a background in finance and a passion for coding. After over a decade in finance, I transitioned to web development in 2021. I gained valuable experience as a Web Developer Intern at Insurance Australia Group, focusing on website optimization. Since August 2023, I’ve been freelancing, specializing in custom web solutions on platforms like Shopify, HubSpot, and WordPress, combining technical skills with business insight to deliver effective websites.
                         </p>
-                        <p>
-                            Ut bibendum arcu sed libero volutpat, at congue mi tincidunt. Nulla facilisi.
-                            Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
-                            Praesent venenatis magna ut eros pharetra, sit amet dictum dolor varius.
-                            Proin sit amet mi et elit dictum sollicitudin vel ac justo. Integer suscipit enim vel gravida dictum.
-                        </p>
-                        <a href="/">Learn More</a>
+                        <a onClick={ () => routeHandler('profile') }>More About Me</a>
                     </div>
                     <div className="about__image-wrapper">
                         <img src={ profile } alt="Profile" className="about__image" />

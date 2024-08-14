@@ -20,10 +20,11 @@
                 font-size: 3.5rem;
                 font-weight: 900;
                 color: $alternate-text-color;
-            }
 
-            span:hover {
-                cursor: pointer;
+                &:hover {
+                    cursor: pointer;
+                    color: $cta-color;
+                }
             }
         }
     }
