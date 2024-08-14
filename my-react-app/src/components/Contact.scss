@@ -19,6 +19,11 @@
     }
 }
 
+.form__wrapper {
+    background-color: $forest;
+    padding: 20px;
+}
+
 @media only screen and (max-width: 1000px) {
     .contact {
         &__group {
@@ -35,5 +40,9 @@
         &__group {
             gap: 10px;
         }
+    }
+
+    .form__wrapper {
+        padding: 15px;
     }
 }

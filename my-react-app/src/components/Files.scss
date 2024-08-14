@@ -23,7 +23,6 @@
     font-weight: 300;
     height: 400px;
     overflow: hidden;
-    border-radius: 3px;
     text-align: left;
     max-width: 500px;;
 
@@ -63,7 +62,8 @@
 }
 
 .file.forest {
-    background-color: #388E3C;
+    background-color: $forest;
+    padding: 15px;
     color: $file-text-color;
     z-index: 1100;
     transform: rotate(-15deg);
