@@ -9,11 +9,9 @@ import HeroBanner from './components/HeroBanner';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import Contact from './components/Contact';
 
 import './App.scss';
-
-import placeholder from './assets/placeholder.webp'
-import ContentWrapper from './ui/ContentWrapper';
 
 function App() {
 
@@ -24,17 +22,18 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {
-        /*
+        { 
+          /* 
         <Files />
         <Resume />
         <HeroBanner />
         <About />
         <Experience />
         <Skills />
-       */
-      }
-      <Projects />
+        <Projects />
+          */
+        }
+        <Contact />
       <Footer />
     </div>
   );

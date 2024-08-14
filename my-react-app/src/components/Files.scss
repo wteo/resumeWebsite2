@@ -64,7 +64,7 @@
 
 .file.forest {
     background-color: #388E3C;
-    color: #ffffff;
+    color: $file-text-color;
     z-index: 1100;
     transform: rotate(-15deg);
     left: -230px;
@@ -89,7 +89,7 @@
 }
 
 .file.coral {
-    background-color: #FF6F61;
+    background-color: $coral;
     z-index: 1200;
     transform: rotate(-10deg);
     left: -380px;
@@ -97,11 +97,11 @@
 
     .file__title,
     .file__content {
-        color: #ffffff;
+        color: $file-text-color;
     }
 
     .file__divider {
-        border: 0.5px dashed #ffffff;
+        border: 0.5px dashed $file-text-color;
     }
 }
 

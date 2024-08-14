@@ -1,0 +1,157 @@
+@import '../sass/variables';
+
+.contact {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    padding: 0px 40px 0px;
+    z-index: 1;
+
+    &__content {
+        background-color: $file-text-color;
+        padding: 5px 20px 60px;
+    }
+
+    &__group {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    &__form-wrapper {
+        background-color: $forest;
+        padding: 20px;
+    }
+
+    &__form {
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+    }
+
+    &__form-title {
+        font-size: 1.5rem;
+        margin: 10px;
+        color: $file-text-color;
+    }
+
+    &__form-table {
+        width: 100%;
+        border-collapse: collapse;
+        border: 1px solid $file-text-color;
+    }
+
+    &__form-row {
+        border-bottom: 1px solid $file-text-color;
+    }
+
+    &__form-label {
+        padding: 10px;
+        font-weight: 900;
+        text-align: left;
+        vertical-align: top;
+        width: 30%;
+        border-right: 1px solid $file-text-color;
+        white-space: nowrap;
+        color: $file-text-color;
+    }
+
+    &__form-input {
+        width: 70%;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        color: $file-text-color;
+        font-family: 'Averia Serif Libre', 'Georgia', 'Times New Roman';
+        font-weight: 300;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        font-size: 1rem;
+        box-sizing: border-box;
+        resize: none;
+        background-color: transparent;
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+    textarea {
+        height: 100px;
+    }
+
+    &__button {
+        width: 100%;
+        padding: 15px;
+        font-family: 'Averia Serif Libre', 'Georgia', 'Times New Roman';
+        text-transform: uppercase;
+        text-align: right;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        background-color: transparent;
+        color: $file-text-color;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &-icon {
+            font-size: 1.75rem;
+            line-height: 1;
+        }
+
+        &:hover {
+            background-color: darken($forest, 10%);
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 1000px) {
+    .contact {
+        &__group {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .contact {
+        padding: 0px 20px 0px;
+        font-size: 1rem;
+
+        &__form-title {
+            font-size: 1.2rem;
+        }
+
+        &__form-wrapper {
+            padding: 15px;
+        }
+
+        &__form-label {
+            padding: 7.5px;
+        }
+    
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            padding: 7.5px;
+        }
+
+        &__button {
+            padding: 10px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+    
+            &-icon {
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+
+        }
+    }
+}
