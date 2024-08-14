@@ -60,12 +60,18 @@
         background-color: #00000032;
     }
 
+    &__image-text {
+        font-weight: 300;
+        font-size: 0.9rem;   
+    }
+
     &__link {
         float: right;
         margin-top: 20px;
         margin-bottom: 40px;
         font-size: 1rem;
     }
+
 }
 
 /* Responsive design for different screen sizes */
