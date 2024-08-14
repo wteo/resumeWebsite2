@@ -12,14 +12,14 @@ function Experience() {
             title: 'Web Developer, Freelancer',
             duration: 'Jul 2023 to Present',
             job: [{
-                description: 'Plico Energy',
-                tasks: ['task 1', 'item 2', 'item 3']
+                description: 'As a Freelance Web Developer, I specialize in creating custom web solutions. My services include migrating websites across various platforms, developing bespoke themes for platforms like Shopify, HubSpot, and WordPress, and providing comprehensive support throughout the entire web design and development process.',
+                tasks: []
             }, {
-                description: 'Play Innovation',
-                tasks: ['task 1', 'item 2', 'item 3']
-            }, {
-                description: 'Ettikette Candles',
-                tasks: ['task 1', 'item 2', 'item 3']
+                description: 'Present and past clients I have worked with include:',
+                tasks: ['Automic Group', 'Etikette Candles', 'Plico Energy', 'Sydney Blockchain', 'and so forth']
+            },{
+                description: 'If I\’ve piqued your interest, I encourage you to dive into my portfolio page and explore my selected works.',
+                tasks: []
             }]
         },
         {

@@ -17,6 +17,10 @@
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
+
+    &__description {
+        margin-right: 30%;
+    }
 }
 
 .form__wrapper {
@@ -26,8 +30,13 @@
 
 @media only screen and (max-width: 1000px) {
     .contact {
+
         &__group {
-            grid-template-columns: 1fr;
+            grid-template-columns: 1fr 1.5fr;
+        }
+
+        &__description {
+            margin-right: 0px;
         }
     }
 }
@@ -38,6 +47,7 @@
         font-size: 1rem;
 
         &__group {
+            grid-template-columns: 1fr;
             gap: 10px;
         }
     }

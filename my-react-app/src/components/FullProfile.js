@@ -34,6 +34,22 @@ function FullProfiles() {
                     </div>
                 </div>
             </ContentWrapper>
+            <ContentWrapper>
+                <div className="philosphy">
+                    <h1 className="profile__title">
+                        About Me
+                    </h1>
+                    <hr />
+                    <div className="profile__group">
+                        <div className="profile__image-wrapper">
+                            <img src={ profile } alt="Profile" className="profile__image" />
+                        </div>
+                        <div className="profile__description">
+                            { descriptions.map(description => <p>{ description }</p>) }
+                        </div>
+                    </div>
+                </div>
+            </ContentWrapper>
         </section>
     );
 }
