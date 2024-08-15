@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import HeroBanner from './components/HeroBanner';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
+import Services from './components/Services';
 
 import FullProfile from './components/FullProfile';
 import Projects from './components/Projects';
@@ -30,6 +31,7 @@ function App() {
       {url === 'home' && <About routeHandler={routeHandler} /> }
       {url === 'home' && <Experience />}
       {url === 'home' && <Skills />}
+      {url === 'home' && <Services />}
       {url === 'profile' && <FullProfile />}
       {url === 'projects' && <Projects />}
       {url === 'contact' && <Contact />}
