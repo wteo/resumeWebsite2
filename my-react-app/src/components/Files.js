@@ -38,9 +38,9 @@ function Files({ routeHandler }) {
                 <h3 className="file__title">Connect with Me</h3>
                 <hr className="file__divider" />
                 <hr className="file__divider" />
-                <p className="file__content">
+                <div className="file__content">
                     <Social />
-                </p>
+                </div>
             </div>
             <div id="file__form" className="file forest" onClick={ () => routeHandler('contact') }>
                 <Form />
@@ -48,7 +48,7 @@ function Files({ routeHandler }) {
             <div className="file coral" onClick={ () => routeHandler('projects') }>
                 <h3 className="file__title">My Selected Works</h3>
                 <hr className="file__divider" />
-                <p className="file__content">
+                <div className="file__content">
                     <div className="file__grid">
                         <div className="file__image-wrapper">
                             <img className="file__image" src={ office } alt="project" />
@@ -63,7 +63,7 @@ function Files({ routeHandler }) {
                             <img className="file__image" src={ office } alt="project" />
                         </div>
                     </div>
-                </p>
+                </div>
             </div>
             <div className="file lime" onClick={ () => routeHandler('blogs') }>
                 <h3 className="file__title">Read My Blogs</h3>

@@ -12,12 +12,12 @@
 
     &__content {
         text-align: left;
-        width: 65%;
+        width: 60%;
 
         &-title {
 
             span {
-                font-size: 3.5rem;
+                font-size: 4.5rem;
                 font-weight: 900;
                 color: $alternate-text-color;
 
@@ -35,9 +35,13 @@
     .hero {
         font-size: 2.0rem;
         height: 450px;
-    
-        &__content-title span {
-            font-size: 3.0rem;
+
+        &__content {
+            width: 65%;
+
+            &-title span {
+                font-size: 3.5rem;
+            }
         }
     }
 }
@@ -56,6 +60,6 @@
                 font-size: 2.5rem;
             }
         }
-    
+
     }
 }

@@ -19,8 +19,8 @@ function Social() {
 
     return (
         <div className="social">
-            { socials.map(social => (
-                <a className="social__image-wrapper" href={social.url} target="_blank" rel="noreferrer">
+            { socials.map((social, index) => (
+                <a className="social__image-wrapper" key={index} href={social.url} target="_blank" rel="noreferrer">
                     <img className="social__image" src={social.src} alt={social.alt} />
                 </a>
             ))}
