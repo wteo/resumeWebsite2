@@ -9,6 +9,7 @@
 
     &__content-title {
         margin: 0;
+        font-size: 3rem;
     }
 }
 
@@ -97,5 +98,9 @@
     .experience {
         padding: 50px 20px;
         font-size: 1rem;
+
+        &__content-title {
+            font-size: 2rem;
+        }
     }
 }

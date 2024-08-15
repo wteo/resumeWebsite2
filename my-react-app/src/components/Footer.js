@@ -6,7 +6,7 @@ import './Footer.scss';
 
 function Footer({ routeHandler }) {
 
-    const profileRouteHandler = () => routeHandler('profile');
+    const homeRouteHandler = () => routeHandler('home');
     const projectsRouteHandler = () => routeHandler('projects');
     const contactRouteHandler = () => routeHandler('contact');
 
@@ -16,7 +16,7 @@ function Footer({ routeHandler }) {
                 <hr />
                 <div className="footer__content">
                     <ul className="footer__menu">
-                        <li className="footer__menu-item" onClick={ profileRouteHandler }>About</li>
+                        <li className="footer__menu-item" onClick={ homeRouteHandler }>Home</li>
                         <li className="footer__menu-item" onClick={ projectsRouteHandler }>My Work</li>
                         <li className="footer__menu-item" onClick={ contactRouteHandler }>Contact</li>
                         <li className="footer__menu-item">Blogs</li>

@@ -18,7 +18,7 @@
     flex: 1;
     position: relative;
     transition: all 0.3s ease-in-out;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.6;
     font-weight: 300;
     height: 400px;
@@ -35,6 +35,28 @@
     &__content {
         margin: 0;
     }
+
+    &__grid {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px; 
+    }
+    
+    &__image-wrapper {
+        width: 100%;
+        overflow: hidden; 
+        border-radius: 5px;
+        filter: hue-rotate(-20deg) saturate(150%) opacity(30%); 
+    }
+    
+    &__image {
+        width: 100%;
+        height: auto; 
+        display: block; 
+    }
+
+    
 }
 
 .file.yellow {
@@ -51,14 +73,13 @@
     }
 
     .file__divider {
-        border: 0.5px dotted $primary-text-color;
+        border: 0.5px solid $primary-text-color;
     }
 }
 
 .file.yellow:hover {
     transform: rotate(5deg);
     top: 20px;
-    cursor: pointer;
 }
 
 .file.forest {

@@ -10,7 +10,6 @@ import Experience from './components/Experience';
 import Skills from './components/Skills';
 import Services from './components/Services';
 
-import FullProfile from './components/FullProfile';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 
@@ -32,7 +31,6 @@ function App() {
       {url === 'home' && <Experience />}
       {url === 'home' && <Skills />}
       {url === 'home' && <Services />}
-      {url === 'profile' && <FullProfile />}
       {url === 'projects' && <Projects />}
       {url === 'contact' && <Contact />}
       <Footer routeHandler={routeHandler} />

@@ -20,7 +20,7 @@ function Services() {
     return (
         <section className="services">
             <ContentWrapper>
-                <h1 className="services__title">Services</h1>
+                <h1 className="services__content-title">Services</h1>
                 <hr />
                 <div className="services__group">
                     {

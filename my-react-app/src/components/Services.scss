@@ -1,7 +1,5 @@
 @import '../sass/variables';
 
-@import '../sass/variables';
-
 .services {
     text-align: left;
     font-size: 1.2rem;
@@ -9,7 +7,11 @@
     padding: 50px;
     background-color: $primary-bg-color;
 
-    &__title {
+    &__content-title {
+        font-size: 3rem;
+    }
+
+    &__title, &__content-title {
         margin-bottom: 0;
     }
 
@@ -38,6 +40,10 @@
     .services {
         padding: 50px 20px;
         font-size: 1rem;
+
+        &__content-title {
+            font-size: 2rem;
+        }
     }
 }
 
