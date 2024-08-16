@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 
 import Social from '../ui/Social';
-import Form from './Form';
+import Form from '../ui/Form';
 
 import './Files.scss';
 import './Projects.scss';

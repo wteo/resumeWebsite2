@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContentWrapper from '../ui/ContentWrapper';
+import Section from '../ui/Section';
 
 import './Skills.scss';
 
@@ -47,30 +47,26 @@ function Skills() {
     ];
 
     return (
-        <section className="skills">
-            <ContentWrapper>
-                <h1 className="skills__title">How I work</h1>
-                <hr />
-                <div className="skills__group">
-                    {
-                        categories.map((category, categoryIndex) => (
-                            <div className="skills__item" key={categoryIndex}>
-                                <h4 className="skills__category">{category.category}</h4>
-                                <p className="skills__description">{category.description}</p>
-                                <ul className="skills__list">Tools Used:
-                                    {category.tools.map((tool, toolIndex) => <li key={toolIndex}>{tool}</li>)}
-                                </ul>
-                                <div className="skills__image-wrapper">
-                                    <img className="skills__image" src={category.caseStudy.src} alt={category.caseStudy.alt} />
-                                </div>
-                                <p className="skills__image-text"><strong>{category.caseStudy.alt}</strong> { category.caseStudy.desc }</p>
-                                <a className="skills__link" href="/">Learn More</a>
+        <Section sectionClassName="skills" title="How I work">
+            <div className="skills__group">
+                {
+                    categories.map((category, categoryIndex) => (
+                        <div className="skills__item" key={categoryIndex}>
+                            <h4 className="skills__category">{category.category}</h4>
+                            <p className="skills__description">{category.description}</p>
+                            <ul className="skills__list">Tools Used:
+                                {category.tools.map((tool, toolIndex) => <li key={toolIndex}>{tool}</li>)}
+                            </ul>
+                            <div className="skills__image-wrapper">
+                                <img className="skills__image" src={category.caseStudy.src} alt={category.caseStudy.alt} />
                             </div>
-                        ))
-                    }
-                </div>
-            </ContentWrapper>
-        </section>
+                            <p className="skills__image-text"><strong>{category.caseStudy.alt}</strong> {category.caseStudy.desc}</p>
+                            <a className="skills__link" href="/">Learn More</a>
+                        </div>
+                    ))
+                }
+            </div>
+            \        </Section>
     );
 }
 

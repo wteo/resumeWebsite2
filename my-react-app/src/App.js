@@ -12,7 +12,7 @@ import Services from './components/Services';
 
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Article from './components/Article';
+import Blogs from './components/Blogs';
 
 import './App.scss';
 
@@ -34,7 +34,7 @@ function App() {
       {url === 'home' && <Services />}
       {url === 'projects' && <Projects />}
       {url === 'contact' && <Contact />}
-      {url === 'blogs' && <Article />}
+      {url === 'blogs' && <Blogs />}
       <Footer routeHandler={routeHandler} />
     </div>
   );

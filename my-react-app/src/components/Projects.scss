@@ -87,13 +87,10 @@
 @media only screen and (max-width: 650px) {
     .projects {
         padding: 0px 20px 0px;
+        font-size: 1rem;
 
         &__group {
             grid-template-columns: 1fr;
-        }
-
-        &__title {
-            font-size: 2.5rem;
         }
 
         &__image-wrapper--large {
