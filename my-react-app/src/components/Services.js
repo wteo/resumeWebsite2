@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ContentWrapper from '../ui/ContentWrapper';
+import Section from '../ui/Section';
 
 import './Services.scss';
 
@@ -18,24 +18,20 @@ function Services() {
     }];
 
     return (
-        <section className="services">
-            <ContentWrapper>
-                <h1 className="services__content-title">Services</h1>
-                <hr />
-                <div className="services__group">
-                    {
-                        categories.map((category, categoryIndex) => (
-                            <div className="services__category" key={categoryIndex}>
-                                <h3 className="services__title">{category.category}</h3>
-                                <ul className="services__list">
-                                    {category.servicelist.map((service, serviceIndex) => <li key={serviceIndex}>{service}</li>)}
-                                </ul>
-                            </div>
-                        ))
-                    }
-                </div>
-            </ContentWrapper>
-        </section>
+        <Section sectionClassName="services" title="Services">
+            <div className="services__group">
+                {
+                    categories.map((category, categoryIndex) => (
+                        <div className="services__category" key={categoryIndex}>
+                            <h3 className="services__title">{category.category}</h3>
+                            <ul className="services__list">
+                                {category.servicelist.map((service, serviceIndex) => <li key={serviceIndex}>{service}</li>)}
+                            </ul>
+                        </div>
+                    ))
+                }
+            </div>
+        </Section>
     );
 }
 

@@ -1,11 +1,9 @@
-import React, { useState } from 'react';
-
 import ContentWrapper from '../ui/ContentWrapper';
+import Accordion from '../ui/Accordion';
 
 import './Experience.scss';
 
 function Experience() {
-    const [activeIndex, setActiveIndex] = useState(null);
 
     const experiences = [
         {
@@ -45,41 +43,12 @@ function Experience() {
         }
     ];
 
-    const toggleAccordion = (index) => {
-        setActiveIndex(activeIndex === index ? null : index);
-    };
-
     return (
         <section className="experience">
             <ContentWrapper>
                 <div className="experience__content">
                     <h1 className="experience__content-title">My Experience</h1>
-                    <div className="experience__content-accordion">
-                        {experiences.map((exp, index) => (
-                            <div key={index} className="accordion-item">
-                                <div
-                                    className="accordion-title"
-                                    onClick={() => toggleAccordion(index)}
-                                >
-                                        <div>
-                                        <h3>{exp.title}</h3>
-                                        <h5>{exp.duration}</h5>
-                                    </div>
-                                    <span>+</span>
-                                </div>
-                                <div className={ `accordion-content ${activeIndex === index ? 'active' : '' }`}>
-                                    { exp.job.map((item, intemIndex) => 
-                                    <div className="job" key={intemIndex}>
-                                        <p className="job__description">{item.description}</p>
-                                        <ul className="job__list">
-                                            {item.tasks.map((task, taskIndex) => <li key={taskIndex}>{task}</li>)}
-                                        </ul>
-                                    </div>
-                                    ) }
-                                </div>
-                            </div>
-                        ))}
-                    </div>
+                    <Accordion experiences={experiences} />
                 </div>
             </ContentWrapper>
         </section>
