@@ -1,3 +1,4 @@
+@import '../sass/mixins';
 @import '../sass/variables';
 
 .profile {
@@ -21,21 +22,10 @@
     }
 
     &__image-wrapper {
+        @include responsive-image;
         margin-top: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        overflow: hidden;
         height: auto;
         max-height: 550px;
-        border-radius: 7.5px;
-
-        &__image {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
     }
 
     &__description {

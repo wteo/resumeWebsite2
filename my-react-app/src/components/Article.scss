@@ -1,3 +1,4 @@
+@import '../sass/mixins';
 @import '../sass/variables';
 
 .article {
@@ -26,21 +27,10 @@
     }
 
     &__image-wrapper {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+        @include responsive-image(5px, cover);
         position: relative; 
-        width: 100%;
-        border-radius: 5px;
         background-color: rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
-    }
-
-    &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 }
 

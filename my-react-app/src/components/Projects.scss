@@ -1,3 +1,4 @@
+@import '../sass/mixins';
 @import '../sass/variables';
 
 .projects {
@@ -23,14 +24,9 @@
     &__image-wrapper,
     &__image-wrapper--large,
     &__image-wrapper--narrow {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
+        @include responsive-image(5px, cover);
         position: relative; 
-        width: 100%;
         height: 250px;
-        border-radius: 5px;
         background-color: rgba(0, 0, 0, 0.1);
         filter: grayscale(100%); 
 
@@ -57,12 +53,6 @@
             transform: scale(1.25);
             transition: all 0.3s ease-in-out;
         }
-    }
-
-    &__image {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
     }
 
     &__image-description {
