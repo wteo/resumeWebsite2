@@ -9,6 +9,7 @@ function Footer({ routeHandler }) {
     const homeRouteHandler = () => routeHandler('home');
     const projectsRouteHandler = () => routeHandler('projects');
     const contactRouteHandler = () => routeHandler('contact');
+    const blogsRouteHandler = () => routeHandler('blogs');
 
     return (
         <footer className="footer">
@@ -19,7 +20,7 @@ function Footer({ routeHandler }) {
                         <li className="footer__menu-item" onClick={ homeRouteHandler }>Home</li>
                         <li className="footer__menu-item" onClick={ projectsRouteHandler }>My Work</li>
                         <li className="footer__menu-item" onClick={ contactRouteHandler }>Contact</li>
-                        <li className="footer__menu-item">Blogs</li>
+                        <li className="footer__menu-item" onClick={ blogsRouteHandler }>Blogs</li>
                     </ul>
                     <div className="footer__contact">
                         <p className="footer__contact-detail">hello@wendyteo.dev</p>

@@ -15,6 +15,7 @@ function Header({ routeHandler }) {
     const homeRouteHandler = () => routeHandler('home');
     const projectsRouteHandler = () => routeHandler('projects');
     const contactRouteHandler = () => routeHandler('contact');
+    const blogsRouteHandler = () => routeHandler('blogs');
 
     return (
         <>
@@ -25,7 +26,7 @@ function Header({ routeHandler }) {
                         <ul className="header__menu-list">
                             <li className="header__menu-item" onClick={projectsRouteHandler}>Selected Works</li>
                             <li className="header__menu-item" onClick={contactRouteHandler}>Work with Me</li>
-                            <li className="header__menu-item">Blogs</li>
+                            <li className="header__menu-item" onClick={blogsRouteHandler}>Blogs</li>
                         </ul>
                     </div>
                     <div className="header__mobile-bar"></div>
@@ -41,7 +42,7 @@ function Header({ routeHandler }) {
                             <ul className="header__mobile-menu-list">
                                 <li className="header__mobile-menu-item" onClick={projectsRouteHandler}>Selected Works</li>
                                 <li className="header__mobile-menu-item" onClick={contactRouteHandler}>Work with Me</li>
-                                <li className="header__mobile-menu-item">Read my Blogs</li>
+                                <li className="header__mobile-menu-item" onClick={blogsRouteHandler}>Read my Blogs</li>
                             </ul>
                         </div>
                     )}

@@ -18,7 +18,7 @@ function Experience() {
                 description: 'Present and past clients I have worked with include:',
                 tasks: ['Automic Group', 'Etikette Candles', 'Plico Energy', 'Sydney Blockchain', 'and so forth']
             },{
-                description: 'If I\’ve piqued your interest, I encourage you to dive into my portfolio page and explore my selected works.',
+                description: 'If I’ve piqued your interest, I encourage you to dive into my portfolio page and explore my selected works.',
                 tasks: []
             }]
         },
