@@ -7,7 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HeroBanner from './components/HeroBanner';
 import Experience from './components/Experience';
-import Skills from './components/Skills';
+import Process from './components/Process';
 import Services from './components/Services';
 
 import Projects from './components/Projects';
@@ -30,7 +30,7 @@ function App() {
       {url === 'home' && <HeroBanner />}
       {url === 'home' && <About routeHandler={routeHandler} /> }
       {url === 'home' && <Experience />}
-      {url === 'home' && <Skills />}
+      {url === 'home' && <Process />}
       {url === 'home' && <Services />}
       {url === 'projects' && <Projects />}
       {url === 'contact' && <Contact />}

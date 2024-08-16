@@ -2,11 +2,11 @@ import React from 'react';
 
 import Section from '../ui/Section';
 
-import './Skills.scss';
+import './Process.scss';
 
 import placeholder from '../assets/placeholder.webp';
 
-function Skills() {
+function Process() {
 
     const categories = [
         {
@@ -47,21 +47,21 @@ function Skills() {
     ];
 
     return (
-        <Section sectionClassName="skills" title="How I work">
-            <div className="skills__group">
+        <Section sectionClassName="process" title="How I work">
+            <div className="process__group">
                 {
                     categories.map((category, categoryIndex) => (
-                        <div className="skills__item" key={categoryIndex}>
-                            <h4 className="skills__category">{category.category}</h4>
-                            <p className="skills__description">{category.description}</p>
-                            <ul className="skills__list">Tools Used:
+                        <div className="process__item" key={categoryIndex}>
+                            <h4 className="process__category">{category.category}</h4>
+                            <p className="process__description">{category.description}</p>
+                            <ul className="process__list">Tools Used:
                                 {category.tools.map((tool, toolIndex) => <li key={toolIndex}>{tool}</li>)}
                             </ul>
-                            <div className="skills__image-wrapper">
-                                <img className="skills__image" src={category.caseStudy.src} alt={category.caseStudy.alt} />
+                            <div className="process__image-wrapper">
+                                <img className="process__image" src={category.caseStudy.src} alt={category.caseStudy.alt} />
                             </div>
-                            <p className="skills__image-text"><strong>{category.caseStudy.alt}</strong> {category.caseStudy.desc}</p>
-                            <a className="skills__link" href="/">Learn More</a>
+                            <p className="process__image-text"><strong>{category.caseStudy.alt}</strong> {category.caseStudy.desc}</p>
+                            <a className="process__link" href="/">Learn More</a>
                         </div>
                     ))
                 }
@@ -70,4 +70,4 @@ function Skills() {
     );
 }
 
-export default Skills;
+export default Process;

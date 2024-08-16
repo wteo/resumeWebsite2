@@ -1,6 +1,6 @@
 @import '../sass/variables';
 
-.skills {
+.process {
     text-align: left;
     font-size: 1.2rem;
     line-height: 1.6;
@@ -77,19 +77,19 @@
 
 /* Responsive design for different screen sizes */
 @media (max-width: 1024px) {
-    .skills__group {
+    .process__group {
         grid-template-columns: 1fr 1fr; /* 2 columns for tablets */
     }
 }
 
 @media (max-width: 768px) {
-    .skills__group {
+    .process__group {
         grid-template-columns: 1fr; /* 1 column for mobile */
     }
 }
 
 @media only screen and (max-width: 650px) {
-    .skills {
+    .process {
         padding: 50px 20px;
         font-size: 1rem;
 
