@@ -1,26 +1,7 @@
+@import '../sass/mixins';
 @import '../sass/variables';
 
 .experience {
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    padding: 50px;
-    background-color: $primary-bg-color;
-
-    &__content-title {
-        margin: 0;
-        font-size: 3rem;
-    }
-}
-
-
-@media only screen and (max-width: 650px) {
-    .experience {
-        padding: 50px 20px;
-        font-size: 1rem;
-
-        &__content-title {
-            font-size: 2rem;
-        }
-    }
+    @include section-layout(50px, 50px 20px);
+    @include section-title;
 }

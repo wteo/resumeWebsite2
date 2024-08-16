@@ -23,7 +23,7 @@ function Services() {
                 {
                     categories.map((category, categoryIndex) => (
                         <div className="services__category" key={categoryIndex}>
-                            <h3 className="services__title">{category.category}</h3>
+                            <h3 className="services__category-title">{category.category}</h3>
                             <ul className="services__list">
                                 {category.servicelist.map((service, serviceIndex) => <li key={serviceIndex}>{service}</li>)}
                             </ul>

@@ -1,19 +1,9 @@
+@import '../sass/mixins';
 @import '../sass/variables';
 
 .services {
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    padding: 50px;
-    background-color: $primary-bg-color;
-
-    &__content-title {
-        font-size: 3rem;
-    }
-
-    &__title, &__content-title {
-        margin-bottom: 0;
-    }
+    @include section-layout(50px, 50px 20px);
+    @include section-title;
 
     &__group {
         display: flex;
@@ -33,17 +23,6 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 30px;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .services {
-        padding: 50px 20px;
-        font-size: 1rem;
-
-        &__content-title {
-            font-size: 2rem;
-        }
     }
 }
 

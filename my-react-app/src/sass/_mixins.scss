@@ -13,3 +13,50 @@
         object-fit: $object-fit;
     }
 }
+
+
+@mixin page-layout($margin-bottom: 20px) {
+    & { 
+        text-align: left;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        padding: 0px 40px 0px;
+
+        @media only screen and (max-width: 650px) {
+            font-size: 1rem;
+            padding: 0px 20px 0px;
+        }
+
+        &__content {
+            background-color: $alternate-bg-color;
+            padding: 5px 20px $margin-bottom;
+        }
+    }
+}
+
+@mixin section-layout($padding: 20px 50px, $padding-mobile: 20px) {
+    & {
+        text-align: left;
+        font-size: 1.2rem;
+        line-height: 1.6;
+        padding: $padding;
+
+        @media only screen and (max-width: 650px) {
+            font-size: 1rem;
+            padding: $padding-mobile;
+        }
+    }
+}
+
+@mixin section-title($margin: 0, $size: 3rem, $size-mobile: 2rem) {
+    & {
+        &__title {
+            margin: $margin;
+            font-size: $size;
+
+            @media only screen and (max-width: 650px) {
+                font-size: $size-mobile;
+            }
+        }
+    }
+}

@@ -2,16 +2,7 @@
 @import '../sass/variables';
 
 .blogs {
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    padding: 0px 40px 0px;
-    z-index: 1;
-
-    &__content {
-        background-color: $alternate-bg-color;
-        padding: 5px 20px 20px;
-    }
+    @include page-layout;
 
     &__group {
         display: grid;
@@ -62,8 +53,6 @@
 
 @media only screen and (max-width: 650px) {
     .blogs {
-        padding: 0px 20px 0px;
-        font-size: 1rem;
 
         &__group {
             grid-template-columns: 1fr;

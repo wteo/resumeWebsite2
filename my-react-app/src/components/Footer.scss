@@ -1,11 +1,8 @@
+@import '../sass/mixins';
 @import '../sass/variables';
 
 .footer {
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    padding: 20px 50px;
-    background-color: $primary-bg-color;
+    @include section-layout;
 
     &__content {
         display: flex;
@@ -33,11 +30,4 @@
         font-size: 0.85rem;
     }
 
-}
-
-@media only screen and (max-width: 650px) {
-    .footer {
-        padding: 20px;
-        font-size: 1rem;
-    }
 }

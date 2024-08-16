@@ -1,16 +1,9 @@
+@import '../sass/mixins';
 @import '../sass/variables';
 
 .process {
-    text-align: left;
-    font-size: 1.2rem;
-    line-height: 1.6;
-    padding: 50px;
-    background-color: $primary-bg-color;
-
-    &__title {
-        margin: 0;
-        font-size: 3rem;
-    }
+    @include section-layout(50px, 50px 20px);
+    @include section-title;
 
     &__group {
         margin-top: 30px;
@@ -85,16 +78,5 @@
 @media (max-width: 768px) {
     .process__group {
         grid-template-columns: 1fr; /* 1 column for mobile */
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .process {
-        padding: 50px 20px;
-        font-size: 1rem;
-
-        &__title {
-            font-size: 2rem;
-        }
     }
 }
