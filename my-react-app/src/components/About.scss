@@ -19,12 +19,10 @@
         border-bottom: 1px double $border-color;
     }
 
-    &__content {
-        display: grid;
+    &__group {
+        @include grid(50px, 2, 768px);
         justify-content: center;
         align-items: start;
-        grid-template-columns: 1fr 1fr; 
-        gap: 50px; 
         margin-top: 30px;
     }
 
@@ -45,10 +43,6 @@
     }
 
     @media (max-width: 768px) {
-        &__content {
-            grid-template-columns: 1fr; 
-        }
-
         &__image-wrapper {
             max-width: 100%; 
         }

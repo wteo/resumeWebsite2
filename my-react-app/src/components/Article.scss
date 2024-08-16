@@ -5,11 +5,9 @@
     @include page-layout;
 
     &__group {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        @include grid(20px, 2);
         margin-top: 40px;
         margin-bottom: 40px;
-        gap: 20px;
         height: 500px;
     }
 
@@ -22,11 +20,5 @@
         position: relative; 
         background-color: rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .article__group {
-        grid-template-columns: 1fr;
     }
 }

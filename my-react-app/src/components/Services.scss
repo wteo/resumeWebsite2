@@ -20,14 +20,7 @@
 
 @media only screen and (max-width: 1000px) {
     .services__group {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
+        @include grid(30px, 2, 500px);
     }
 }
 
-@media only screen and (max-width: 500px) {
-    .services__group {
-        grid-template-columns: 1fr;
-    }
-}

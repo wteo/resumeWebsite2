@@ -13,7 +13,7 @@ function About({ routeHandler }) {
                 <h1 className="about__title">Wendy Teo</h1>
                 <hr className="about__divider" />
                 <hr className="about__divider" />
-                <div className="about__content">
+                <div className="about__group">
                     <div className="about__description">
                         <h1>Quick Profile</h1>
                         <p>
