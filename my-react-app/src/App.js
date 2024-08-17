@@ -25,8 +25,6 @@ function App() {
   return (
     <div className="App">
       {url !== 'home' && <Header routeHandler={routeHandler} />}
-      {url === 'home' && <Files routeHandler={routeHandler} />}
-      <Resume />
       {url === 'home' && <HeroBanner />}
       {url === 'home' && <About routeHandler={routeHandler} /> }
       {url === 'home' && <Experience />}
@@ -35,6 +33,8 @@ function App() {
       {url === 'projects' && <Projects />}
       {url === 'contact' && <Contact />}
       {url === 'blogs' && <Article />}
+      {url === 'home' && <Files routeHandler={routeHandler} />}
+      <Resume />
       <Footer routeHandler={routeHandler} />
     </div>
   );

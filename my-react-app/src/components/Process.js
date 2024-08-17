@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 import Section from '../ui/Section';
 import Tags from '../ui/Tags';
@@ -10,6 +10,21 @@ import etikette from '../assets/etikette.png';
 import automic from '../assets/automic.png';
 
 function Process() {
+
+    const scrollRef = useRef(null);
+
+    const scrollLeft = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({ left: -500, behavior: 'smooth' });
+        }
+    };
+
+    const scrollRight = () => {
+        if (scrollRef.current) {
+            scrollRef.current.scrollBy({ left: 500, behavior: 'smooth' });
+        }
+    };
+
 
     const categories = [
         {
@@ -54,13 +69,14 @@ function Process() {
 
     return (
         <Section sectionClassName="process" title="How I work">
-            <div className="process__group">
+            <button className="process__arrow process__arrow--left" onClick={scrollLeft}>&lt;</button>
+            <div className="process__group" ref={scrollRef}>
                 {
                     categories.map((category, categoryIndex) => (
                         <div className="process__item" key={categoryIndex}>
                             <h4 className="process__category">{category.category}</h4>
                             <p className="process__description">{category.description}</p>
-                            <Tags list="Tools Used" arr={category.tools}/>
+                            <Tags list="Tools Used" arr={category.tools} />
                             <div className="process__image-wrapper">
                                 <video className="process__video" autoPlay loop muted playsInline poster={category.caseStudy.src}>
                                     <source src={category.caseStudy.video} type="video/mp4" />
@@ -74,6 +90,7 @@ function Process() {
                     ))
                 }
             </div>
+            <button className="process__arrow process__arrow--right" onClick={scrollRight}>&gt;</button>
         </Section>
     );
 }
