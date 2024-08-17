@@ -66,10 +66,33 @@
     & {
         display: grid;
         grid-template-columns: repeat($columns, 1fr);
-        gap: $gap
-    }
+        gap: $gap;
 
-    @media (max-width: $screen-width) {
-        grid-template-columns: 1fr; 
+        @media (max-width: $screen-width) {
+            grid-template-columns: 1fr; 
+        }
+    }
+}
+
+@mixin file-variant($color, $z-index, $degree, $left, $top) {
+    & {
+        background-color: $color;
+        z-index: $z-index;
+        transform: rotate($degree);
+        left: $left;
+        top: $top;
+    }
+}
+
+@mixin file-variant-mobile($left, $top, $degree, $new-top, $new-degree) {
+    & {
+        left: $left;
+        top: $top;
+        transform: rotate($degree);
+
+        &:hover {
+            top: $new-top;
+            transform: rotate($new-degree);
+        }
     }
 }

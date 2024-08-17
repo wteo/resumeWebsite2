@@ -55,8 +55,14 @@
 
     &__image-description {
         position: absolute;
+        display: block;
         bottom: 0;
-        right: 20px;
+        left: 20px;
+        font-size: 1.5rem;
+        color: rgb(255, 255, 255);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
     }
 }
 

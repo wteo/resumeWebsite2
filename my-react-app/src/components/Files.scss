@@ -1,3 +1,4 @@
+@import '../sass/mixins';
 @import '../sass/variables';
 
 .folder {
@@ -25,6 +26,7 @@
     overflow: hidden;
     text-align: left;
     max-width: 500px;;
+    cursor: pointer;
 
     &__title {
         font-weight: 900;
@@ -55,17 +57,12 @@
         height: auto; 
         display: block; 
     }
-
-    
 }
 
 .file.yellow {
     flex: 0.75;
-    background-color: $yellow;
-    z-index: 1500;
-    transform: rotate(10deg);
-    left: -30px;
-    top: 70px;
+    @include file-variant($yellow, 1500, 10deg, -30px, 70px);
+    cursor: default;
 
     .file__title,
     .file__content {
@@ -75,21 +72,17 @@
     .file__divider {
         border: 0.5px solid $primary-text-color;
     }
-}
 
-.file.yellow:hover {
-    transform: rotate(5deg);
-    top: 20px;
+    &:hover {
+        transform: rotate(5deg);
+        top: 20px;
+    }
 }
 
 .file.forest {
-    background-color: $forest;
+    @include file-variant($forest, 1100, -15deg, -230px, -50px);
     padding: 15px;
     color: $file-text-color;
-    z-index: 1100;
-    transform: rotate(-15deg);
-    left: -230px;
-    top: -50px;
 
     .file__title,
     .file__content {
@@ -103,21 +96,16 @@
     input {
         cursor: pointer;
     }
+    
+    &:hover {
+        transform: rotate(-10deg);
+        top: -125px;
+    }
 }
 
-
-.file.forest:hover {
-    transform: rotate(-10deg);
-    top: -125px;
-    cursor: pointer;
-}
 
 .file.coral {
-    background-color: $coral;
-    z-index: 1200;
-    transform: rotate(-10deg);
-    left: -380px;
-    top: 0;
+    @include file-variant($coral, 1200, -10deg, -380px, 0);
 
     .file__title,
     .file__content {
@@ -127,31 +115,27 @@
     .file__divider {
         border: 0.5px dashed $file-text-color;
     }
+
+    &:hover {
+        transform: rotate(-5deg);
+        top: -75px;
+    }
 }
 
-.file.coral:hover {
-    transform: rotate(-5deg);
-    top: -75px;
-    cursor: pointer;
-}
 
 .file.lime {
-    background-color: $lime;
-    z-index: 1300;
-    transform: rotate(-5deg);
-    left: -530px;
-    top: 40px;
+    @include file-variant($lime, 1300, -5deg, -530px, 40px);
 
     .file__divider {
         border: 0.5px dashed #4e4e4e;
     }
+
+    &:hover {
+        transform: rotate(0deg);
+        top: -35px;
+    }
 }
 
-.file.lime:hover {
-    transform: rotate(0deg);
-    top: -35px;
-    cursor: pointer;
-}
 
 @media only screen and (max-width: 1200px) {
     .folder {
@@ -165,6 +149,7 @@
 }
 
 
+// @mixin file-variant-mobile($left, $top, $degree, $new-top, $new-degree) 
 @media only screen and (max-width: 650px) {
     .folder {
         bottom: -275px;
@@ -177,47 +162,19 @@
     }
 
     .file.yellow {
-        left: -55px;
-        top: 65px;
-        transform: rotate(-5deg);
-    }
-
-    .file.yellow:hover {
-        top: 15px;
-        transform: rotate(-8deg);
+        @include file-variant-mobile(-55px, 65px, -5deg, 15px, -8deg);
     }
 
     .file.forest {
-        left: -340px;
-        top: -150px;
-        transform: rotate(-3deg);
-    }
-
-    .file.forest:hover {
-        top: -200px;
-        transform: rotate(-6deg);
+        @include file-variant-mobile(-340px, -150px, -3deg, -200px, -6deg);
     }
 
     .file.coral {
-        left: -575px;
-        top: -85px;
-        transform: rotate(3deg);
-    }
-
-    .file.coral:hover {
-        top: -135px;
-        transform: rotate(6deg);
+        @include file-variant-mobile(-575px, -85px, 3deg, -135px, 6deg);
     }
 
     .file.lime {
-        left: -820px;
-        top: -10px;
-        transform: rotate(6deg);
-    }
-
-    .file.lime:hover {
-        top: -60px;
-        transform: rotate(9deg);
+        @include file-variant-mobile(-820px, -10px, 6deg, -60px, 9deg);
     }
 }
 

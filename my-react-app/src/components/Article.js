@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Section from '../ui/Section';
+import Tags from '../ui/Tags';
 
 import './Article.scss';
 
@@ -10,6 +11,9 @@ import placeholder from '../assets/placeholder.webp'
 
 
 function Article() {
+
+    const tags=['HTML', 'CSS', 'JavaScript'];
+
     return (
         <Section sectionClassName="article" title="Add Article Title here">
             <div className="article__group">
@@ -18,6 +22,7 @@ function Article() {
                         kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m
                     </p>
                     <p>kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m</p>
+                    <Tags list="Tools Used" arr={tags}/>
                 </div>
                 <div className="article__media">
                     <div className="article__image-wrapper">

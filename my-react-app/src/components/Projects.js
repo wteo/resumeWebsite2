@@ -19,7 +19,7 @@ function Projects() {
                 </div>
                 <div className="projects__image-wrapper--narrow">
                     <img className="projects__image" src={profile} alt="project" />
-                    <p className="projects__image-description">Image description</p>
+                    <p className="projects__image-description">This is an exceptionally long image description</p>
                 </div>
                 <div className="projects__image-wrapper">
                     <img className="projects__image" src={office} alt="project" />

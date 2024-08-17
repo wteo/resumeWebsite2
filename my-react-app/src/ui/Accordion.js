@@ -22,7 +22,7 @@ function Accordion({ experiences }) {
                             <h3>{exp.title}</h3>
                             <h5>{exp.duration}</h5>
                         </div>
-                        <span>+</span>
+                        <span>{ activeIndex === index ? "-" : "+" }</span>
                     </div>
                     <div className={`accordion-content ${activeIndex === index ? 'active' : ''}`}>
                         {exp.job.map((item, intemIndex) =>
