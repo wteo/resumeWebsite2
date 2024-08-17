@@ -5,9 +5,12 @@ import Tags from '../ui/Tags';
 
 import './Process.scss';
 
-import gotsauss from '../assets/gotsauss.png';
-import etikette from '../assets/etikette.png';
-import automic from '../assets/automic.png';
+import gotsauss from '../assets/gotsauss.webp';
+import gotsaussVideo from '../assets/gotsauss.mp4';
+import etikette from '../assets/etikette.webp';
+import etiketteVideo from '../assets/etikette.mp4';
+import automic from '../assets/automic.webp';
+import automicVideo from '../assets/automic.mp4';
 
 function Process() {
 
@@ -15,13 +18,13 @@ function Process() {
 
     const scrollLeft = () => {
         if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: -500, behavior: 'smooth' });
+            scrollRef.current.scrollBy({ left: -300, behavior: 'smooth' });
         }
     };
 
     const scrollRight = () => {
         if (scrollRef.current) {
-            scrollRef.current.scrollBy({ left: 500, behavior: 'smooth' });
+            scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
         }
     };
 
@@ -36,7 +39,7 @@ function Process() {
             caseStudy: {
                 src: gotsauss,
                 alt: 'Got Sauce?',
-                video: '',
+                video: gotsaussVideo,
                 desc: 'My first collaboration with Anthony Attapattu on his "Gotsauss" landing page. This was a pivotal project that laid the foundation for how I work today.'
             },
         },
@@ -49,7 +52,7 @@ function Process() {
             caseStudy: {
                 src: etikette,
                 alt: 'Brighten your online presence!',
-                video: '',
+                video: etiketteVideo,
                 desc: 'I partnered with a UI/UX designer to craft a custom Shopify theme for Etikette, a family-owned candle business, revitalizing their online storefront.'
 
             },
@@ -61,7 +64,7 @@ function Process() {
             caseStudy: {
                 src: automic,
                 alt: 'Migrating to a new platform?',
-                video: '',
+                video: automicVideo,
                 desc: ' I seamlessly transitioned Automic Group\'s website from WordPress to HubSpot, providing ongoing support for optimization.'
             },
         }

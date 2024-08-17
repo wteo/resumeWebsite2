@@ -25,8 +25,20 @@
         @include responsive-image(5px, cover);
         position: relative; 
         height: 250px;
-        background-color: rgba(0, 0, 0, 0.1);
-        filter: grayscale(100%); 
+        background-color: rgba(0, 0, 0, 0.2);
+
+        .projects__video,
+        .projects__image {
+            filter: opacity(0.5);
+        }
+
+        .projects__video {
+            transform: scale(0.8);
+        }
+
+        .projects__image {
+            transform: scale(0.4);
+        }
 
         &--large, &--narrow { 
             grid-row: span 2;
@@ -42,14 +54,22 @@
         }
 
         &:hover {
-            filter: grayscale(0%); 
             cursor: pointer;
             transition: all 0.3s ease-in-out;
         }
 
+        &:hover .projects__video,
         &:hover .projects__image {
-            transform: scale(1.25);
             transition: all 0.3s ease-in-out;
+            filter: opacity(1);
+        }
+
+        &:hover .projects__video {
+            transform: scale(1);
+        }
+
+        &:hover .projects__image {
+            transform: scale(0.5);
         }
     }
 
@@ -62,7 +82,15 @@
         color: rgb(255, 255, 255);
         margin-right: 20px;
         margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+    }
+
+    &__image-wrapper.cyan {
+        background-color: #42b5cc32;
+
+        &:hover {
+            background-color: #0dcaf0;
+        }
     }
 }
 
@@ -88,17 +116,13 @@
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 575px) {
     .projects {
         padding: 0px 20px 0px;
         font-size: 1rem;
 
         &__group {
             grid-template-columns: 1fr;
-        }
-
-        &__image-wrapper--large {
-            height: 250px;
         }
 
         &__image-wrapper--large,

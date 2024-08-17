@@ -7,7 +7,10 @@ import Form from '../ui/Form';
 import './Files.scss';
 import './Projects.scss';
 
-import office from '../assets/office.webp';
+import etikette from '../assets/etikette.webp';
+import gotsauss from '../assets/gotsauss.webp';
+import plico from '../assets/plico.webp';
+import automic from '../assets/automic.webp';
 
 function Files({ routeHandler }) {
 
@@ -51,16 +54,16 @@ function Files({ routeHandler }) {
                 <div className="file__content">
                     <div className="file__grid">
                         <div className="file__image-wrapper">
-                            <img className="file__image" src={ office } alt="project" />
+                            <img className="file__image" src={ etikette } alt="Etikette Candles" />
                         </div>
                         <div className="file__image-wrapper">
-                            <img className="file__image" src={ office } alt="project" />
+                            <img className="file__image" src={ gotsauss } alt="Gotsauss" />
                         </div>
                         <div className="file__image-wrapper">
-                            <img className="file__image" src={ office } alt="project" />
+                            <img className="file__image" src={ plico } alt="Plico Energy" />
                         </div>
                         <div className="file__image-wrapper">
-                            <img className="file__image" src={ office } alt="project" />
+                            <img className="file__image" src={ automic } alt="Automic Group" />
                         </div>
                     </div>
                 </div>

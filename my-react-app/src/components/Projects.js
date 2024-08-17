@@ -4,33 +4,55 @@ import Section from '../ui/Section';
 
 import './Projects.scss';
 
-import pen from '../assets/pen.webp';
-import office from '../assets/office.webp';
-import profile from '../assets/profile.webp';
+// Large projects or companies
+import etikette from '../assets/etikette.webp';
+import etiketteVideo from '../assets/etikette.mp4';
+import play from '../assets/play.webp';
+import plico from '../assets/plico.webp';
+import automic from '../assets/automic.webp';
+import automicVideo from '../assets/automic.mp4';
 
+// Landing pages
+import blockchain from '../assets/blockchain.webp';
+import tls from '../assets/tls.webp';
+import gotsauss from '../assets/gotsauss.webp';
 
 function Projects() {
     return (
         <Section sectionClassName="projects" title="How I Work">
             <div className="projects__group">
                 <div className="projects__image-wrapper--large">
-                    <img className="projects__image" src={office} alt="project" />
+                    <video className="projects__video" autoPlay loop muted playsInline poster={etikette}>
+                        <source src={etiketteVideo} type="video/mp4" />
+                        <img className="projects__image" src={etikette} alt="Etikette" />
+                    </video>
                     <p className="projects__image-description">Image description</p>
                 </div>
                 <div className="projects__image-wrapper--narrow">
-                    <img className="projects__image" src={profile} alt="project" />
+                    <img className="projects__image" src={gotsauss} alt="Gotsauss" />
                     <p className="projects__image-description">This is an exceptionally long image description</p>
                 </div>
-                <div className="projects__image-wrapper">
-                    <img className="projects__image" src={office} alt="project" />
+                <div className="projects__image-wrapper cyan">
+                    <img className="projects__image" src={plico} alt="Plico Energy" />
                     <p className="projects__image-description">Image description</p>
                 </div>
                 <div className="projects__image-wrapper--large">
-                    <img className="projects__image" src={pen} alt="project" />
+                    <video className="projects__video" autoPlay loop muted playsInline poster={automic}>
+                        <source src={automicVideo} type="video/mp4" />
+                        <img className="projects__image" src={automic} alt="Automic" />
+                    </video>
                     <p className="projects__image-description">Image description</p>
                 </div>
                 <div className="projects__image-wrapper">
-                    <img className="projects__image" src={office} alt="project" />
+                    <img className="projects__image" src={blockchain} alt="Sydney Blockchain" />
+                    <p className="projects__image-description">Image description</p>
+                </div>
+                <div className="projects__image-wrapper">
+                    <img className="projects__image" src={tls} alt="The Lazy Society" />
+                    <p className="projects__image-description">Image description</p>
+                </div>
+                <div className="projects__image-wrapper">
+                    <img className="projects__image" src={play} alt="Play" />
                     <p className="projects__image-description">Image description</p>
                 </div>
             </div>
