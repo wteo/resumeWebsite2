@@ -14,7 +14,7 @@
     }
 
     &__group {
-        @include grid(20px, 3);
+        @include grid(30px, 3);
         margin-top: 40px;
         margin-bottom: 40px;
     }
@@ -24,7 +24,7 @@
     &__image-wrapper--narrow {
         @include responsive-image(5px, cover);
         position: relative; 
-        height: 250px;
+        height: 240px;
         background-color: rgba(0, 0, 0, 0.2);
 
         .projects__video,
@@ -42,7 +42,7 @@
 
         &--large, &--narrow { 
             grid-row: span 2;
-            height: 520px;
+            height: 530px;
         }
 
         &--large {
@@ -101,12 +101,12 @@
         }
 
         &__image-wrapper--large {
-            height: 400px;
+            height: 420px;
         }
 
         &__image-wrapper,
         &__image-wrapper--narrow {
-            height: 250px;
+            height: 260px;
         }
     
         &__image-wrapper--narrow {
@@ -120,6 +120,7 @@
     .projects {
         padding: 0px 20px 0px;
         font-size: 1rem;
+        gap: 20px;
 
         &__group {
             grid-template-columns: 1fr;

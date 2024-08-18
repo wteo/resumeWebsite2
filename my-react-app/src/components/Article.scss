@@ -5,15 +5,15 @@
     @include page-layout;
 
     &__group {
-        @include grid(20px, 2);
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        gap: 60px;
         margin-top: 30px;
         margin-bottom: 40px;
-        height: 500px;
+        height: 750px;
     }
 
     &__description {
-        width: 70%;
-
         p {
             margin: 0;
             margin-bottom: 20px;
@@ -22,24 +22,30 @@
 
     &__media {
         overflow: scroll;
+        border-radius: 7.5px;
     }
 
     &__image-wrapper {
-        @include responsive-image(5px, cover);
+        @include responsive-image(7.5px, cover);
         position: relative; 
-        background-color: rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
+        max-height: 450px;
+        background-color: rgba(0, 0, 0, 0.199);
+    }
+
+    &__image, &__video {
+        border-radius: 7.5px;
+    }
+
+    &__image-description {
+        margin-bottom: 40px;
+        text-align: left;
     }
 }
+
 
 @media only screen and (max-width: 1000px) {
-    .article__description {
-        width: 90%;
-    }
-}
-
-@media only screen and (max-width: 650px) {
-    .article__description {
-        width: 100%;
+    .article__group {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
