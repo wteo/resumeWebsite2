@@ -149,18 +149,25 @@
             grid-template-columns: 1fr;
         }
 
-        &__image-wrapper--large .projects__image.zoom {
-            transform: scale(0.3);
+        &__image-wrapper--large {
+            height: 260px;
 
-            &:hover {
-                transform: scale(0.35);
+                .projects__video {
+                    transform: scale(0.5);
+                    
+                    &:hover {
+                        transform: scale(0.6);
+                    }
+                }
+            
+                .projects__image.zoom {
+                    transform: scale(0.3);
+
+                &:hover {
+                    transform: scale(0.35);
+                }
             }
         }
-
-        &__video, &__image {
-            
-        }
-
 
         &__image-wrapper--large,
         &__image-wrapper--narrow {
