@@ -8,13 +8,12 @@ import './Projects.scss';
 import etikette from '../assets/etikette.webp';
 import etiketteVideo from '../assets/etikette.mp4';
 import play from '../assets/play.webp';
-import plico from '../assets/plico.webp';
-import automic from '../assets/automic.webp';
-import automicVideo from '../assets/automic.mp4';
+import plico from '../assets/plico2.webp';
+import automic from '../assets/automic2.webp';
 
 // Landing pages
-import blockchain from '../assets/blockchain.webp';
-import tls from '../assets/tls.webp';
+import blockchain from '../assets/blockchain2.webp';
+import tls from '../assets/tls2.webp';
 import gotsauss from '../assets/gotsauss.webp';
 
 function Projects() {
@@ -26,34 +25,25 @@ function Projects() {
                         <source src={etiketteVideo} type="video/mp4" />
                         <img className="projects__image" src={etikette} alt="Etikette" />
                     </video>
-                    <p className="projects__image-description">Etikette Candles</p>
                 </div>
                 <div className="projects__image-wrapper--narrow">
-                    <img className="projects__image" src={gotsauss} alt="Gotsauss" />
-                    <p className="projects__image-description">Anthony "Gotsauss" Attapattu</p>
+                    <img className="projects__image" src={play} alt="Gotsauss" />
                 </div>
                 <div className="projects__image-wrapper cyan">
                     <img className="projects__image" src={plico} alt="Plico Energy" />
-                    <p className="projects__image-description">Plico Energy</p>
                 </div>
                 <div className="projects__image-wrapper--large">
-                    <video className="projects__video" autoPlay loop muted playsInline poster={automic}>
-                        <source src={automicVideo} type="video/mp4" />
-                        <img className="projects__image" src={automic} alt="Automic" />
-                    </video>
-                    <p className="projects__image-description">Automic Group</p>
+                    <img className="projects__image zoom" src={automic} alt="Automic" />
                 </div>
-                <div className="projects__image-wrapper">
+                <div className="projects__image-wrapper white">
                     <img className="projects__image" src={blockchain} alt="Sydney Blockchain" />
-                    <p className="projects__image-description">Sydney Blockchain</p>
                 </div>
                 <div className="projects__image-wrapper">
+                    <img className="projects__image" src={gotsauss} alt="Gotsauss" />
+                    <p className="projects__image-description">Anthony Attapattu</p>
+                </div>
+                <div className="projects__image-wrapper ocean">
                     <img className="projects__image" src={tls} alt="The Lazy Society" />
-                    <p className="projects__image-description">The Lazy Society</p>
-                </div>
-                <div className="projects__image-wrapper">
-                    <img className="projects__image" src={play} alt="Play" />
-                    <p className="projects__image-description">Play Innovation</p>
                 </div>
             </div>
         </Section>

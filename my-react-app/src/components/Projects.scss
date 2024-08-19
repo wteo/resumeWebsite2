@@ -26,10 +26,11 @@
         position: relative; 
         height: 240px;
         background-color: rgba(0, 0, 0, 0.2);
+        box-shadow: inset 0px 0px 20px rgba(0, 0, 0, 0.1);
 
         .projects__video,
         .projects__image {
-            filter: opacity(0.5);
+            filter: opacity(1);
         }
 
         .projects__video {
@@ -37,7 +38,7 @@
         }
 
         .projects__image {
-            transform: scale(0.4);
+            transform: scale(0.6);
         }
 
         &--large, &--narrow { 
@@ -51,6 +52,16 @@
 
         &--narrow {
             grid-column: span 1;
+
+            @media only screen and (min-width: 851px) {
+                .projects__image {
+                    transform: scale(1) !important;
+                }
+
+                .projects__image:hover {
+                        transform: scale(1.2) !important;
+                }
+            }
         }
 
         &:hover {
@@ -69,7 +80,7 @@
         }
 
         &:hover .projects__image {
-            transform: scale(0.5);
+            transform: scale(0.8);
         }
     }
 
@@ -86,11 +97,15 @@
     }
 
     &__image-wrapper.cyan {
-        background-color: #42b5cc32;
+        background-color: #0dcaf0;
+    }
 
-        &:hover {
-            background-color: #0dcaf0;
-        }
+    &__image-wrapper.white {
+        background-color: #ffffff;
+    }
+
+    &__image-wrapper.ocean {
+        background-color: #0e4d64;
     }
 }
 
@@ -107,6 +122,14 @@
         &__image-wrapper,
         &__image-wrapper--narrow {
             height: 260px;
+        }
+
+        &__image-wrapper--large .projects__image.zoom {
+            transform: scale(0.5);
+
+            &:hover {
+                transform: scale(0.6);
+            }
         }
     
         &__image-wrapper--narrow {
@@ -125,6 +148,19 @@
         &__group {
             grid-template-columns: 1fr;
         }
+
+        &__image-wrapper--large .projects__image.zoom {
+            transform: scale(0.3);
+
+            &:hover {
+                transform: scale(0.35);
+            }
+        }
+
+        &__video, &__image {
+            
+        }
+
 
         &__image-wrapper--large,
         &__image-wrapper--narrow {
