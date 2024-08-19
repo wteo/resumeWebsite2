@@ -25,20 +25,21 @@
         border-radius: 7.5px;
     }
 
-    &__image-wrapper {
-        @include responsive-image(7.5px, cover);
-        position: relative; 
-        max-height: 450px;
-        background-color: rgba(0, 0, 0, 0.199);
-    }
-
     &__image, &__video {
+        width: 100%;
+        object-fit: contain;
+        max-height: 450px;
         border-radius: 7.5px;
     }
 
+    &__image.mobile {
+        max-height: 300px;
+    }
+
     &__image-description {
+        margin: 0;
         margin-bottom: 40px;
-        text-align: left;
+        text-align: center;
     }
 }
 
@@ -47,5 +48,11 @@
     .article__group {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .article__image.mobile {
+        max-height: 200px;
     }
 }

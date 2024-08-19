@@ -26,34 +26,34 @@ function Projects() {
                         <source src={etiketteVideo} type="video/mp4" />
                         <img className="projects__image" src={etikette} alt="Etikette" />
                     </video>
-                    <p className="projects__image-description">Image description</p>
+                    <p className="projects__image-description">Etikette Candles</p>
                 </div>
                 <div className="projects__image-wrapper--narrow">
                     <img className="projects__image" src={gotsauss} alt="Gotsauss" />
-                    <p className="projects__image-description">This is an exceptionally long image description</p>
+                    <p className="projects__image-description">Anthony "Gotsauss" Attapattu</p>
                 </div>
                 <div className="projects__image-wrapper cyan">
                     <img className="projects__image" src={plico} alt="Plico Energy" />
-                    <p className="projects__image-description">Image description</p>
+                    <p className="projects__image-description">Plico Energy</p>
                 </div>
                 <div className="projects__image-wrapper--large">
                     <video className="projects__video" autoPlay loop muted playsInline poster={automic}>
                         <source src={automicVideo} type="video/mp4" />
                         <img className="projects__image" src={automic} alt="Automic" />
                     </video>
-                    <p className="projects__image-description">Image description</p>
+                    <p className="projects__image-description">Automic Group</p>
                 </div>
                 <div className="projects__image-wrapper">
                     <img className="projects__image" src={blockchain} alt="Sydney Blockchain" />
-                    <p className="projects__image-description">Image description</p>
+                    <p className="projects__image-description">Sydney Blockchain</p>
                 </div>
                 <div className="projects__image-wrapper">
                     <img className="projects__image" src={tls} alt="The Lazy Society" />
-                    <p className="projects__image-description">Image description</p>
+                    <p className="projects__image-description">The Lazy Society</p>
                 </div>
                 <div className="projects__image-wrapper">
                     <img className="projects__image" src={play} alt="Play" />
-                    <p className="projects__image-description">Image description</p>
+                    <p className="projects__image-description">Play Innovation</p>
                 </div>
             </div>
         </Section>

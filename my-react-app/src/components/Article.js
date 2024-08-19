@@ -5,48 +5,55 @@ import Tags from '../ui/Tags';
 
 import './Article.scss';
 
-import etiketteVideo from '../assets/etikette.mp4';
-import etikette from '../assets/etikette.webp';
-import plico from '../assets/plico.webp';
-import play from '../assets/play.webp';
-import gotsauss from '../assets/gotsauss.webp';
-import blockchain from '../assets/blockchain.webp';
-
-
+import etiketteOldLaptop from '../assets/etikette_old_laptop.webp';
+import etiketteOldMobile from '../assets/etikette_old_mobile.webp';
+import etiketteNewLaptop from '../assets/etikette_new_laptop.webp';
+import etiketteNewMobile from '../assets/etikette_new_mobile.webp';
+import etiketteBanner from '../assets/etikette_banner.webp';
+import etiketteBannerVideo from '../assets/etikette_banner.mp4';
+import etikettePagination from '../assets/etikette_pagination.webp';
+import etikettePaginationVideo from '../assets/etikette_pagination.mp4';
 
 function Article() {
 
     const tags = ['HTML', 'CSS', 'JavaScript'];
 
+    // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const images = [{
-        src: etikette,
-        alt: 'Etikette',
-        video: etiketteVideo,
-        description: 'Scroll through the layout of the website'
-    },
-    {
-        src: plico,
-        alt: 'plico',
+        src: etiketteNewLaptop,
+        alt: 'New Etikette Design on a Macbook',
         video: null,
-        description: 'Lorem ipsum'
+        description: 'Etikette New Design'
+    },{
+        src: etiketteNewMobile,
+        alt: 'New Etikette Design on a mobile',
+        video: null,
+        description: 'Etikette New Design'
+    },
+    {
+        src: etiketteOldLaptop,
+        alt: 'Old Etikette Design on a Macbook',
+        video: null,
+        description: 'Etikette\'s old design in a Macbook'
     }, {
-        src: play,
-        alt: 'play',
-        video: null
-    },
-    {
-        src: gotsauss,
-        alt: 'gotsauss',
-        video: null
-    },
-    {
-        src: blockchain,
-        alt: 'blockchain',
-        video: null
+        src: etiketteOldMobile,
+        alt: 'Old Etikette Design on a mobile',
+        video: null,
+        description: 'Etikette\'s old design in an Iphone'
+    }, {
+        src: etiketteBanner,
+        alt: 'Etikette Banner',
+        video: etiketteBannerVideo,
+        description: ''
+    }, {
+        src: etikettePagination,
+        alt: 'Etikette Pagination',
+        video: etikettePaginationVideo,
+        description: ''
     }];
 
     return (
-        <Section sectionClassName="article" title="Add Article Title here">
+        <Section sectionClassName="article" title="Etikette Candles">
             <div className="article__group">
                 <div className="article__description">
                     <p>
@@ -54,7 +61,7 @@ function Article() {
                     </p>
                     <p>kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m</p>
                     <Tags list="Tools Used" arr={tags} />
-                    <p>Website: <a href="/">https://www.etikette.com</a></p>
+                    <p>Website: <a target="_blank" rel="noopener noreferrer" href="https://etikettecandles.com/">https://etikettecandles.com/</a></p>
                 </div>
                 <div className="article__media">
                     {
@@ -63,10 +70,10 @@ function Article() {
                             <div className="article__image-wrapper" key={index}>
                                 {
                                     image.video === null ?
-                                        <img className="article__image" src={image.src} alt={image.alt} /> :
+                                        <img className={`article__image ${image.alt.includes('mobile') ? "mobile" : ''}` } src={image.src} alt={image.alt} /> :
                                         <video className="article__video" autoPlay loop muted playsInline poster={image.src}>
                                             <source src={image.video} type="video/mp4" />
-                                            <img className="article__image" src={etikette} alt="Etikette" />
+                                            <img className="article__image" src={image.src} alt={image.alt} />
                                         </video> 
                                 }
                             </div>
