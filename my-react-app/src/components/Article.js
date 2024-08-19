@@ -18,6 +18,8 @@ function Article() {
 
     const tags = ['HTML', 'CSS', 'JavaScript'];
 
+    const url = 'https://etikettecandles.com/';
+
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const images = [{
         src: etiketteNewLaptop,
@@ -44,12 +46,10 @@ function Article() {
         src: etiketteBanner,
         alt: 'Etikette Banner',
         video: etiketteBannerVideo,
-        description: ''
     }, {
         src: etikettePagination,
         alt: 'Etikette Pagination',
         video: etikettePaginationVideo,
-        description: ''
     }];
 
     return (
@@ -61,7 +61,7 @@ function Article() {
                     </p>
                     <p>kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m</p>
                     <Tags list="Tools Used" arr={tags} />
-                    <p>Website: <a target="_blank" rel="noopener noreferrer" href="https://etikettecandles.com/">https://etikettecandles.com/</a></p>
+                    <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
                 </div>
                 <div className="article__media">
                     {
@@ -77,7 +77,7 @@ function Article() {
                                         </video> 
                                 }
                             </div>
-                            <p className="article__image-description">{ image.description }</p>
+                            <p className="article__image-description">{ image.description ?? '' }</p>
                             </>))
                     }
                 </div>

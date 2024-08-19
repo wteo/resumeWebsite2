@@ -17,6 +17,8 @@ function Article() {
 
     const tags = ['HTML', 'CSS', 'JavaScript'];
 
+    const url = 'https://www.plicoenergy.com.au/';
+
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const images = [{
         src: plicoLaptop,
@@ -48,7 +50,7 @@ function Article() {
                     </p>
                     <p>kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m</p>
                     <Tags list="Tools Used" arr={tags} />
-                    <p>Website: <a target="_blank" rel="noopener noreferrer" href="https://www.plicoenergy.com.au/">https://www.plicoenergy.com.au/</a></p>
+                    <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
                 </div>
                 <div className="article__media">
                     {

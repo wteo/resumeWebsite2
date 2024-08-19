@@ -8,9 +8,9 @@ import './Files.scss';
 import './Projects.scss';
 
 import etikette from '../assets/etikette.webp';
-import gotsauss from '../assets/gotsauss.webp';
-import plico from '../assets/plico.webp';
 import automic from '../assets/automic.webp';
+import play from '../assets/play.webp';
+import plico from '../assets/plico.webp';
 
 function Files({ routeHandler }) {
 
@@ -57,13 +57,13 @@ function Files({ routeHandler }) {
                             <img className="file__image" src={ etikette } alt="Etikette Candles" />
                         </div>
                         <div className="file__image-wrapper">
-                            <img className="file__image" src={ gotsauss } alt="Gotsauss" />
+                            <img className="file__image" src={ automic } alt="Automic Group" />
                         </div>
                         <div className="file__image-wrapper">
                             <img className="file__image" src={ plico } alt="Plico Energy" />
                         </div>
                         <div className="file__image-wrapper">
-                            <img className="file__image" src={ automic } alt="Automic Group" />
+                            <img className="file__image" src={ play } alt="Play Innovation" />
                         </div>
                     </div>
                 </div>

@@ -8,43 +8,43 @@ import './Projects.scss';
 import etikette from '../assets/etikette.webp';
 import etiketteVideo from '../assets/etikette.mp4';
 import play from '../assets/play.webp';
-import plico from '../assets/plico2.webp';
-import automic from '../assets/automic2.webp';
+import plico from '../assets/plico.webp';
+import automic from '../assets/automic.webp';
 
 // Landing pages
-import blockchain from '../assets/blockchain2.webp';
-import tls from '../assets/tls2.webp';
+import blockchain from '../assets/blockchain.webp';
+import tls from '../assets/tls.webp';
 import gotsauss from '../assets/gotsauss.webp';
 
 function Projects() {
     return (
         <Section sectionClassName="projects" title="How I Work">
             <div className="projects__group">
-                <div className="projects__image-wrapper--large">
+                <a className="projects__image-wrapper--large" href="/">
                     <video className="projects__video" autoPlay loop muted playsInline poster={etikette}>
                         <source src={etiketteVideo} type="video/mp4" />
                         <img className="projects__image" src={etikette} alt="Etikette" />
                     </video>
-                </div>
-                <div className="projects__image-wrapper--narrow">
+                </a>
+                <a className="projects__image-wrapper--narrow" href="/">
                     <img className="projects__image" src={play} alt="Gotsauss" />
-                </div>
-                <div className="projects__image-wrapper cyan">
+                </a>
+                <a className="projects__image-wrapper cyan" href="/">
                     <img className="projects__image" src={plico} alt="Plico Energy" />
-                </div>
-                <div className="projects__image-wrapper--large">
+                </a>
+                <a className="projects__image-wrapper--large" href="/">
                     <img className="projects__image zoom" src={automic} alt="Automic" />
-                </div>
-                <div className="projects__image-wrapper white">
+                </a>
+                <a className="projects__image-wrapper white" href="/">
                     <img className="projects__image" src={blockchain} alt="Sydney Blockchain" />
-                </div>
-                <div className="projects__image-wrapper">
+                </a>
+                <a className="projects__image-wrapper" href="/">
                     <img className="projects__image" src={gotsauss} alt="Gotsauss" />
                     <p className="projects__image-description">Anthony Attapattu</p>
-                </div>
-                <div className="projects__image-wrapper ocean">
+                </a>
+                <a className="projects__image-wrapper ocean" href="/">
                     <img className="projects__image" src={tls} alt="The Lazy Society" />
-                </div>
+                </a>
             </div>
         </Section>
     );
