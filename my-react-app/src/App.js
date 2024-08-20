@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import Files from './components/Files';
 import Resume from './components/Resume';
 import About from './components/About';
 import Header from './components/Header';
@@ -33,7 +32,6 @@ function App() {
       {url === 'projects' && <Projects />}
       {url === 'contact' && <Contact />}
       {url === 'blogs' && <Article />}
-      {url === 'home' && <Files routeHandler={routeHandler} />}
       <Resume />
       <Footer routeHandler={routeHandler} />
     </div>

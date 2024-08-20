@@ -6,9 +6,11 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 600px;
+    height: 475px;
     font-size: 2.75rem;
     padding: 50px;
+    padding-top: 70px;
+    margin-top: -110px;
 
     &__content {
         text-align: left;
@@ -20,11 +22,6 @@
                 font-size: 4.5rem;
                 font-weight: 900;
                 color: $alternate-text-color;
-
-                &:hover {
-                    cursor: pointer;
-                    color: $cta-color;
-                }
             }
         }
     }
@@ -34,7 +31,7 @@
 @media only screen and (max-width: 1000px) {
     .hero {
         font-size: 2.0rem;
-        height: 450px;
+        height: 400px;
 
         &__content {
             width: 65%;
@@ -49,7 +46,7 @@
 @media only screen and (max-width: 650px) {
     .hero {
         font-size: 1.75rem;
-        height: 400px;
+        height: 325px;
         padding-left: 20px;
 
         &__content {

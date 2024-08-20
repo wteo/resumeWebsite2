@@ -2,34 +2,49 @@ import React from 'react';
 
 import ContentWrapper from '../ui/ContentWrapper';
 
+import Files from './Files';
+
 import './Header.scss';
 
 function Header({ routeHandler }) {
 
     const [menuOpen, setMenuOpen] = React.useState(false);
+    const [isNameHidden, setIsNameHidden] = React.useState(true);
 
     const toggleMenu = () => {
         setMenuOpen(!menuOpen);
     };
 
-    const homeRouteHandler = () => routeHandler('home');
-    const projectsRouteHandler = () => routeHandler('projects');
-    const contactRouteHandler = () => routeHandler('contact');
-    const blogsRouteHandler = () => routeHandler('blogs');
+    const homeRouteHandler = () => {
+        routeHandler('home');
+        setIsNameHidden(true);
+    }
+    const projectsRouteHandler = () => {
+        routeHandler('projects');
+        setIsNameHidden(false);        
+    }
+    const contactRouteHandler = () => { 
+        routeHandler('contact');
+        setIsNameHidden(false);        
+    }
+    const blogsRouteHandler = () => {
+        routeHandler('blogs');
+        setIsNameHidden(false);        
+    }
 
     return (
         <>
             <header className="header">
                 <ContentWrapper>
                     <div className="header__container">
-                        <h1 className="header__title" onClick={homeRouteHandler}>Wendy Teo</h1>
+                        <h1 className="header__title" onClick={homeRouteHandler} style={{ opacity: `${ isNameHidden ? '0': '1'}` }}>Wendy Teo</h1>
                         <ul className="header__menu-list">
                             <li className="header__menu-item" onClick={projectsRouteHandler}>Selected Works</li>
                             <li className="header__menu-item" onClick={contactRouteHandler}>Work with Me</li>
                             <li className="header__menu-item" onClick={blogsRouteHandler}>Blogs</li>
                         </ul>
                     </div>
-                    <div className="header__mobile-bar"></div>
+                    <div className="header__mobile-bar" style={{ backdropFilter: `blur(${ isNameHidden ? '0' : '5'}px)` }}></div>
                     {menuOpen ? (
                         <span className="header__hamburger" onClick={toggleMenu}>&times;</span>
                     ) : (
@@ -47,6 +62,7 @@ function Header({ routeHandler }) {
                         </div>
                     )}
             </header>
+            { isNameHidden && <Files onRoute={{projectsRouteHandler, contactRouteHandler, blogsRouteHandler}}/> }
         </>
     );
 }

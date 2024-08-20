@@ -5,6 +5,7 @@
     @include section-layout(50px, 50px 20px);
     @include section-title;
     position: relative;
+    background-color: $primary-bg-color;
 
     &__group {
         display: flex;

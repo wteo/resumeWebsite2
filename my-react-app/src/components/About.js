@@ -10,12 +10,12 @@ function About({ routeHandler }) {
     return (
         <section className="about">
             <ContentWrapper>
-                <h1 className="about__title">About Me</h1>
+                <h1 className="about__title">Wendy Teo</h1>
                 <hr className="about__divider" />
                 <hr className="about__divider" />
                 <div className="about__group">
                     <div className="about__description">
-                        <h1>Full Stack Developer crafting custom web solutions with frontend expertise</h1>
+                        <h1>Quick Profile</h1>
                         <p>
                             I’m Wendy Teo, a web developer with a background in finance and a passion for coding. After over a decade in finance, I transitioned to web development in 2021. I gained valuable experience as a Web Developer Intern at Insurance Australia Group, focusing on website optimization. Since August 2023, I’ve been freelancing, specializing in custom web solutions on platforms like Shopify, HubSpot, and WordPress, combining technical skills with business insight to deliver effective websites.
                         </p>

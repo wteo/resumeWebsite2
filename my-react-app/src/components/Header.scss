@@ -3,7 +3,8 @@
 .header {
     padding: 10px 40px;
     color: $alternate-text-color;
-
+    z-index: 500;
+    
     &__container {
         display: flex;
         justify-content: space-between;
@@ -53,8 +54,6 @@
         top: 0;
         right: 0;
         height: 97px;
-        backdrop-filter: blur(5px);
-        background-color: $header-bar-color;
     }
 
     &__hamburger {
@@ -106,7 +105,6 @@
 @media only screen and (max-width: 1000px) {
 
     .header {
-
         margin-top: 77px;
 
         &__title {
