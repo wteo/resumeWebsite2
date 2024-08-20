@@ -21,6 +21,7 @@
     position: relative;
     transition: all 0.3s ease-in-out;
     font-size: 1.2rem;
+    text-decoration: none;
     line-height: 1.6;
     font-weight: 300;
     height: 400px;
@@ -126,6 +127,7 @@
 
 .file.lime {
     @include file-variant($lime, 1300, -5deg, -530px, 40px);
+    color: $alternate-text-color;
 
     .file__divider {
         border: 0.5px dashed #4e4e4e;

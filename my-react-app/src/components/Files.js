@@ -12,7 +12,7 @@ import automic from '../assets/automic.webp';
 import gotsauss from '../assets/gotsauss.webp';
 import play from '../assets/play.webp';
 
-function Files({ onRoute }) {
+function Files() {
 
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollTop, setLastScrollTop] = useState(0);
@@ -45,10 +45,10 @@ function Files({ onRoute }) {
                     <Social />
                 </div>
             </div>
-            <div id="file__form" className="file forest" onClick={ onRoute.contactRouteHandler }>
+            <a id="file__form" className="file forest" href="./contact">
                 <Form />
-            </div>
-            <div className="file coral" onClick={ onRoute.projectsRouteHandler }>
+            </a>
+            <a className="file coral" href="./projects">
                 <h3 className="file__title">My Selected Works</h3>
                 <hr className="file__divider" />
                 <div className="file__content">
@@ -67,14 +67,14 @@ function Files({ onRoute }) {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="file lime" onClick={ onRoute.blogsRouteHandler }>
+            </a>
+            <a className="file lime" href="./blogs">
                 <h3 className="file__title">Read My Blogs</h3>
                 <hr className="file__divider" />
                 <p className="file__content">
                     Explore my in-depth analyses of personal and work projects, where I share challenges, solutions, and insights into the creative process.
                 </p>
-            </div>
+            </a>
         </section>
     );
 }

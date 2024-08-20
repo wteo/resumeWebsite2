@@ -4,6 +4,10 @@
     padding: 10px 40px;
     color: $alternate-text-color;
     z-index: 500;
+
+    a {
+        text-decoration: none;
+    }
     
     &__container {
         display: flex;

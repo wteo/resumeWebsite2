@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { useState } from 'react';
 
@@ -25,17 +26,23 @@ function App() {
 
   return (
     <div className="App">
-      <Header routeHandler={routeHandler} />
-      {url === 'home' && <HeroBanner />}
-      {url === 'home' && <About routeHandler={routeHandler} />}
-      {url === 'home' && <Experience />}
-      {url === 'home' && <Process />}
-      {url === 'home' && <Services />}
-      {url === 'projects' && <Projects />}
-      {url === 'contact' && <Contact />}
-      {url === 'blogs' && <Article />}
-      <Resume />
-      <Footer routeHandler={routeHandler} />
+      <Router>
+        <Header routeHandler={routeHandler} />
+          <Routes>
+              <Route path="/" element={<>
+                <HeroBanner />
+                <About />
+                <Experience />
+                <Process />
+                <Services />
+              </>} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/blogs" element={<Article />} />
+            </Routes>
+            <Footer routeHandler={routeHandler} />
+        <Resume />
+      </Router>
     </div>
   );
 }
