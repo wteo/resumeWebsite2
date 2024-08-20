@@ -64,11 +64,6 @@
             }
         }
 
-        &:hover {
-            cursor: pointer;
-            transition: all 0.3s ease-in-out;
-        }
-
         &:hover .projects__video,
         &:hover .projects__image {
             transition: all 0.3s ease-in-out;

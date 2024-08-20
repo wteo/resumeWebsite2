@@ -24,9 +24,9 @@ function App() {
 
   return (
     <div className="App">
-      {url !== 'home' && <Header routeHandler={routeHandler} />}
+      <Header routeHandler={routeHandler} />
       {url === 'home' && <HeroBanner />}
-      {url === 'home' && <About routeHandler={routeHandler} /> }
+      {url === 'home' && <About routeHandler={routeHandler} />}
       {url === 'home' && <Experience />}
       {url === 'home' && <Process />}
       {url === 'home' && <Services />}

@@ -43,7 +43,7 @@ function Article() {
 
     return (
         <Section sectionClassName="article" title="Plico Energy">
-            <div className="article__group">
+            <article className="article__group">
                 <div className="article__description">
                     <p>
                         kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m
@@ -70,7 +70,7 @@ function Article() {
                             </>))
                     }
                 </div>
-            </div>
+            </article>
         </Section>
     );
 }

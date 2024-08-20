@@ -16,7 +16,7 @@ import etikettePaginationVideo from '../assets/etikette_pagination.mp4';
 
 function Article() {
 
-    const tags = ['HTML', 'CSS', 'JavaScript'];
+    const tags = ['Figma', 'Shopify', 'Liquid', 'JavaScript'];
 
     const url = 'https://etikettecandles.com/';
 
@@ -54,7 +54,7 @@ function Article() {
 
     return (
         <Section sectionClassName="article" title="Etikette Candles">
-            <div className="article__group">
+            <article className="article__group">
                 <div className="article__description">
                     <p>
                         kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m
@@ -81,7 +81,7 @@ function Article() {
                             </>))
                     }
                 </div>
-            </div>
+            </article>
         </Section>
     );
 }

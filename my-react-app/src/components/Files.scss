@@ -48,7 +48,6 @@
     &__image-wrapper {
         width: 100%;
         overflow: hidden; 
-        border-radius: 5px;
         filter: hue-rotate(-20deg) saturate(150%) opacity(30%);
     }
     
@@ -56,6 +55,7 @@
         width: 100%;
         height: auto; 
         display: block; 
+        border-radius: 5px;
     }
 }
 

@@ -47,7 +47,7 @@ function Process() {
             category: 'Design & Development',
             description: 'Combining design and development, this phase focuses on bringing your project to life. I create visually appealing, user-friendly designs and build responsive websites that function flawlessly across platforms. From wireframes to the final build, this integrated approach ensures a seamless transition from concept to reality.',
             tools: [
-                'Figma', 'HTML', 'CSS', 'JavaScript', 'React', 'VueJS', 'CMS',
+                'Figma', 'Webflow', 'HTML', 'CSS', 'JavaScript', 'React', 'VueJS', 'Wordpress', 'Hubspot', 'Drupal', 'Shopify'
             ],
             caseStudy: {
                 src: etikette,

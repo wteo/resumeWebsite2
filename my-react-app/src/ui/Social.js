@@ -8,11 +8,11 @@ import linkedin from '../assets/linkedin.png';
 function Social() {
 
     const socials = [{
-        url: 'https://www.github.com',
+        url: 'https://www.linkedin.com/in/wendy-teo-36821461/',
         src: linkedin,
         alt: 'LinkedIn'
     },{
-        url: 'https://www.linkedin.com',
+        url: 'https://github.com/wteo/',
         src: gitHub,
         alt: 'Github'
     }];
