@@ -1,3 +1,5 @@
+import React from 'react';
+
 import ContentWrapper from '../ui/ContentWrapper';
 import Accordion from '../ui/Accordion';
 
