@@ -70,7 +70,7 @@
         color: $file-text-color;
         border: none;
         cursor: pointer;
-        transition: background-color 0.3s ease;
+        transition: $transition;
     
         &-icon {
             font-size: 1.75rem;

@@ -20,12 +20,12 @@
         &:hover {
             filter: grayscale(0%); 
             cursor: pointer;
-            transition: all 0.3s ease-in-out;
+            transition: $transition;
         }
 
         &:hover .projects__image {
             transform: scale(1.25);
-            transition: all 0.3s ease-in-out;
+            transition: $transition;
         }
     }
 

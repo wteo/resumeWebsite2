@@ -1,8 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { useState } from 'react';
-
 import Resume from './components/Resume';
 import About from './components/About';
 import Header from './components/Header';
@@ -15,19 +13,15 @@ import Services from './components/Services';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Article from './components/Article';
+import Error404 from './components/Error404';
 
 import './App.scss';
 
 function App() {
-
-  const [url, setUrl] = useState('home'); // This state manages the url route 
-
-  const routeHandler = (newUrl) => setUrl(newUrl);
-
   return (
     <div className="App">
       <Router>
-        <Header routeHandler={routeHandler} />
+        <Header />
           <Routes>
               <Route path="/" element={<>
                 <HeroBanner />
@@ -39,8 +33,9 @@ function App() {
               <Route path="/projects" element={<Projects />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/blogs" element={<Article />} />
+              <Route path="/*" element={<Error404 />} />
             </Routes>
-            <Footer routeHandler={routeHandler} />
+            <Footer />
         <Resume />
       </Router>
     </div>

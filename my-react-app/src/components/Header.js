@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom'; 
+import { useLocation } from 'react-router-dom';
 
 import ContentWrapper from '../ui/ContentWrapper';
 
@@ -27,12 +27,18 @@ function Header() {
                             <h1 className="header__title" style={{ opacity: isHomePage ? '0' : '1' }}>Wendy Teo</h1>
                         </a>
                         <ul className="header__menu-list">
-                            <a href="./projects"><li className="header__menu-item">Selected Works</li></a>
-                            <a href="./contact"><li className="header__menu-item">Work with Me</li></a>
-                            <a href="./blogs"><li className="header__menu-item">Blogs</li></a>
+                            <a href="./projects">
+                                <li className={`header__menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>Selected Works</li>
+                            </a>
+                            <a href="./contact">
+                                <li className={`header__menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Work with Me</li>
+                            </a>
+                            <a href="./blogs">
+                                <li className={`header__menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>Blogs</li>
+                            </a>
                         </ul>
                     </div>
-                    <div className="header__mobile-bar" style={{ backdropFilter: `blur(${ isHomePage ? '0' : '5'}px)` }}></div>
+                    <div className="header__mobile-bar" style={{ backdropFilter: `blur(${isHomePage ? '0' : '5'}px)` }}></div>
                     {menuOpen ? (
                         <span className="header__hamburger" onClick={toggleMenu}>&times;</span>
                     ) : (
@@ -43,14 +49,20 @@ function Header() {
                     menuOpen && (
                         <div className="header__mobile-menu">
                             <ul className="header__mobile-menu-list">
-                                <a href="./projects"><li className="header__mobile-menu-item">Selected Works</li></a>
-                                <a href="./contact"><li className="header__mobile-menu-item">Work with Me</li></a>
-                                <a href="./blogs"><li className="header__mobile-menu-item">Read my Blogs</li></a>
+                                <a href="./projects">
+                                    <li className={`header__mobile-menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>Selected Works</li>
+                                </a>
+                                <a href="./contact">
+                                    <li className={`header__mobile-menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Work with Me</li>
+                                </a>
+                                <a href="./blogs">
+                                    <li className={`header__mobile-menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>Read my Blogs</li>
+                                </a>
                             </ul>
                         </div>
                     )}
             </header>
-            { isHomePage && <Files /> }
+            {isHomePage && <Files />}
         </>
     );
 }

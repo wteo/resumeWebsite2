@@ -103,6 +103,29 @@
         }
     }
 
+    &__menu-item,
+    &__mobile-menu-item {
+        transition: $transition;
+    }
+
+    &__menu-item.active {
+        font-size: 1.05rem;
+        font-weight: 900;
+
+        &:hover {
+            color: $alternate-text-color;
+        }
+    }
+
+    &__mobile-menu-item.active {
+        font-size: 1.55rem;
+        font-weight: 900;
+
+        &:hover {
+            color: $alternate-text-color;
+        }
+    }
+
 }
 
 

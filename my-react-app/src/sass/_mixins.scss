@@ -1,3 +1,20 @@
+@mixin default-button() {
+    & {
+        margin-top: 15px;
+        background-color: $primary-text-color;
+        color: $primary-bg-color;
+        border: none;
+        padding: 10px 30px;
+        border-radius: 5px;
+        transition: $transition;
+    
+        &:hover {
+          background-color: $cta-color;
+          cursor: pointer;
+        }
+    }
+}
+
 @mixin responsive-image($border-radius: 7.5px, $object-fit: contain) {
     & {
         display: flex;
