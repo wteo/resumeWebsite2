@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './Tags.scss';
+import './Tag.scss';
 
-function Process({ list, arr }) {
+function Tag({ list, arr }) {
 
   return (
     <ul className="tags">{ list }:
@@ -11,4 +11,4 @@ function Process({ list, arr }) {
   );
 }
 
-export default Process;
+export default Tag;

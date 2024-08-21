@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Section from '../../ui/Section';
-import Tags from '../../components/Tags';
+import Tags from '../../components/Tag';
 
 import './Article.scss';
 

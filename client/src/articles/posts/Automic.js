@@ -1,47 +1,32 @@
 import React from 'react';
 
 import Section from '../../ui/Section';
-import Tags from '../../components/Tags';
+import Tags from '../../components/Tag';
 
 import '../templates/Article.scss';
 
-import plicoLaptop from '../../assets/images/plico_laptop.webp';
-import plicoMobile from '../../assets/images/plico_mobile.webp';
-import plicoModalVideo from '../../assets/images/plico_modal.mp4';
-import plicoModal from '../../assets/images/plico_modal.webp';
-import plicoMenuVideo from '../../assets/images/plico_menu.mp4';
-import plicoMenu from '../../assets/images/plico_menu.webp';
+import automicLaptop from '../../assets/images/automic_laptop.webp';
+import automicMobile from '../../assets/images/automic_mobile.webp';
 
 function Article() {
 
     const tags = ['HTML', 'CSS', 'JavaScript'];
 
-    const url = 'https://www.plicoenergy.com.au/';
+    const url = 'https://www.automicgroup.com.au/';
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const images = [{
-        src: plicoLaptop,
-        alt: 'Plico on a Macbook',
+        src: automicLaptop,
+        alt: 'Automic in Mac',
         video: null,
     },{
-        src: plicoMobile,
-        alt: 'Plico on a mobile',
+        src: automicMobile,
+        alt: 'Automic in mobile',
         video: null,
-    },
-    {
-        src: plicoModal,
-        alt: 'Plico Modal',
-        video: plicoModalVideo,
-        description: 'A modal for site visitor to select their geographic location. This affects the pricing of products.'
-    }, {
-        src: plicoMenu,
-        alt: 'Plico mobile menu',
-        video: plicoMenuVideo,
-        description: 'Mobile menu'
     }];
 
     return (
-        <Section sectionClassName="article" title="Plico Energy">
+        <Section sectionClassName="article" title="Automic Group">
             <article className="article__group">
                 <div className="article__description">
                     <p>
@@ -65,7 +50,7 @@ function Article() {
                                         </video> 
                                 }
                             </div>
-                            <p className="article__image-description">{ image.description ?? ''}</p>
+                            <p className="article__image-description">{ image.description ?? '' }</p>
                             </>))
                     }
                 </div>

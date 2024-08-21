@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-import Tags from '../components/Tags';
+import Tag from '../components/Tag';
 
 import Section from '../ui/Section';
 
@@ -80,7 +80,7 @@ function Process() {
                         <div className="process__item" key={categoryIndex}>
                             <h4 className="process__category">{category.category}</h4>
                             <p className="process__description">{category.description}</p>
-                            <Tags list="Tools Used" arr={category.tools} />
+                            <Tag list="Tools Used" arr={category.tools} />
                             <div className="process__image-wrapper">
                                 <video className="process__video" autoPlay loop muted playsInline poster={category.caseStudy.src}>
                                     <source src={category.caseStudy.video} type="video/mp4" />
