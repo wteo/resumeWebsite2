@@ -2,8 +2,8 @@ import React from 'react';
 
 import './Social.scss';
 
-import gitHub from '../assets/github.png';
-import linkedin from '../assets/linkedin.png';
+import gitHub from '../assets/icons/github.png';
+import linkedin from '../assets/icons/linkedin.png';
 
 function Social() {
 

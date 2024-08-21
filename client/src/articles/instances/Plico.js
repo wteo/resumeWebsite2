@@ -1,59 +1,47 @@
 import React from 'react';
 
-import Section from '../ui/Section';
-import Tags from '../ui/Tags';
+import Section from '../../ui/Section';
+import Tags from '../../components/Tags';
 
-import './Article.scss';
+import '../templates/Article.scss';
 
-import etiketteOldLaptop from '../assets/etikette_old_laptop.webp';
-import etiketteOldMobile from '../assets/etikette_old_mobile.webp';
-import etiketteNewLaptop from '../assets/etikette_new_laptop.webp';
-import etiketteNewMobile from '../assets/etikette_new_mobile.webp';
-import etiketteBanner from '../assets/etikette_banner.webp';
-import etiketteBannerVideo from '../assets/etikette_banner.mp4';
-import etikettePagination from '../assets/etikette_pagination.webp';
-import etikettePaginationVideo from '../assets/etikette_pagination.mp4';
+import plicoLaptop from '../../assets/images/plico_laptop.webp';
+import plicoMobile from '../../assets/images/plico_mobile.webp';
+import plicoModalVideo from '../../assets/images/plico_modal.mp4';
+import plicoModal from '../../assets/images/plico_modal.webp';
+import plicoMenuVideo from '../../assets/images/plico_menu.mp4';
+import plicoMenu from '../../assets/images/plico_menu.webp';
 
 function Article() {
 
-    const tags = ['Figma', 'Shopify', 'Liquid', 'JavaScript'];
+    const tags = ['HTML', 'CSS', 'JavaScript'];
 
-    const url = 'https://etikettecandles.com/';
+    const url = 'https://www.plicoenergy.com.au/';
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const images = [{
-        src: etiketteNewLaptop,
-        alt: 'New Etikette Design on a Macbook',
+        src: plicoLaptop,
+        alt: 'Plico on a Macbook',
         video: null,
-        description: 'Etikette New Design'
     },{
-        src: etiketteNewMobile,
-        alt: 'New Etikette Design on a mobile',
+        src: plicoMobile,
+        alt: 'Plico on a mobile',
         video: null,
-        description: 'Etikette New Design'
     },
     {
-        src: etiketteOldLaptop,
-        alt: 'Old Etikette Design on a Macbook',
-        video: null,
-        description: 'Etikette\'s old design in a Macbook'
+        src: plicoModal,
+        alt: 'Plico Modal',
+        video: plicoModalVideo,
+        description: 'A modal for site visitor to select their geographic location. This affects the pricing of products.'
     }, {
-        src: etiketteOldMobile,
-        alt: 'Old Etikette Design on a mobile',
-        video: null,
-        description: 'Etikette\'s old design in an Iphone'
-    }, {
-        src: etiketteBanner,
-        alt: 'Etikette Banner',
-        video: etiketteBannerVideo,
-    }, {
-        src: etikettePagination,
-        alt: 'Etikette Pagination',
-        video: etikettePaginationVideo,
+        src: plicoMenu,
+        alt: 'Plico mobile menu',
+        video: plicoMenuVideo,
+        description: 'Mobile menu'
     }];
 
     return (
-        <Section sectionClassName="article" title="Etikette Candles">
+        <Section sectionClassName="article" title="Plico Energy">
             <article className="article__group">
                 <div className="article__description">
                     <p>
@@ -77,7 +65,7 @@ function Article() {
                                         </video> 
                                 }
                             </div>
-                            <p className="article__image-description">{ image.description ?? '' }</p>
+                            <p className="article__image-description">{ image.description ?? ''}</p>
                             </>))
                     }
                 </div>

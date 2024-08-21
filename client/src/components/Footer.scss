@@ -14,6 +14,10 @@
     &__menu {
         list-style: none;
         padding-inline-start: 0;
+
+        a {
+            text-decoration: none;
+        }
     }
 
     &__menu-item:hover {

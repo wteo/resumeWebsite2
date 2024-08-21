@@ -1,7 +1,8 @@
 import React from 'react';
 
+import Form from '../components/Form';
+
 import Section from '../ui/Section';
-import Form from '../ui/Form';
 
 import './Contact.scss';
 

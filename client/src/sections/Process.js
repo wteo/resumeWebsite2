@@ -1,16 +1,17 @@
 import React, { useRef } from 'react';
 
+import Tags from '../components/Tags';
+
 import Section from '../ui/Section';
-import Tags from '../ui/Tags';
 
 import './Process.scss';
 
-import gotsauss from '../assets/gotsauss.webp';
-import gotsaussVideo from '../assets/gotsauss.mp4';
-import etikette from '../assets/etikette.webp';
-import etiketteVideo from '../assets/etikette.mp4';
-import automic from '../assets/automic.webp';
-import automicVideo from '../assets/automic.mp4';
+import gotsauss from '../assets/images/gotsauss.webp';
+import gotsaussVideo from '../assets/videos/gotsauss.mp4';
+import etikette from '../assets/images/etikette.webp';
+import etiketteVideo from '../assets/videos/etikette.mp4';
+import automic from '../assets/images/automic.webp';
+import automicVideo from '../assets/videos/automic.mp4';
 
 function Process() {
 

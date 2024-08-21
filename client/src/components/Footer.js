@@ -4,12 +4,7 @@ import ContentWrapper from '../ui/ContentWrapper';
 
 import './Footer.scss';
 
-function Footer({ routeHandler }) {
-
-    const homeRouteHandler = () => routeHandler('home');
-    const projectsRouteHandler = () => routeHandler('projects');
-    const contactRouteHandler = () => routeHandler('contact');
-    const blogsRouteHandler = () => routeHandler('blogs');
+function Footer() {
 
     return (
         <footer className="footer">
@@ -17,10 +12,10 @@ function Footer({ routeHandler }) {
                 <hr />
                 <div className="footer__content">
                     <ul className="footer__menu">
-                        <li className="footer__menu-item" onClick={ homeRouteHandler }>Home</li>
-                        <li className="footer__menu-item" onClick={ projectsRouteHandler }>My Work</li>
-                        <li className="footer__menu-item" onClick={ contactRouteHandler }>Contact</li>
-                        <li className="footer__menu-item" onClick={ blogsRouteHandler }>Blogs</li>
+                        <a href="./"><li className="footer__menu-item">Home</li></a>
+                        <a href="./projects"><li className="footer__menu-item">My Work</li></a>
+                        <a href="./contact"><li className="footer__menu-item">Contact</li></a>
+                        <a href="./blogs"><li className="footer__menu-item">Blogs</li></a>
                     </ul>
                     <div className="footer__contact">
                         <p className="footer__contact-detail">hello@wendyteo.dev</p>

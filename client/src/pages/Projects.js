@@ -5,16 +5,16 @@ import Section from '../ui/Section';
 import './Projects.scss';
 
 // Large projects or companies
-import etikette from '../assets/etikette.webp';
-import etiketteVideo from '../assets/etikette.mp4';
-import play from '../assets/play.webp';
-import plico from '../assets/plico.webp';
-import automic from '../assets/automic.webp';
+import etikette from '../assets/images/etikette.webp';
+import etiketteVideo from '../assets/videos/etikette.mp4';
+import play from '../assets/images/play.webp';
+import plico from '../assets/images/plico.webp';
+import automic from '../assets/images/automic.webp';
 
 // Landing pages
-import blockchain from '../assets/blockchain.webp';
-import tls from '../assets/tls.webp';
-import gotsauss from '../assets/gotsauss.webp';
+import blockchain from '../assets/images/blockchain.webp';
+import tls from '../assets/images/tls.webp';
+import gotsauss from '../assets/images/gotsauss.webp';
 
 function Projects() {
     return (

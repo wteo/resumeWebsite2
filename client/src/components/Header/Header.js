@@ -1,9 +1,9 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 
-import ContentWrapper from '../ui/ContentWrapper';
+import ContentWrapper from '../../ui/ContentWrapper';
 
-import Files from './Files';
+import Files from './Files/Files';
 
 import './Header.scss';
 
