@@ -2,6 +2,7 @@ import React from 'react';
 
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
+import ArticleMedia from './ArticleMedia';
 
 import './Article.scss';
 
@@ -21,7 +22,7 @@ function Article() {
     const url = 'https://etikettecandles.com/';
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
-    const images = [{
+    const assets = [{
         src: etiketteNewLaptop,
         alt: 'New Etikette Design on a Macbook',
         video: null,
@@ -63,24 +64,7 @@ function Article() {
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
                 </div>
-                <div className="article__media">
-                    {
-                        images.map((image, index) => (
-                            <>
-                            <div className="article__image-wrapper" key={index}>
-                                {
-                                    image.video === null ?
-                                        <img className={`article__image ${image.alt.includes('mobile') ? "mobile" : ''}` } src={image.src} alt={image.alt} /> :
-                                        <video className="article__video" autoPlay loop muted playsInline poster={image.src}>
-                                            <source src={image.video} type="video/mp4" />
-                                            <img className="article__image" src={image.src} alt={image.alt} />
-                                        </video> 
-                                }
-                            </div>
-                            <p className="article__image-description">{ image.description ?? '' }</p>
-                            </>))
-                    }
-                </div>
+                <ArticleMedia assets={assets} />
             </article>
         </Section>
     );

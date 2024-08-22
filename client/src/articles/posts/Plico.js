@@ -2,6 +2,7 @@ import React from 'react';
 
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
+import ArticleMedia from '../templates/ArticleMedia';
 
 import '../templates/Article.scss';
 
@@ -14,16 +15,16 @@ import plicoMenu from '../../assets/images/plico_menu.webp';
 
 function Plico() {
 
-    const tags = ['HTML', 'CSS', 'JavaScript'];
+    const tags = ['HTML', 'CSS', 'JavaScript', 'HubSpot'];
 
     const url = 'https://www.plicoenergy.com.au/';
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
-    const images = [{
+    const assets = [{
         src: plicoLaptop,
         alt: 'Plico on a Macbook',
         video: null,
-    },{
+    }, {
         src: plicoMobile,
         alt: 'Plico on a mobile',
         video: null,
@@ -37,7 +38,7 @@ function Plico() {
         src: plicoMenu,
         alt: 'Plico mobile menu',
         video: plicoMenuVideo,
-        description: 'Mobile menu'
+        description: 'Plico\'s navigation menu'
     }];
 
     return (
@@ -45,30 +46,15 @@ function Plico() {
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m
+                        Plico Energy, a leading energy provider in WA, needed a location-based modal on their website's global header to help users input their geographic location in Australia. This was crucial for adjusting their subscription pricing based on where the user was located. Since Plico currently only operates in a few key states like Victoria and WA, users from outside these areas needed to be redirected to an "Expression of Interest" form.
                     </p>
-                    <p>kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m</p>
+                    <p>
+                        I built a modal that appears when users click the location icon, guiding them to either the relevant pricing details or the interest form, depending on their location. In addition, I have also customised other parts of their website components, such as the mobile navigation menu, accordions, and carousels, to better align with their needs.
+                    </p>
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
                 </div>
-                <div className="article__media">
-                    {
-                        images.map((image, index) => (
-                            <>
-                            <div className="article__image-wrapper" key={index}>
-                                {
-                                    image.video === null ?
-                                        <img className={`article__image ${image.alt.includes('mobile') ? "mobile" : ''}` } src={image.src} alt={image.alt} /> :
-                                        <video className="article__video" autoPlay loop muted playsInline poster={image.src}>
-                                            <source src={image.video} type="video/mp4" />
-                                            <img className="article__image" src={image.src} alt={image.alt} />
-                                        </video> 
-                                }
-                            </div>
-                            <p className="article__image-description">{ image.description ?? ''}</p>
-                            </>))
-                    }
-                </div>
+                <ArticleMedia assets={assets} />
             </article>
         </Section>
     );

@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 import Tag from '../components/Tag';
 
@@ -41,6 +42,7 @@ function Process() {
                 src: gotsauss,
                 alt: 'Got Sauce?',
                 video: gotsaussVideo,
+                url: '/projects/gotsauss',
                 desc: 'My first collaboration with Anthony Attapattu on his "Gotsauss" landing page. This was a pivotal project that laid the foundation for how I work today.'
             },
         },
@@ -54,6 +56,7 @@ function Process() {
                 src: etikette,
                 alt: 'Brighten your online presence!',
                 video: etiketteVideo,
+                url: '/projects/etikette',
                 desc: 'I partnered with a UI/UX designer to craft a custom Shopify theme for Etikette, a family-owned candle business, revitalizing their online storefront.'
 
             },
@@ -66,6 +69,7 @@ function Process() {
                 src: automic,
                 alt: 'Migrating to a new platform?',
                 video: automicVideo,
+                url: '/projects/automic',
                 desc: ' I seamlessly transitioned Automic Group\'s website from WordPress to HubSpot, providing ongoing support for optimization.'
             },
         }
@@ -89,7 +93,7 @@ function Process() {
                             </div>
 
                             <p className="process__image-text"><strong>{category.caseStudy.alt}</strong> {category.caseStudy.desc}</p>
-                            <a className="process__link" href="/">Learn More</a>
+                            <Link className="process__link" to={category.caseStudy.url}>Learn More</Link>
                         </div>
                     ))
                 }

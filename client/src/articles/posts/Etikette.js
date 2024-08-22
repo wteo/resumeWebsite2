@@ -2,6 +2,7 @@ import React from 'react';
 
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
+import ArticleMedia from '../templates/ArticleMedia';
 
 import '../templates/Article.scss';
 
@@ -21,12 +22,12 @@ function Etikette() {
     const url = 'https://etikettecandles.com/';
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
-    const images = [{
+    const assets = [{
         src: etiketteNewLaptop,
         alt: 'New Etikette Design on a Macbook',
         video: null,
         description: 'Etikette New Design'
-    },{
+    }, {
         src: etiketteNewMobile,
         alt: 'New Etikette Design on a mobile',
         video: null,
@@ -57,30 +58,15 @@ function Etikette() {
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m
+                        Etikette Candles wanted to refresh their online presence with a modern, user-friendly design. To achieve this, I collaborated with a UI/UX designer to redesign their Shopify website, focusing on improving the user experience and enhancing the brand's visual appeal.
                     </p>
-                    <p>kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m</p>
+                    <p>
+                        Working closely with the UI/UX designer, I implemented the new design in Shopify, ensuring that the site was not only aesthetically pleasing but also functional and easy to navigate. My responsibilities included integrating custom design elements, optimizing the site for performance, and ensuring seamless responsiveness across all devices.
+                    </p>
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
                 </div>
-                <div className="article__media">
-                    {
-                        images.map((image, index) => (
-                            <>
-                            <div className="article__image-wrapper" key={index}>
-                                {
-                                    image.video === null ?
-                                        <img className={`article__image ${image.alt.includes('mobile') ? "mobile" : ''}` } src={image.src} alt={image.alt} /> :
-                                        <video className="article__video" autoPlay loop muted playsInline poster={image.src}>
-                                            <source src={image.video} type="video/mp4" />
-                                            <img className="article__image" src={image.src} alt={image.alt} />
-                                        </video> 
-                                }
-                            </div>
-                            <p className="article__image-description">{ image.description ?? '' }</p>
-                            </>))
-                    }
-                </div>
+                <ArticleMedia assets={assets} />
             </article>
         </Section>
     );

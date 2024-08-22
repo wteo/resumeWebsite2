@@ -2,6 +2,7 @@ import React from 'react';
 
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
+import ArticleMedia from '../templates/ArticleMedia';
 
 import '../templates/Article.scss';
 
@@ -10,12 +11,12 @@ import automicMobile from '../../assets/images/automic_mobile.webp';
 
 function Automic() {
 
-    const tags = ['HTML', 'CSS', 'JavaScript'];
+    const tags = ['HTML', 'CSS', 'JavaScript', 'HubSpot'];
 
     const url = 'https://www.automicgroup.com.au/';
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
-    const images = [{
+    const assets = [{
         src: automicLaptop,
         alt: 'Automic in Mac',
         video: null,
@@ -30,30 +31,15 @@ function Automic() {
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m
+                        Automic Group needed to migrate their website from WordPress to HubSpot to leverage HubSpot's powerful marketing and CRM tools. They tasked me with rebuilding most of their existing pages within the HubSpot environment, ensuring a smooth transition while preserving their brand identity.
                     </p>
-                    <p>kjds lfksd flkjh dbsfjhbs fojhs bafjhb slnfb lsjkbdf sjnf sfjshb f,m</p>
+                    <p>
+                        I successfully recreated the majority of their website pages in HubSpot, maintaining consistency with the original design and functionality. Additionally, I developed a couple of custom blog templates tailored to their content needs, enabling them to manage and publish blog posts more efficiently within the HubSpot platform.
+                    </p>
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
                 </div>
-                <div className="article__media">
-                    {
-                        images.map((image, index) => (
-                            <>
-                            <div className="article__image-wrapper" key={index}>
-                                {
-                                    image.video === null ?
-                                        <img className={`article__image ${image.alt.includes('mobile') ? "mobile" : ''}` } src={image.src} alt={image.alt} /> :
-                                        <video className="article__video" autoPlay loop muted playsInline poster={image.src}>
-                                            <source src={image.video} type="video/mp4" />
-                                            <img className="article__image" src={image.src} alt={image.alt} />
-                                        </video> 
-                                }
-                            </div>
-                            <p className="article__image-description">{ image.description ?? '' }</p>
-                            </>))
-                    }
-                </div>
+                <ArticleMedia assets={assets} />
             </article>
         </Section>
     );
