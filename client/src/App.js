@@ -10,7 +10,10 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
 
-import Article from './articles/templates/Article';
+// Blog Posts
+import Etikette from './articles/posts/Etikette';
+import Plico from './articles/posts/Plico';
+import Automic from './articles/posts/Automic';
 
 import './App.scss';
 
@@ -22,8 +25,11 @@ function App() {
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/contact" element={<Contact />} />
-              <Route path="/blogs" element={<Article />} />
+              <Route path="/projects/etikette" element={<Etikette />} />
+              <Route path="/projects/plico" element={<Plico />} />
+              <Route path="/projects/automic" element={<Automic />} />
+              <Route path="/contact" element={<Contact />}/>
+              <Route path="/blogs" element={<Error404 />} />
               <Route path="/*" element={<Error404 />} />
             </Routes>
             <Footer />

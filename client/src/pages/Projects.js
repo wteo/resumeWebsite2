@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import Section from '../ui/Section';
 
@@ -20,31 +21,31 @@ function Projects() {
     return (
         <Section sectionClassName="projects" title="How I Work">
             <div className="projects__group">
-                <a className="projects__image-wrapper--large" href="/">
+                <Link className="projects__image-wrapper--large" to="/projects/etikette">
                     <video className="projects__video" autoPlay loop muted playsInline poster={etikette}>
                         <source src={etiketteVideo} type="video/mp4" />
                         <img className="projects__image" src={etikette} alt="Etikette" />
                     </video>
-                </a>
-                <a className="projects__image-wrapper--narrow" href="/">
+                </Link>
+                <Link className="projects__image-wrapper--narrow" to="/projects/play">
                     <img className="projects__image" src={play} alt="Gotsauss" />
-                </a>
-                <a className="projects__image-wrapper cyan" href="/">
+                </Link>
+                <Link className="projects__image-wrapper cyan" to="/projects/plico">
                     <img className="projects__image" src={plico} alt="Plico Energy" />
-                </a>
-                <a className="projects__image-wrapper--large" href="/">
+                </Link>
+                <Link className="projects__image-wrapper--large" to="/projects/automic">
                     <img className="projects__image zoom" src={automic} alt="Automic" />
-                </a>
-                <a className="projects__image-wrapper white" href="/">
+                </Link>
+                <Link className="projects__image-wrapper white" to="/projects/blockchain">
                     <img className="projects__image" src={blockchain} alt="Sydney Blockchain" />
-                </a>
-                <a className="projects__image-wrapper" href="/">
+                </Link>
+                <Link className="projects__image-wrapper" to="/projects/gotsauss">
                     <img className="projects__image" src={gotsauss} alt="Gotsauss" />
                     <p className="projects__image-description">Anthony Attapattu</p>
-                </a>
-                <a className="projects__image-wrapper ocean" href="/">
+                </Link>
+                <Link className="projects__image-wrapper ocean" to="/projects/tls">
                     <img className="projects__image" src={tls} alt="The Lazy Society" />
-                </a>
+                </Link>
             </div>
         </Section>
     );

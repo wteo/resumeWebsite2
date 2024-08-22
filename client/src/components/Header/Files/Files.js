@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import Social from '../../Social';
 import Form from '../../Form';
@@ -41,9 +42,9 @@ function Files() {
                     <Social />
                 </div>
             </div>
-            <a id="file__form" className="file forest" href="./contact">
+            <Link id="file__form" className="file forest" to="contact">
                 <Form />
-            </a>
+            </Link>
             <ProjectFile />
             <BlogFile />
         </section>

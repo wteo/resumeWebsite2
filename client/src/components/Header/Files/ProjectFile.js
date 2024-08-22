@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import './Files.scss';
 
@@ -10,7 +11,7 @@ import play from '../../../assets/images/play.webp';
 function ProjectFile() {
 
   return (
-    <a className="file coral" href="./projects">
+    <Link className="file coral" to="projects">
       <h3 className="file__title">My Selected Works</h3>
       <hr className="file__divider" />
       <div className="file__content">
@@ -29,7 +30,7 @@ function ProjectFile() {
           </div>
         </div>
       </div>
-    </a>
+    </Link>
   );
 }
 

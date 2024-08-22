@@ -7,12 +7,12 @@ import '../templates/Article.scss';
 
 import plicoLaptop from '../../assets/images/plico_laptop.webp';
 import plicoMobile from '../../assets/images/plico_mobile.webp';
-import plicoModalVideo from '../../assets/images/plico_modal.mp4';
+import plicoModalVideo from '../../assets/videos/plico_modal.mp4';
 import plicoModal from '../../assets/images/plico_modal.webp';
-import plicoMenuVideo from '../../assets/images/plico_menu.mp4';
+import plicoMenuVideo from '../../assets/videos/plico_menu.mp4';
 import plicoMenu from '../../assets/images/plico_menu.webp';
 
-function Article() {
+function Plico() {
 
     const tags = ['HTML', 'CSS', 'JavaScript'];
 
@@ -74,4 +74,4 @@ function Article() {
     );
 }
 
-export default Article;
+export default Plico;

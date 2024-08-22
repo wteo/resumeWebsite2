@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import ContentWrapper from '../../ui/ContentWrapper';
 
@@ -23,19 +24,19 @@ function Header() {
             <header className="header">
                 <ContentWrapper>
                     <div className="header__container">
-                        <a href="/">
+                        <Link to="/">
                             <h1 className="header__title" style={{ opacity: isHomePage ? '0' : '1' }}>Wendy Teo</h1>
-                        </a>
+                        </Link>
                         <ul className="header__menu-list">
-                            <a href="./projects">
+                            <Link to="projects">
                                 <li className={`header__menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>Selected Works</li>
-                            </a>
-                            <a href="./contact">
+                            </Link>
+                            <Link to="contact">
                                 <li className={`header__menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Work with Me</li>
-                            </a>
-                            <a href="./blogs">
+                            </Link>
+                            <Link to="blogs">
                                 <li className={`header__menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>Blogs</li>
-                            </a>
+                            </Link>
                         </ul>
                     </div>
                     <div className="header__mobile-bar" style={{ backdropFilter: `blur(${isHomePage ? '0' : '5'}px)` }}></div>
@@ -49,15 +50,15 @@ function Header() {
                     menuOpen && (
                         <div className="header__mobile-menu">
                             <ul className="header__mobile-menu-list">
-                                <a href="./projects">
+                                <Link to="projects">
                                     <li className={`header__mobile-menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>Selected Works</li>
-                                </a>
-                                <a href="./contact">
+                                </Link>
+                                <Link to="contact">
                                     <li className={`header__mobile-menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Work with Me</li>
-                                </a>
-                                <a href="./blogs">
+                                </Link>
+                                <Link to="blogs">
                                     <li className={`header__mobile-menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>Read my Blogs</li>
-                                </a>
+                                </Link>
                             </ul>
                         </div>
                     )}
