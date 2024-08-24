@@ -1,4 +1,5 @@
 @import './sass/variables';
+@import './sass/mixins';
 
 body {
     margin: 0;
@@ -19,11 +20,6 @@ a {
         cursor: pointer;
         color: $cta-color;
     }
-}
-
-button {
-    background-color: $cta-color;
-    color: #ffffff;
 }
 
 hr {

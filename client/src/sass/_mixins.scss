@@ -7,6 +7,7 @@
         padding: 10px 30px;
         border-radius: 5px;
         transition: $transition;
+        font-family: 'Georgia', 'Times New Roman';
     
         &:hover {
           background-color: $cta-color;
@@ -36,7 +37,7 @@
 @mixin page-layout($margin-bottom: 20px) {
     & { 
         text-align: left;
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         line-height: 1.6;
         padding: 0px 40px 0px;
 

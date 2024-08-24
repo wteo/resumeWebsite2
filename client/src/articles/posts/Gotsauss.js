@@ -11,7 +11,7 @@ import gotsaussMobile from '../../assets/images/gotsauss_mobile.webp';
 
 function Gotsauss() {
 
-    const tags = ['HTML', 'CSS', 'JavaScript'];
+    const tags = ['Fidgma', 'JavaScript', 'VueJS', 'MailJet', 'Netlify'];
 
     const url = 'https://gotsauss.com/';
 
@@ -27,14 +27,21 @@ function Gotsauss() {
     }];
 
     return (
-        <Section sectionClassName="article" title="Gotsauss">
+        <Section sectionClassName="article" title="Landing Page for Personal Trainer Anthony Attapattu">
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        A professional coach trainer needed a dynamic, modern landing page to attract potential clients and showcase their coaching services. They wanted a solution that was fast, responsive, and easy to maintain, making Vue.js the perfect choice.
+                        Anthony Attapattu, a professional training coach, needed a landing page to attract clients and showcase his services with 
+                        minimal ongoing maintenance. Since a Content Management System (CMS) wasn't necessary, I chose VueJS for its quick setup and 
+                        fast response time.
                     </p>
                     <p>
-                        I designed and developed a sleek, interactive landing page using Vue.js. The page was tailored to highlight the coach’s expertise, services, and client testimonials, all while providing a seamless user experience. The use of Vue.js allowed for smooth transitions, responsive design, and quick load times, ensuring the page was both visually appealing and functional.
+                        After an initial call to understand his needs, I created a wireframe aligned with his brand. 
+                        Following a few design revisions, I developed the landing page, which highlights his profile, services, client testimonials, 
+                        and includes a contact form, with weekly updates via Zoom or email.
+                    </p>
+                    <p>
+                        With no CMS required, I integrated MailJet for form maintenance and hosted the site on Netlify.
                     </p>
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>

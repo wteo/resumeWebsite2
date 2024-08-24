@@ -15,41 +15,40 @@ import plicoMenu from '../../assets/images/plico_menu.webp';
 
 function Plico() {
 
-    const tags = ['HTML', 'CSS', 'JavaScript', 'HubSpot'];
+    const tags = ['HTML', 'CSS', 'JavaScript', 'HubSpot CMS', 'Hubl'];
 
     const url = 'https://www.plicoenergy.com.au/';
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const assets = [{
+        src: plicoModal,
+        alt: 'Plico Energy Modal',
+        video: plicoModalVideo,
+        description: 'Demo of the location modal I built for Plico Energy.'
+    }, {
+        src: plicoMenu,
+        alt: 'Plico Energy mobile menu',
+        video: plicoMenuVideo,
+        description: 'Plico Energy\'s mobile navigation menu.'
+    }, {
         src: plicoLaptop,
-        alt: 'Plico on a Macbook',
+        alt: 'Plico Energy on a Macbook',
         video: null,
     }, {
         src: plicoMobile,
-        alt: 'Plico on a mobile',
+        alt: 'Plico Energy on a mobile',
         video: null,
-    },
-    {
-        src: plicoModal,
-        alt: 'Plico Modal',
-        video: plicoModalVideo,
-        description: 'A modal for site visitor to select their geographic location. This affects the pricing of products.'
-    }, {
-        src: plicoMenu,
-        alt: 'Plico mobile menu',
-        video: plicoMenuVideo,
-        description: 'Plico\'s navigation menu'
     }];
 
     return (
-        <Section sectionClassName="article" title="Plico Energy">
+        <Section sectionClassName="article" title="Creating a Modal & Further UI Enhancements for Plico Energy">
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        Plico Energy, a leading energy provider in WA, needed a location-based modal on their website's global header to help users input their geographic location in Australia. This was crucial for adjusting their subscription pricing based on where the user was located. Since Plico currently only operates in a few key states like Victoria and WA, users from outside these areas needed to be redirected to an "Expression of Interest" form.
+                        Plico Energy, a leading energy provider in WA, required a modal on their website's global header to enable users to input their geographic location within Australia. This was essential for adjusting subscription pricing based on the user's location. Since Plico currently operates primarily in VIC and WA, users outside these areas needed to be redirected to an "Expression of Interest" form.
                     </p>
                     <p>
-                        I built a modal that appears when users click the location icon, guiding them to either the relevant pricing details or the interest form, depending on their location. In addition, I have also customised other parts of their website components, such as the mobile navigation menu, accordions, and carousels, to better align with their needs.
+                        As an ongoing client, Plico Energy has also benefited from continuous website customizations that I have implemented to better align with their evolving needs. These updates have included enhancements to the mobile navigation menu, accordions, and carousels, ensuring the site remains user-friendly.
                     </p>
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>

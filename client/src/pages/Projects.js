@@ -19,7 +19,7 @@ import gotsauss from '../assets/images/gotsauss.webp';
 
 function Projects() {
     return (
-        <Section sectionClassName="projects" title="How I Work">
+        <Section sectionClassName="projects" title="My Selected Works">
             <div className="projects__group">
                 <Link className="projects__image-wrapper--large" to="/projects/etikette">
                     <video className="projects__video" autoPlay loop muted playsInline poster={etikette}>

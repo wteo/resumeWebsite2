@@ -10,7 +10,7 @@
         gap: 60px;
         margin-top: 30px;
         margin-bottom: 40px;
-        height: 650px;
+        height: 700px;
     }
 
     &__description {
@@ -23,6 +23,11 @@
     &__media {
         overflow: scroll;
         border-radius: 7.5px;
+        margin-bottom: 20px;
+
+        p {
+            font-size: 1rem;
+        }
     }
 
     &__image, &__video {
@@ -45,15 +50,27 @@
 
 
 @media only screen and (max-width: 1000px) {
-    .article__group {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        height: auto;
+    .article {
+        &__group {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            height: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .article {
+        &__media p {
+            font-size: 0.85rem;
+        }
     }
 }
 
 @media only screen and (max-width: 500px) {
-    .article__image.mobile {
-        max-height: 200px;
+    .article {
+        &__image.mobile {
+            max-height: 200px;
+        }
     }
 }

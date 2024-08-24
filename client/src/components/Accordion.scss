@@ -55,6 +55,7 @@
       transition: all 0.3s ease-in-out;
       padding-left: 10px;
       padding-right: 10px;
+      font-size: 1.1rem;
 
       &.active {
         max-height: 500px; /* Adjust based on content size */
@@ -81,5 +82,11 @@
     li {
       margin-left: 15px;
     }
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .accordions .accordion-item .accordion-content {
+    font-size: 1rem;
   }
 }

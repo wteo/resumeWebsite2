@@ -25,6 +25,7 @@
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         flex: 0 0 500px;
         scroll-snap-align: start;
+        font-size: 1.1rem;
     }
 
     &__category {
@@ -106,6 +107,7 @@
         &__item {
             flex: 1;
             margin-right: 0px;
+            font-size: 1rem;
         }
 
         &__arrow {

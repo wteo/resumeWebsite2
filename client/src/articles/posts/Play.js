@@ -11,33 +11,32 @@ import playMobile from '../../assets/images/play_mobile.webp';
 
 function Play() {
 
-    const tags = ['HTML', 'CSS', 'JavaScript', 'HubSpot'];
+    const tags = ['HTML', 'CSS', 'JavaScript', 'HubSpot CMS', 'Hubl'];
 
     const url = 'https://www.playinnovation.com.au/';
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const assets = [{
         src: playLaptop,
-        alt: 'Play in Mac',
+        alt: 'Play Innovation in Mac',
         video: null,
     }, {
         src: playMobile,
-        alt: 'Play in mobile',
+        alt: 'Play Innovation in mobile',
         video: null,
     }];
 
     return (
-        <Section sectionClassName="article" title="Play Innovation">
+        <Section sectionClassName="article" title="Custom Code saves Play Innovation AUD$15K">
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        Play Innovation faced the challenge of downgrading their website in HubSpot, which resulted in the loss of several key features, including the critical CTA buttons. To ensure the website maintained its original design and functionality, they needed a custom solution.
+                        To reduce costs, Play Innovation downgraded their Hubspot subscription, which led to the loss of key drag-and-drop 
+                        features within their theme editor, such as editable blog templates and Call-to-Action buttons.
                     </p>
                     <p>
-                        I stepped in to customize the necessary elements, including recreating the CTA buttons that were no longer available in the downgraded version. My goal was to preserve the website’s visual consistency and user experience despite the reduced feature set.
-                    </p>
-                    <p>
-                        Through careful customization, I was able to retain the website’s design integrity and ensure that the essential functions, like CTA buttons, remained effective. This allowed Play Innovation to continue engaging users without compromising on their brand’s look and feel, even after the downgrade.
+                        To main the website's design and functionality, I implemented custom solutions through careful code customization. 
+                        Without compromising their brand's look and feel, this approach saved Play Innovation approximately AUD$15,000 annually.
                     </p>
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>

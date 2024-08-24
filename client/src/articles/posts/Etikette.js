@@ -17,7 +17,7 @@ import etikettePaginationVideo from '../../assets/videos/etikette_pagination.mp4
 
 function Etikette() {
 
-    const tags = ['Figma', 'Shopify', 'Liquid', 'JavaScript'];
+    const tags = ['Figma', 'Shopify', 'Liquid', 'JavaScript', 'GitHub'];
 
     const url = 'https://etikettecandles.com/';
 
@@ -26,42 +26,51 @@ function Etikette() {
         src: etiketteNewLaptop,
         alt: 'New Etikette Design on a Macbook',
         video: null,
-        description: 'Etikette New Design'
+        description: 'Etikette new design'
     }, {
         src: etiketteNewMobile,
         alt: 'New Etikette Design on a mobile',
         video: null,
-        description: 'Etikette New Design'
+        description: 'Etikette new design'
     },
     {
         src: etiketteOldLaptop,
         alt: 'Old Etikette Design on a Macbook',
         video: null,
-        description: 'Etikette\'s old design in a Macbook'
+        description: 'Etikette old design'
     }, {
         src: etiketteOldMobile,
         alt: 'Old Etikette Design on a mobile',
         video: null,
-        description: 'Etikette\'s old design in an Iphone'
+        description: 'Etikette old design'
     }, {
         src: etiketteBanner,
         alt: 'Etikette Banner',
         video: etiketteBannerVideo,
+        description: 'In the original theme, this banner lacked the option to add a heading title in the drag and drop theme editor, which I later incorporated.'
     }, {
         src: etikettePagination,
         alt: 'Etikette Pagination',
         video: etikettePaginationVideo,
+        description: 'The featured collection initially lacked dot indicators. At the UI/UX designer\'s request, I added this design element, incorporating custom JavaScript work.'
     }];
 
     return (
-        <Section sectionClassName="article" title="Etikette Candles">
+        <Section sectionClassName="article" title="Modernizing Etikette's Online Presence">
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        Etikette Candles wanted to refresh their online presence with a modern, user-friendly design. To achieve this, I collaborated with a UI/UX designer to redesign their Shopify website, focusing on improving the user experience and enhancing the brand's visual appeal.
+                        Etikette Candles aimed to modernize their online presence with a more user-friendly Shopify design. 
+                        To achieve this, I collaborated with a UI/UX designer to select and customize a theme that matched 
+                        the client's vision.
                     </p>
                     <p>
-                        Working closely with the UI/UX designer, I implemented the new design in Shopify, ensuring that the site was not only aesthetically pleasing but also functional and easy to navigate. My responsibilities included integrating custom design elements, optimizing the site for performance, and ensuring seamless responsiveness across all devices.
+                        For instance, the original theme offered limited background colour options. To better align with the brand, 
+                        I enhanced it by adding the flexibility to choose any background colours across sections of the site.
+                    </p>
+                    <p>
+                        Additionally, I optimized site performance and ensured full responsiveness across all devices, 
+                        delivering a sleek, modern experience that reflects the brand's identity.
                     </p>
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
