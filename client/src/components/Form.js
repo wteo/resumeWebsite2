@@ -71,7 +71,7 @@ function Form() {
         // Check if there are any errors
         if (!Object.values(newErrors).some(error => error)) {
 
-            const url = process.env.REACT_APP_URL_API_FORMSPREE;
+            const url = process.env.REACT_APP_URL_FORMSPREE;
 
             // Form submission logic here
             fetch(url, {
@@ -111,67 +111,69 @@ function Form() {
 
     return (
         <form className="form" onSubmit={handleSubmit} onClick={() => setIsFormSubmitted(false)}>
-            <table className="form__table">
-                <tbody>
-                    <tr className="form__row">
-                        <td colSpan="2">
-                            <h2 className="form__title">Work with Me</h2>
-                        </td>
-                    </tr>
-                    <tr className="form__row">
-                        <td className="form__label">
-                            <label htmlFor="name">Full Name *</label>
-                        </td>
-                        <td className="form__input">
-                            <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
-                        </td>
-                    </tr>
-                    <tr className="form__row">
-                        <td className="form__label">
-                            <label htmlFor="email">Email *</label>
-                        </td>
-                        <td className="form__input">
-                            <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
-                        </td>
-                    </tr>
-                    <tr className="form__row">
-                        <td className="form__label">
-                            <label htmlFor="phone">Phone</label>
-                        </td>
-                        <td className="form__input">
-                            <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} />
-                        </td>
-                    </tr>
-                    <tr className="form__row">
-                        <td className="form__label">
-                            <label htmlFor="subject">Project</label>
-                        </td>
-                        <td className="form__input">
-                            <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} />
-                        </td>
-                    </tr>
-                    <tr className="form__row">
-                        <td className="form__label">
-                            <label htmlFor="message">Your Message *</label>
-                        </td>
-                        <td className="form__input">
-                            <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required />
-                        </td>
-                    </tr>
-                    <tr className="form__row">
-                        <td colSpan="2" className="form__button-cell">
-                            <button className="form__button" type="submit">
-                                Submit <span className="form__button-icon">&#187;</span>
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div className="form__error-wrapper">
-                {isFormSubmitted && <p className="form__error">{formResponse}</p>}
-                {formErrors.name && <p className="form__error">{formErrors.name}</p>}
-                {formErrors.email && <p className="form__error">{formErrors.email}</p>}
-                {formErrors.message && <p className="form__error">{formErrors.message}</p>}
+            {   !isFormSubmitted &&
+                <table className="form__table">
+                    <tbody>
+                        <tr className="form__row">
+                            <td colSpan="2">
+                                <h2 className="form__title">Work with Me</h2>
+                            </td>
+                        </tr>
+                        <tr className="form__row">
+                            <td className="form__label">
+                                <label htmlFor="name">Full Name *</label>
+                            </td>
+                            <td className="form__input">
+                                <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required />
+                            </td>
+                        </tr>
+                        <tr className="form__row">
+                            <td className="form__label">
+                                <label htmlFor="email">Email *</label>
+                            </td>
+                            <td className="form__input">
+                                <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required />
+                            </td>
+                        </tr>
+                        <tr className="form__row">
+                            <td className="form__label">
+                                <label htmlFor="phone">Phone</label>
+                            </td>
+                            <td className="form__input">
+                                <input type="tel" id="phone" name="phone" value={formData.phone} onChange={handleChange} />
+                            </td>
+                        </tr>
+                        <tr className="form__row">
+                            <td className="form__label">
+                                <label htmlFor="subject">Project</label>
+                            </td>
+                            <td className="form__input">
+                                <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} />
+                            </td>
+                        </tr>
+                        <tr className="form__row">
+                            <td className="form__label">
+                                <label htmlFor="message">Your Message *</label>
+                            </td>
+                            <td className="form__input">
+                                <textarea id="message" name="message" rows="5" value={formData.message} onChange={handleChange} required />
+                            </td>
+                        </tr>
+                        <tr className="form__row">
+                            <td colSpan="2" className="form__button-cell">
+                                <button className="form__button" type="submit">
+                                    Submit <span className="form__button-icon">&#187;</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            }
+            {isFormSubmitted && <p className="form__message-response">{formResponse}</p>}
+            <div className="form__message">
+                {formErrors.name && <p className="form__message-error">{formErrors.name}</p>}
+                {formErrors.email && <p className="form__message-error">{formErrors.email}</p>}
+                {formErrors.message && <p className="form__message-error">{formErrors.message}</p>}
             </div>
         </form>
     );
