@@ -8,6 +8,8 @@ import '../templates/Article.scss';
 
 import automicLaptop from '../../assets/images/automic_laptop.webp';
 import automicMobile from '../../assets/images/automic_mobile.webp';
+import automicText from '../../assets/images/automic_text_animation.webp';
+import automicTextVideo from '../../assets/videos/automic_text_animation.mp4';
 
 function Automic() {
 
@@ -24,6 +26,11 @@ function Automic() {
         src: automicMobile,
         alt: 'Automic Group in mobile',
         video: null,
+    }, {
+        src: automicText,
+        alt: 'Automic Group Text Animation Demo',
+        video: automicTextVideo,
+        description: 'This demo highlights custom code for Automic Group, including a header Login Button with a dropdown menu and an optional fade-in effect for text, adding dynamic elements while preserving the original design.'
     }];
 
     return (

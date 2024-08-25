@@ -8,6 +8,9 @@ import '../templates/Article.scss';
 
 import gotsaussLaptop from '../../assets/images/gotsauss_laptop.webp';
 import gotsaussMobile from '../../assets/images/gotsauss_mobile.webp';
+import gotsaussGallery from '../../assets/images/gotsauss_gallery.webp';
+import gotsaussGalleryVideo from '../../assets/videos/gotsauss_gallery.mp4';
+import gotsaussForm from '../../assets/images/gotsauss_form.webp';
 
 function Gotsauss() {
 
@@ -24,6 +27,16 @@ function Gotsauss() {
         src: gotsaussMobile,
         alt: 'Gotsauss in mobile',
         video: null,
+    }, {
+        src: gotsaussGallery,
+        alt: 'Gotsauss Gallery',
+        video: gotsaussGalleryVideo,
+        description: 'Demo of Anthony\'s photo gallery'
+    }, {
+        src: gotsaussForm,
+        alt: 'Gotsauss Contact Form',
+        video: null,
+        description: 'Contact form'
     }];
 
     return (
