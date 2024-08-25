@@ -19,7 +19,7 @@ function Footer() {
                         <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer"><li className="footer__menu-item">Blogs</li></Link>
                     </ul>
                     <div className="footer__contact">
-                        <p className="footer__contact-detail">hello@wendyteo.dev</p>
+                        <p className="footer__contact-detail">wendyteo.wy@gmail.com</p>
                         <p className="footer__contact-detail">+61 458 369 510</p>
                     </div>
                 </div>
