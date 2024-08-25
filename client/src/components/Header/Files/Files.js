@@ -13,16 +13,18 @@ function Files() {
 
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollTop, setLastScrollTop] = useState(0);
+    const scrollThreshold = 20; // Adjust this value to set how much scrolling up is needed
 
     useEffect(() => {
         const handleScroll = () => {
             const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
             if (currentScrollTop > lastScrollTop) {
                 setIsVisible(false);
-            } else {
+            } 
+            else if (lastScrollTop - currentScrollTop > scrollThreshold) {
                 setIsVisible(true);
             }
-            setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); // Update lastScrollTop, never less than 0
+            setLastScrollTop(currentScrollTop <= 0 ? 0 : currentScrollTop); 
         };
 
         window.addEventListener('scroll', handleScroll);
