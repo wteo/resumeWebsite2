@@ -11,13 +11,13 @@ import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
 
 // Blog Posts
-import Etikette from './articles/posts/Etikette';
-import Play from './articles/posts/Play';
-import Plico from './articles/posts/Plico';
-import Automic from './articles/posts/Automic';
-import Blockchain from './articles/posts/Blockchain';
-import Gotsauss from './articles/posts/Gotsauss';
-import TLS from './articles/posts/TLS';
+import Etikette from './articles/projects/Etikette';
+import Play from './articles/projects/Play';
+import Plico from './articles/projects/Plico';
+import Automic from './articles/projects/Automic';
+import Blockchain from './articles/projects/Blockchain';
+import Gotsauss from './articles/projects/Gotsauss';
+import TLS from './articles/projects/TLS';
 
 import './App.scss';
 
