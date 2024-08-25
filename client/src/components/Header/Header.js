@@ -54,22 +54,23 @@ function Header() {
                         <div className="header__mobile-menu">
                             <ul className="header__mobile-menu-list">
                                 <Link to="/">
-                                    <li className={`header__mobile-menu-item ${location.pathname === '/' ? 'active' : ''}`}>Home</li>
+                                    <li className={`header__mobile-menu-item ${location.pathname === '/' ? 'active' : ''}`} onClick={toggleMenu}>Home</li>
                                 </Link>
                                 <Link to="projects">
-                                    <li className={`header__mobile-menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>Selected Works</li>
+                                    <li className={`header__mobile-menu-item ${location.pathname === '/projects' ? 'active' : ''}`} onClick={toggleMenu}>Selected Works</li>
                                 </Link>
                                 <Link to="contact">
-                                    <li className={`header__mobile-menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Work with Me</li>
+                                    <li className={`header__mobile-menu-item ${location.pathname === '/contact' ? 'active' : ''}`} onClick={toggleMenu}>Work with Me</li>
                                 </Link>
                                 <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">
-                                    <li className={`header__mobile-menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>Read my Blogs</li>
+                                    <li className={`header__mobile-menu-item ${location.pathname === '/blogs' ? 'active' : ''}`} onClick={toggleMenu}>Read my Blogs</li>
                                 </Link>
                             </ul>
                         </div>
                     )}
             </header>
             {isHomePage && <Files />}
+            { menuOpen && <div className="overlay" onClick={toggleMenu} /> }
         </>
     );
 }
