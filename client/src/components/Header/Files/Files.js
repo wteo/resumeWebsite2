@@ -13,7 +13,7 @@ function Files() {
 
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollTop, setLastScrollTop] = useState(0);
-    const scrollThreshold = 30; // Adjust this value to set how much scrolling up is needed
+    const scrollThreshold = 15; // Adjust this value to set how much scrolling up is needed
 
     useEffect(() => {
         const handleScroll = () => {
