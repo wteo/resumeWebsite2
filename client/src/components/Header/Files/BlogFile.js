@@ -6,7 +6,7 @@ import './Files.scss';
 function BlogFile() {
 
   return (
-    <Link className="file lime" to="blogs">
+    <Link className="file lime" to="https://medium.com/" target="_blank" rel="noopener noreferrer">
       <h3 className="file__title">Read My Blogs</h3>
       <hr className="file__divider" />
       <p className="file__content">

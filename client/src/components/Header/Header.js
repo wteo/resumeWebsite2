@@ -34,7 +34,7 @@ function Header() {
                             <Link to="contact">
                                 <li className={`header__menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Work with Me</li>
                             </Link>
-                            <Link to="blogs">
+                            <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">
                                 <li className={`header__menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>Blogs</li>
                             </Link>
                         </ul>
@@ -56,7 +56,7 @@ function Header() {
                                 <Link to="contact">
                                     <li className={`header__mobile-menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Work with Me</li>
                                 </Link>
-                                <Link to="blogs">
+                                <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">
                                     <li className={`header__mobile-menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>Read my Blogs</li>
                                 </Link>
                             </ul>

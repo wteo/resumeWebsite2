@@ -10,7 +10,7 @@ import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
 
-// Blog Posts
+// Project Articles
 import Etikette from './articles/projects/Etikette';
 import Play from './articles/projects/Play';
 import Plico from './articles/projects/Plico';
@@ -29,13 +29,13 @@ function App() {
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
-              <Route path="/projects/etikette" element={<Etikette />} />
-              <Route path="/projects/play" element={<Play />} />
-              <Route path="/projects/plico" element={<Plico />} />
-              <Route path="/projects/automic" element={<Automic />} />
-              <Route path="/projects/blockchain" element={<Blockchain />} />
-              <Route path="/projects/gotsauss" element={<Gotsauss />} />
-              <Route path="/projects/tls" element={<TLS />} />
+                <Route path="/projects/etikette" element={<Etikette />} />
+                <Route path="/projects/play" element={<Play />} />
+                <Route path="/projects/plico" element={<Plico />} />
+                <Route path="/projects/automic" element={<Automic />} />
+                <Route path="/projects/blockchain" element={<Blockchain />} />
+                <Route path="/projects/gotsauss" element={<Gotsauss />} />
+                <Route path="/projects/tls" element={<TLS />} />
               <Route path="/contact" element={<Contact />}/>
               <Route path="/blogs" element={<Error404 />} />
               <Route path="/*" element={<Error404 />} />
