@@ -8,7 +8,7 @@ import linkedin from '../assets/icons/linkedin.png';
 function Social() {
 
     const socials = [{
-        url: 'https://www.linkedin.com/in/wendy-teo-36821461/',
+        url: 'https://linkedin.com/in/wendy-teo-36821461',
         src: linkedin,
         alt: 'LinkedIn'
     },{
