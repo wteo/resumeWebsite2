@@ -95,13 +95,16 @@
         left: 50%;
         background-color: $alternate-bg-color;
         margin: 0;
+        padding-top: 50px;
         z-index: 10000;
         text-align: left;
         font-size: 1.5rem;
+        transform: translateX(100%);
+        transition: $transition;
     }
 
-    &__mobile-menu-list {
-        margin-top: 15vh;
+    &__mobile-menu.active {
+        transform: translateX(0%);
     }
 
     &__mobile-menu-item {

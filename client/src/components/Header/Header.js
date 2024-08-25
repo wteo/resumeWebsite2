@@ -50,8 +50,8 @@ function Header() {
                     )}
                 </ContentWrapper>
                 {
-                    menuOpen && (
-                        <div className="header__mobile-menu">
+                    
+                        <div className={`header__mobile-menu ${ menuOpen ? 'active' : '' }`}>
                             <ul className="header__mobile-menu-list">
                                 <Link to="/">
                                     <li className={`header__mobile-menu-item ${location.pathname === '/' ? 'active' : ''}`} onClick={toggleMenu}>Home</li>
@@ -67,7 +67,7 @@ function Header() {
                                 </Link>
                             </ul>
                         </div>
-                    )}
+                }
             </header>
             {isHomePage && <Files />}
             { menuOpen && <div className="overlay" onClick={toggleMenu} /> }
