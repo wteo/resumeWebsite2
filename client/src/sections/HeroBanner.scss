@@ -6,7 +6,7 @@
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 475px;
+    height: 500px;
     font-size: 2.75rem;
     padding: 50px;
     padding-top: 70px;
@@ -31,7 +31,7 @@
 @media only screen and (max-width: 1000px) {
     .hero {
         font-size: 2.0rem;
-        height: 400px;
+        height: 425px;
 
         &__content {
             width: 65%;
@@ -46,7 +46,7 @@
 @media only screen and (max-width: 650px) {
     .hero {
         font-size: 1.75rem;
-        height: 325px;
+        height: 350px;
         padding-left: 20px;
 
         &__content {
