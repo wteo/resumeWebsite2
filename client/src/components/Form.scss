@@ -2,6 +2,18 @@
 
 .form {
     width: 100%;
+    margin-bottom: -10px;
+
+    &__error-wrapper {
+        margin-top: 10px;
+    }
+
+    &__error {
+        margin: 0 0 5px 20px;
+        list-style-type: disc;
+        display: list-item;
+        color: $error;
+    }
 
     &__title {
         font-size: 1.5rem;

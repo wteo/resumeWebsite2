@@ -28,6 +28,9 @@ function Header() {
                             <h1 className="header__title" style={{ opacity: isHomePage ? '0' : '1' }}>Wendy Teo</h1>
                         </Link>
                         <ul className="header__menu-list">
+                            <Link to="/">
+                                <li className={`header__menu-item ${location.pathname === '/' ? 'active' : ''}`}>Home</li>
+                            </Link>
                             <Link to="projects">
                                 <li className={`header__menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>Selected Works</li>
                             </Link>
@@ -50,6 +53,9 @@ function Header() {
                     menuOpen && (
                         <div className="header__mobile-menu">
                             <ul className="header__mobile-menu-list">
+                                <Link to="/">
+                                    <li className={`header__mobile-menu-item ${location.pathname === '/' ? 'active' : ''}`}>Home</li>
+                                </Link>
                                 <Link to="projects">
                                     <li className={`header__mobile-menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>Selected Works</li>
                                 </Link>
