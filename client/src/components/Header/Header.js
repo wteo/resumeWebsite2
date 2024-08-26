@@ -28,18 +28,26 @@ function Header() {
                             <h1 className="header__title" style={{ opacity: isHomePage ? '0' : '1' }}>Wendy Teo</h1>
                         </Link>
                         <ul className="header__menu-list">
-                            <Link to="/">
-                                <li className={`header__menu-item ${location.pathname === '/' ? 'active' : ''}`}>Home</li>
-                            </Link>
-                            <Link to="projects">
-                                <li className={`header__menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>Selected Works</li>
-                            </Link>
-                            <Link to="contact">
-                                <li className={`header__menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>Work with Me</li>
-                            </Link>
-                            <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">
-                                <li className={`header__menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>Blogs</li>
-                            </Link>
+                            <li className={`header__menu-item ${location.pathname === '/' ? 'active' : ''}`}>
+                                <Link to="/">
+                                    Home
+                                </Link>
+                            </li>
+                            <li className={`header__menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>
+                                <Link to="projects">
+                                    Selected Works
+                                </Link>
+                            </li>
+                            <li className={`header__menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>
+                                <Link to="contact">
+                                    Work with Me
+                                </Link>
+                            </li>
+                            <li className={`header__menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>
+                                <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">
+                                    Blogs
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                     <div className="header__mobile-bar" style={{ backdropFilter: `blur(${isHomePage ? '0' : '5'}px)` }}></div>
@@ -53,18 +61,26 @@ function Header() {
                     
                         <div className={`header__mobile-menu ${ menuOpen ? 'active' : '' }`}>
                             <ul className="header__mobile-menu-list">
-                                <Link to="/">
-                                    <li className={`header__mobile-menu-item ${location.pathname === '/' ? 'active' : ''}`} onClick={toggleMenu}>Home</li>
-                                </Link>
-                                <Link to="projects">
-                                    <li className={`header__mobile-menu-item ${location.pathname === '/projects' ? 'active' : ''}`} onClick={toggleMenu}>Selected Works</li>
-                                </Link>
-                                <Link to="contact">
-                                    <li className={`header__mobile-menu-item ${location.pathname === '/contact' ? 'active' : ''}`} onClick={toggleMenu}>Work with Me</li>
-                                </Link>
-                                <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">
-                                    <li className={`header__mobile-menu-item ${location.pathname === '/blogs' ? 'active' : ''}`} onClick={toggleMenu}>Read my Blogs</li>
-                                </Link>
+                                <li className={`header__mobile-menu-item ${location.pathname === '/' ? 'active' : ''}`}>
+                                    <Link to="/" onClick={toggleMenu}>
+                                        Home
+                                    </Link>
+                                </li>
+                                <li className={`header__mobile-menu-item ${location.pathname === '/projects' ? 'active' : ''}`}>
+                                    <Link to="projects" onClick={toggleMenu}>
+                                        Selected Works
+                                    </Link>
+                                </li>
+                                <li className={`header__mobile-menu-item ${location.pathname === '/contact' ? 'active' : ''}`}>
+                                    <Link to="contact" onClick={toggleMenu}>
+                                        Work with Me
+                                    </Link>
+                                </li>
+                                <li className={`header__mobile-menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>
+                                    <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                                        Read my Blogs
+                                    </Link>
+                                </li>
                             </ul>
                         </div>
                 }

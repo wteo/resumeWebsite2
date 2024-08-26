@@ -19,15 +19,16 @@
     }
 
     &__group {
-        @include grid(50px, 2, 768px);
+        @include grid(40px, 2, 850px);
         justify-content: center;
-        align-items: start;
+        align-items: center;
         margin-top: 30px;
     }
 
     &__description {
         font-size: 1.2rem;
         line-height: 1.6;
+        width: 85%;
 
         h1 {
             margin: 0;
@@ -36,15 +37,12 @@
 
     &__image-wrapper {
         @include responsive-image;
-        max-width: 600px;
-        height: auto;
-        max-height: 750px;
+        width: 500px;
+        height: 500px;
     }
 
-    @media (max-width: 768px) {
-        &__image-wrapper {
-            max-width: 100%; 
-        }
+    &__image {
+        transform: scale(0.75);
     }
 }
 
@@ -53,6 +51,15 @@
 
         &__title {
             font-size: 3.25rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .about {
+
+        &__description {
+            width: 100%;
         }
     }
 }

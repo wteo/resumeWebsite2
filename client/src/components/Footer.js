@@ -13,10 +13,18 @@ function Footer() {
                 <hr />
                 <div className="footer__content">
                     <ul className="footer__menu">
-                        <Link to="/"><li className="footer__menu-item">Home</li></Link>
-                        <Link to="projects"><li className="footer__menu-item">My Work</li></Link>
-                        <Link to="contact"><li className="footer__menu-item">Contact</li></Link>
-                        <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer"><li className="footer__menu-item">Blogs</li></Link>
+                        <li className="footer__menu-item">
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li className="footer__menu-item">
+                            <Link to="projects">My Work</Link>
+                        </li>
+                        <li className="footer__menu-item">
+                            <Link to="contact">Contact</Link>
+                        </li>
+                        <li className="footer__menu-item">
+                            <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">Blogs</Link>
+                        </li>
                     </ul>
                     <div className="footer__contact">
                         <p className="footer__contact-detail">wendyteo.wy@gmail.com</p>
