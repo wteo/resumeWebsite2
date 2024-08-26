@@ -18,10 +18,13 @@
       justify-items: center;
       align-items: center;
 
+      h3, h5, span {
+        transition: $transition;
+      }
+
       h3,
       span {
         margin-top: 15px;
-        transition: $transition
       }
 
       h5,
