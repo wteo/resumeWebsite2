@@ -44,7 +44,7 @@ function Header() {
                                 </Link>
                             </li>
                             <li className={`header__menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>
-                                <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">
+                                <Link to="https://medium.com/@wendyteo.wy" target="_blank" rel="noopener noreferrer">
                                     Blogs
                                 </Link>
                             </li>
@@ -83,7 +83,7 @@ function Header() {
                                     </Link>
                                 </li>
                                 <li className={`header__mobile-menu-item ${location.pathname === '/blogs' ? 'active' : ''}`}>
-                                    <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
+                                    <Link to="https://medium.com/@wendyteo.wy" target="_blank" rel="noopener noreferrer" onClick={toggleMenu}>
                                         Read my Blogs
                                     </Link>
                                 </li>

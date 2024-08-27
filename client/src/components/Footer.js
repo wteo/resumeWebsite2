@@ -23,7 +23,7 @@ function Footer() {
                             <Link to="contact">Contact</Link>
                         </li>
                         <li className="footer__menu-item">
-                            <Link to="https://medium.com/" target="_blank" rel="noopener noreferrer">Blogs</Link>
+                            <Link to="https://medium.com/@wendyteo.wy" target="_blank" rel="noopener noreferrer">Blogs</Link>
                         </li>
                     </ul>
                     <div className="footer__contact">
