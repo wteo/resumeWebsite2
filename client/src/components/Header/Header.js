@@ -50,7 +50,13 @@ function Header() {
                             </li>
                         </ul>
                     </div>
-                    <div className="header__mobile-bar" style={{ backdropFilter: `blur(${isHomePage ? '0' : '5'}px)` }}></div>
+                    <div 
+                        className="header__mobile-bar" 
+                        style={{ 
+                            backdropFilter: `blur(${isHomePage ? '0' : '5'}px)`, 
+                            WebkitBackdropFilter: `blur(${isHomePage ? '0' : '5'}px)`,
+                        }} 
+                    />
                     {menuOpen ? (
                         <span className="header__hamburger" onClick={toggleMenu}>&times;</span>
                     ) : (
