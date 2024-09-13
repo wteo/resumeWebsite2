@@ -27,7 +27,7 @@ function Footer() {
                         </li>
                     </ul>
                     <div className="footer__contact">
-                        <p className="footer__contact-detail">wendyteo.wy@gmail.com</p>
+                        <p className="footer__contact-detail">hello@wendyteo.dev</p>
                         <p className="footer__contact-detail">+61 458 369 510</p>
                     </div>
                 </div>
