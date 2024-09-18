@@ -42,7 +42,7 @@
     }
 
     &__image {
-        transform: scale(0.75);
+        object-fit: cover;
     }
 }
 

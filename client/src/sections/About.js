@@ -4,7 +4,7 @@ import ContentWrapper from '../ui/ContentWrapper';
 
 import './About.scss';
 
-import profile from '../assets/images/profile.webp';
+import profile from '../assets/images/selfie.jpg';
 
 function About({ routeHandler }) {
     return (
