@@ -37,12 +37,14 @@
 
     &__image-wrapper {
         @include responsive-image;
-        height: 650px;
+        width: 100%;
     }
 
     &__image {
         object-fit: cover;
         filter: brightness(0.95);
+        height: 500px;
+        border-radius: 7.5px;
     }
 }
 
@@ -74,10 +76,6 @@
 
         &__description {
             font-size: 1rem;
-        }
-
-        &__image-wrapper {
-            height: 500px;
         }
     }
 }
