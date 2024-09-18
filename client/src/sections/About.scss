@@ -37,8 +37,7 @@
 
     &__image-wrapper {
         @include responsive-image;
-        width: 500px;
-        height: 500px;
+        height: 650px;
     }
 
     &__image {
@@ -75,6 +74,10 @@
 
         &__description {
             font-size: 1rem;
+        }
+
+        &__image-wrapper {
+            height: 500px;
         }
     }
 }
