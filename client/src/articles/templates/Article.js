@@ -64,7 +64,7 @@ function Article() {
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
                 </div>
-                <ArticleMedia assets={assets} />
+                <ArticleMedia assets={assets} isCarousel={false} />
             </article>
         </Section>
     );

@@ -6,15 +6,17 @@
 
     &__group {
         display: grid;
-        grid-template-columns: 1fr 1.5fr;
-        gap: 60px;
+        grid-template-columns: 1fr 1.3fr;
+        gap: 40px;
         margin-top: 30px;
         margin-bottom: 40px;
         height: 700px;
-        overflow-y: scroll;
     }
 
     &__description {
+        overflow-y: scroll;
+        padding-right: 20px;
+
         p {
             margin: 0;
             margin-bottom: 20px;
@@ -22,13 +24,46 @@
     }
 
     &__media {
-        overflow-y: scroll;
         border-radius: 7.5px;
         margin-bottom: 20px;
+        min-width: 0; // Add this
+
+        &:not(.article__media--carousel) {
+            overflow-y: scroll;
+        }
+
+        &--carousel {
+            position: relative;
+        }
 
         p {
             font-size: 1rem;
         }
+    }
+
+    &__media-wrapper {
+        .article__media--carousel & {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            overflow-y: hidden;
+            scroll-behavior: smooth;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            
+            &::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    }
+
+    &__media-item--carousel {
+        flex: 0 0 100%;
+        scroll-snap-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     &__image, &__video {
@@ -41,15 +76,37 @@
 
     &__image-description {
         margin: 0;
-        margin-bottom: 40px;
+        margin-top: 10px;
+        margin-bottom: 50px;
         text-align: center;
 
         &--left {
             text-align: left;
         }
     }
-}
 
+    &__arrow {
+        position: absolute;
+        font-size: 1.5rem;
+        background: rgba(0, 0, 0, 0.3);
+        color: white;
+        border: none;
+        padding: 15px 25px;
+        cursor: pointer;
+        z-index: 10;
+        border-radius: 100%;
+
+        &--left {
+            left: -20px;
+            top: 200px;
+        }
+
+        &--right {
+            right: 0;
+            top: 185px;
+        }
+    }
+}
 
 @media only screen and (max-width: 1000px) {
     .article {

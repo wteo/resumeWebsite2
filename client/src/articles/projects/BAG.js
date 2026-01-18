@@ -88,7 +88,7 @@ function Automic() {
                     </p>
                     <Tags list="Tools Used" arr={tags} />
                 </div>
-                <ArticleMedia assets={assets} />
+                <ArticleMedia assets={assets} isCarousel={true} />
             </article>
         </Section>
     );
