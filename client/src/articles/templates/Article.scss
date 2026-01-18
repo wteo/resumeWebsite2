@@ -21,7 +21,7 @@
     }
 
     &__media {
-        overflow: scroll;
+        overflow-y: scroll;
         border-radius: 7.5px;
         margin-bottom: 20px;
 
@@ -31,14 +31,11 @@
     }
 
     &__image, &__video {
-        width: 100%;
+        width: 97.5%;
         object-fit: contain;
         max-height: 450px;
         border-radius: 7.5px;
-    }
-
-    &__image.mobile {
-        max-height: 300px;
+        filter: drop-shadow(4px 4px 6px rgb(220, 220, 220));
     }
 
     &__image-description {

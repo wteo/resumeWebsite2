@@ -17,7 +17,10 @@ function ArticleMedia({ assets }) {
                   </video>
               }
             </div>
-            <p className="article__image-description">{asset.description ?? ''}</p>
+            <p className="article__image-description">
+              {asset.title && <strong>{asset.title}: </strong>}
+              {asset.description ?? ''}
+            </p>
           </>))
       }
     </div>
