@@ -7,14 +7,14 @@ import './Services.scss';
 function Services() {
 
     const categories = [{
-        category: 'Design & Development',
-        servicelist: ['Custom Web Design', 'Website Development', 'Wireframing & Prototyping', 'UI/UX Design', 'Responsive Design']
+        category: 'CRM Integration & Business Automation',
+        servicelist: ['Custom Quote Systems', 'CRM Integration & Custom Objects', 'Workflow Automation', 'API Development', 'Business Process Optimization']
     }, {
-        category: 'E-commerce Solutions',
-        servicelist: ['CMS Integration', 'Custom Themes']
+        category: 'Website Development',
+        servicelist: ['Custom Web Design', 'Website Development', 'Responsive Design', 'Custom Themes', 'UI/UX Design']
     }, {
-        category: 'Migration & Optimization',
-        servicelist: ['Website Migration', 'Website Optimization', 'SEO Optimization', 'Content Migration']
+        category: 'Platform Services',
+        servicelist: ['Website Migration', 'CMS Integration', 'Website Optimization', 'SEO Optimization', 'Content Migration']
     }];
 
     return (

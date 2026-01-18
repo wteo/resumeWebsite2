@@ -7,8 +7,8 @@ import Section from '../ui/Section';
 
 import './Process.scss';
 
-import gotsauss from '../assets/images/gotsauss.webp';
-import gotsaussVideo from '../assets/videos/gotsauss.mp4';
+import blastAwayGuys from '../assets/images/BAG_desktop.png';
+import blastAwayGuysVideo from '../assets/videos/BAG_desktop.mp4';
 import etikette from '../assets/images/etikette.webp';
 import etiketteVideo from '../assets/videos/etikette.mp4';
 import automic from '../assets/images/automic.webp';
@@ -34,43 +34,42 @@ function Process() {
     const categories = [
         {
             category: 'Discovery & Planning',
-            description: 'Every successful project starts with a thorough understanding of your goals and needs. In the discovery and planning phase, I collaborate with you to define project requirements, outline the scope, and create a strategic plan that aligns with your vision. This stage sets the foundation for a smooth and effective development process.',
+            description: 'Every successful project starts with understanding your business challenges and goals. In the discovery phase, I collaborate with you to define requirements, map existing workflows, and create a strategic plan—whether building a CRM integration, automating business processes, or developing a custom website. This foundation ensures the solution truly addresses your operational needs.',
             tools: [
                 'Miro', 'Google Docs', 'Zoom', 'Jira',
             ],
             caseStudy: {
-                src: gotsauss,
-                alt: 'Got Sauce?',
-                video: gotsaussVideo,
-                url: '/projects/gotsauss',
-                desc: 'My first collaboration with Anthony Attapattu on his "Gotsauss" landing page. This was a pivotal project that laid the foundation for how I work today.'
+                src: blastAwayGuys,
+                alt: 'Automating quote workflows',
+                video: blastAwayGuysVideo,
+                url: '/projects/bag',
+                desc: 'Built a custom quote generation system with HubSpot CRM integration for Blast Away Guys, automating their entire sales workflow from quote to acceptance.'
             },
         },
         {
             category: 'Design & Development',
-            description: 'Combining design and development, this phase focuses on bringing your project to life. I create visually appealing, user-friendly designs and build responsive websites that function flawlessly across platforms. From wireframes to the final build, this integrated approach ensures a seamless transition from concept to reality.',
+            description: 'This phase brings your solution to life, whether that\'s building API integrations, developing custom CRM workflows, or creating responsive websites. I combine frontend and backend development to deliver systems that are both user-friendly and technically robust. From data architecture to user interfaces, every component is built to work seamlessly together.',
             tools: [
-                'Figma', 'Webflow', 'HTML', 'CSS', 'JavaScript', 'React', 'VueJS', 'Wordpress', 'Hubspot', 'Drupal', 'Shopify'
+                'Node.js', 'Express', 'HubSpot API', 'REST APIs', 'JavaScript', 'React', 'HTML', 'CSS', 'Figma', 'Shopify', 'WordPress', 'HubSpot CMS'
             ],
             caseStudy: {
                 src: etikette,
                 alt: 'Brighten your online presence!',
                 video: etiketteVideo,
                 url: '/projects/etikette',
-                desc: 'I partnered with a UI/UX designer to craft a custom Shopify theme for Etikette, a family-owned candle business, revitalizing their online storefront.'
-
+                desc: 'Partnered with a UI/UX designer to craft a custom Shopify theme for Etikette, a family-owned candle business, revitalizing their online storefront.'
             },
         },
         {
             category: 'Testing & Launch',
-            description: 'Before going live, I rigorously test the website to ensure optimal performance and functionality across all devices and browsers. Once everything is perfect, I handle the deployment, ensuring a smooth launch. Post-launch, I provide ongoing support to keep your website up-to-date and performing at its best.',
-            tools: ['BrowserStack', 'Google Lighthouse / Analytics', 'GitHub', 'Netlify'],
+            description: 'Before deployment, I rigorously test across devices, browsers, and use cases, validating API integrations, workflow automation, and user interfaces. Once everything performs optimally, I handle the launch and provide ongoing support to ensure your system continues running smoothly and adapts as your business evolves.',
+            tools: ['BrowserStack', 'Postman', 'Google Lighthouse / Analytics', 'GitHub', 'Netlify'],
             caseStudy: {
                 src: automic,
                 alt: 'Migrating to a new platform?',
                 video: automicVideo,
                 url: '/projects/automic',
-                desc: ' I seamlessly transitioned Automic Group\'s website from WordPress to HubSpot, providing ongoing support for optimization.'
+                desc: 'Seamlessly transitioned Automic Group\'s website from WordPress to HubSpot, providing ongoing support for optimization.'
             },
         }
     ];
