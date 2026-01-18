@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import Tag from '../components/Tag';
@@ -16,7 +16,27 @@ import automicVideo from '../assets/videos/automic.mp4';
 
 function Process() {
 
+
     const scrollRef = useRef(null);
+    const [showLeftArrow, setShowLeftArrow] = useState(false);
+    const [showRightArrow, setShowRightArrow] = useState(true);
+
+    const checkScroll = () => {
+        if (scrollRef.current) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
+            setShowLeftArrow(scrollLeft > 0);
+            setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 1);
+        }
+    };
+
+    useEffect(() => {
+        checkScroll();
+        const element = scrollRef.current;
+        if (element) {
+            element.addEventListener('scroll', checkScroll);
+            return () => element.removeEventListener('scroll', checkScroll);
+        }
+    }, []);
 
     const scrollLeft = () => {
         if (scrollRef.current) {
@@ -29,7 +49,6 @@ function Process() {
             scrollRef.current.scrollBy({ left: 300, behavior: 'smooth' });
         }
     };
-
 
     const categories = [
         {
@@ -76,7 +95,7 @@ function Process() {
 
     return (
         <Section sectionClassName="process" title="How I work">
-            <button className="process__arrow process__arrow--left" onClick={scrollLeft}>&lt;</button>
+            {showLeftArrow && <button className="process__arrow process__arrow--left" onClick={scrollLeft}>&lt;</button>}
             <div className="process__group" ref={scrollRef}>
                 {
                     categories.map((category, categoryIndex) => (
@@ -97,7 +116,7 @@ function Process() {
                     ))
                 }
             </div>
-            <button className="process__arrow process__arrow--right" onClick={scrollRight}>&gt;</button>
+            {showRightArrow && <button className="process__arrow process__arrow--right" onClick={scrollRight}>&gt;</button>}
         </Section>
     );
 }

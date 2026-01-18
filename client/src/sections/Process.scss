@@ -7,16 +7,23 @@
     position: relative;
     background-color: $primary-bg-color;
 
-    &__group {
-        display: flex;
-        gap: 30px;
-        overflow: hidden;
-        scroll-snap-type: x mandatory;
-        margin-top: 30px;
-        padding-bottom: 20px;
-        transition: $transition;
-        scroll-behavior: smooth;
+&__group {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    margin-top: 30px;
+    padding-bottom: 20px;
+    transition: $transition;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+        display: none;
     }
+}
 
     &__item {
         background: #ffffff;
@@ -71,15 +78,16 @@
         cursor: pointer;
         z-index: 10;
         border-radius: 100%;
-        top: 45%;
     }
 
     &__arrow--left {
         left: 5vw;
+        top: 45%;
     }
 
     &__arrow--right {
         right: 5vw;
+        top: 44%;
     }
 }
 
