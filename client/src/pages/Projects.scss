@@ -20,6 +20,7 @@
     }
 
     &__image-wrapper,
+    &__image-wrapper--no-image,
     &__image-wrapper--large,
     &__image-wrapper--narrow {
         @include responsive-image(5px, cover);
@@ -108,6 +109,10 @@
     .projects {
         &__group {
             grid-template-columns: 1fr 1fr;
+        }
+
+        &__image-wrapper--no-image {
+            display: none;
         }
 
         &__image-wrapper--large {

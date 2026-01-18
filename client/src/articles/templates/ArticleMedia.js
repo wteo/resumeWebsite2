@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 function ArticleMedia({ assets }) {
+  const descriptionRefs = useRef([]);
+
+  useEffect(() => {
+    descriptionRefs.current.forEach(ref => {
+      if (ref) {
+        const lineHeight = parseFloat(getComputedStyle(ref).lineHeight);
+        const height = ref.scrollHeight;
+        const lines = Math.round(height / lineHeight);
+        
+        if (lines > 2) {
+          ref.classList.add('article__image-description--left');
+        }
+      }
+    });
+  }, [assets]);
 
   return (
     <div className="article__media">
       {
         assets.map((asset, index) => (
-          <>
-            <div className="article__image-wrapper" key={index}>
+          <React.Fragment key={index}>
+            <div className="article__image-wrapper">
               {
                 asset.video === null ?
                   <img className={`article__image ${asset.alt.includes('mobile') ? "mobile" : ''}`} src={asset.src} alt={asset.alt} /> :
@@ -17,11 +32,15 @@ function ArticleMedia({ assets }) {
                   </video>
               }
             </div>
-            <p className="article__image-description">
+            <p 
+              className="article__image-description"
+              ref={el => descriptionRefs.current[index] = el}
+            >
               {asset.title && <strong>{asset.title}: </strong>}
               {asset.description ?? ''}
             </p>
-          </>))
+          </React.Fragment>
+        ))
       }
     </div>
   )

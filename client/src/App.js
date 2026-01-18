@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
 
 // Project Articles
+import BAG from './articles/projects/BAG';
 import Etikette from './articles/projects/Etikette';
 import Play from './articles/projects/Play';
 import Plico from './articles/projects/Plico';
@@ -32,6 +33,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
+                <Route path="/projects/bag" element={<BAG />} />
                 <Route path="/projects/etikette" element={<Etikette />} />
                 <Route path="/projects/play" element={<Play />} />
                 <Route path="/projects/plico" element={<Plico />} />
