@@ -6,7 +6,7 @@ import Section from '../ui/Section';
 import './Projects.scss';
 
 // CRM projects/Custom Quotes
-import blastAwayGuys from '../assets/images/blast_away_guys.png';
+import blastAwayGuys from '../assets/images/blast_away_guys.webp';
 import brightgreen from '../assets/images/brightgreen_neon_light_bg.jpeg';
 
 // E Commerce
