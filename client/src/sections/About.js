@@ -22,7 +22,7 @@ function About({ routeHandler }) {
                             Since 2023, I've specialized in connecting CRM platforms (e.g. HubSpot) and finance systems to eliminate manual data entry, automate workflows, and reduce operational friction. Recent work includes custom quote generation systems with CRM integration and multi-system fulfillment automation for e-commerce operations.
                         </p>
                         <p>
-                            My finance background means I understand your pain points before you explain them. I've lived the inefficiencies. Now, I solve them.
+                            My finance background means I understand your pain points before you explain them. I've lived the inefficiencies. The same bottlenecks, the manual processes, the system gaps... Issues that slow down your team. Now, I solve them.
                         </p>
                         <p>
                             My technical focus lies in HubSpot API, Shopify integrations, custom middleware, and business process automation.

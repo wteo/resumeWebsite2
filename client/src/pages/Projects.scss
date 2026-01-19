@@ -20,7 +20,7 @@
     }
 
     &__image-wrapper,
-    &__image-wrapper--no-image,
+    &__image-wrapper--full-width,
     &__image-wrapper--large,
     &__image-wrapper--narrow {
         @include responsive-image(5px, cover);
@@ -40,6 +40,11 @@
 
         .projects__image {
             transform: scale(0.6);
+        }
+
+        &--full-width {
+            grid-column: span 3;
+            height: 530px;
         }
 
         &--large, &--narrow { 
@@ -80,16 +85,38 @@
         }
     }
 
+    // Note: This disables the hovering effect for projects that are still in development progress
+    &__image-wrapper--wip {
+        cursor: default !important;
+        filter: grayscale(0.7);
+        
+        .projects__video,
+        .projects__image {
+            transform: scale(1) !important;
+            filter: opacity(0.3) !important;
+        }
+        
+        &:hover .projects__video,
+        &:hover .projects__image {
+            transform: scale(1) !important;
+            filter: opacity(0.3) !important;
+        }
+    }
+
     &__image-description {
         position: absolute;
         display: block;
         bottom: 0;
         left: 20px;
         font-size: 1.5rem;
-        color: rgb(255, 255, 255);
+        color: #ffffff;
         margin-right: 20px;
         margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+
+        &.big {
+            font-size: 3rem;
+        }
     }
 
     &__image-wrapper.cyan {
@@ -111,11 +138,7 @@
             grid-template-columns: 1fr 1fr;
         }
 
-        &__image-wrapper--no-image {
-            display: none;
-        }
-
-        &__image-wrapper--large {
+        &__image-wrapper--large, &__image-wrapper--full-width {
             height: 420px;
         }
 
@@ -149,7 +172,7 @@
             grid-template-columns: 1fr;
         }
 
-        &__image-wrapper--large {
+        &__image-wrapper--large, &__image-wrapper--full-width {
             height: 260px;
 
                 .projects__video {
@@ -170,9 +193,16 @@
         }
 
         &__image-wrapper--large,
+        &__image-wrapper--full-width,
         &__image-wrapper--narrow {
             grid-column: span 1;
             grid-row: span 1;
+        }
+
+        &__image-description {
+            &.big {
+                font-size: 1.5rem;
+            }
         }
     }
 }

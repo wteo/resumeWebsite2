@@ -8,10 +8,10 @@ function Services() {
 
     const categories = [{
         category: 'CRM & Finance Integration',
-        servicelist: ['HubSpot Custom Development & API Integration', 'Finance System Connections (Xero, QuickBooks, NetSuite)', 'Quote Generation & Sales Automation', 'Custom CRM Objects & Workflows', 'Multi-System Data Synchronization']
+        servicelist: ['HubSpot Custom Development & API Integration', 'Accounting Software Integration', 'Quote Generation & Sales Automation', 'Custom CRM Objects & Workflows', 'Multi-System Data Synchronization']
     }, {
-        category: 'E-commerce Operations',
-        servicelist: ['Order Management System Integration', 'Fulfillment & Logistics Automation', 'Warehouse Management Connections', 'Inventory & Delivery Tracking Systems', 'Shopify Backend Integration']
+        category: 'E-commerce Operations*',
+        servicelist: ['Order Management System Integration', 'Fulfillment & Logistics Automation', 'Warehouse Management Connections', 'Inventory & Delivery Tracking Systems', 'Shopify Backend Integration'],
     }, {
         category: 'Platform Support',
         servicelist: ['Website Maintenance (Shopify, WordPress, HubSpot)', 'Platform Migrations', 'Performance Optimization', 'CMS Updates']
@@ -31,6 +31,7 @@ function Services() {
                     ))
                 }
             </div>
+            <p className="services__note">* Project currently in active development</p>
         </Section>
     );
 }

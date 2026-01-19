@@ -16,6 +16,11 @@
         margin: 0;
         margin-left: 15px;
     }
+
+    &__note {
+        margin-top: 50px;
+        font-size: 0.85rem;
+    }
 }
 
 @media only screen and (max-width: 1000px) {

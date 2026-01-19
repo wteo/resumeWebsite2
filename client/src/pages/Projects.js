@@ -7,6 +7,10 @@ import './Projects.scss';
 
 // CRM projects/Custom Quotes
 import blastAwayGuys from '../assets/images/blast_away_guys.png';
+import brightgreen from '../assets/images/brightgreen_neon_light_bg.jpeg';
+
+// E Commerce
+import vinificant from '../assets/images/vinificant_red_wine.webp';
 
 // Large projects or companies
 import etikette from '../assets/images/etikette.webp';
@@ -23,25 +27,34 @@ import gotsauss from '../assets/images/gotsauss.webp';
 function Projects() {
     return (
         <>
-            <Section sectionClassName="projects" title="CRM Integration & Custom Applications">
+            <Section sectionClassName="projects" title="CRM & Finance Integration">
                 <p>
-                    Custom-built systems that automate business processes and integrate with CRM platforms. 
-                    These projects eliminate manual workflows through automated quote generation, custom data management, 
-                    and API development, helping sales teams work more efficiently while maintaining data accuracy across systems.
+                    Custom API integrations connecting HubSpot, finance systems, and business applications. Automates quote-to-cash workflows, eliminates manual data entry between systems, and builds custom CRM functionality for sales process optimization. Backend integration work focused on reliable system-to-system communication.
                 </p>
                 <div className="projects__group">
                     <Link className="projects__image-wrapper--large" to="/projects/bag">
                         <img className="projects__image" src={blastAwayGuys} alt="Blast Away Guys" />
                     </Link>
-                    <div className="projects__image-wrapper--no-image" />
-                    <div className="projects__image-wrapper--no-image" />
+                    <div className="projects__image-wrapper--narrow projects__image-wrapper--wip" to="/projects/brightgreen">
+                        <img className="projects__image" src={brightgreen} alt="Brightgreen" />
+                        <p className="projects__image-description">Work in Progress</p>
+                    </div>
                 </div>
             </Section>
-            <Section sectionClassName="projects" title="Website Development">
+            <Section sectionClassName="projects" title="E-commerce Operations">
                 <p>
-                    Website builds, migrations, and customizations that enhance online presence and user experience. 
-                    Each project focuses on responsive design, performance optimization, and implementing features tailored to 
-                    specific client needs and business goals.
+                    Backend automation connecting online stores with warehouse and fulfillment systems. Building custom integrations for order management, inventory tracking, and logistics coordination.
+                </p>
+                <div className="projects__group">
+                    <div className="projects__image-wrapper--full-width projects__image-wrapper--wip" to="/projects/vinificant">
+                        <img className="projects__image" src={vinificant} alt="E-commerce Operations - Work in Progress" />
+                        <p className="projects__image-description big">Work in Progress</p>
+                    </div>
+                </div>
+            </Section>
+            <Section sectionClassName="projects" title="Platform Support">
+                <p>
+                    Website development, customizations, and migrations across Shopify, WordPress, and HubSpot. Includes theme customization, platform transitions, performance optimization, and ongoing website projects for existing clients.
                 </p>
                 <div className="projects__group">
                     <Link className="projects__image-wrapper--large" to="/projects/etikette">
@@ -51,7 +64,7 @@ function Projects() {
                         </video>
                     </Link>
                     <Link className="projects__image-wrapper--narrow" to="/projects/play">
-                        <img className="projects__image" src={play} alt="Gotsauss" />
+                        <img className="projects__image" src={play} alt="Play Innovations" />
                     </Link>
                     <Link className="projects__image-wrapper cyan" to="/projects/plico">
                         <img className="projects__image" src={plico} alt="Plico Energy" />

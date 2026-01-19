@@ -12,7 +12,7 @@ function Experience() {
             title: 'Business Systems Integration Specialist, Freelancer',
             duration: 'Jul 2023 to Present',
             job: [{
-                description: 'CRM integration and business automation systems connecting disparate platforms via custom API development. Core services:',
+                description: 'I connect your CRM, finance systems, and business applications so data flows automatically between them, eliminating manual entry and giving you real-time visibility. Core services:',
                 tasks: [
                     'HubSpot custom integrations (quote generation, workflow automation, sales process optimization)',
                     'E-commerce operations automation (order management, fulfillment systems, logistics integration)',
