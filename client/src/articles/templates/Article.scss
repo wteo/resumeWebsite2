@@ -16,6 +16,14 @@
     &__description {
         overflow-y: scroll;
         padding-right: 20px;
+        
+        /* Hide scrollbar */
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE/Edge */
+        
+        &::-webkit-scrollbar {
+            display: none; /* Chrome/Safari */
+        }
 
         p {
             margin: 0;
@@ -49,13 +57,13 @@
             overflow-y: hidden;
             scroll-behavior: smooth;
             scroll-snap-type: x mandatory;
-            scrollbar-width: none;
-            -ms-overflow-style: none;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none; /* IE/Edge */
             
-            &::-webkit-scrollbar {
-                display: none;
+                &::-webkit-scrollbar {
+                    display: none; /* Chrome/Safari */
+                }
             }
-        }
     }
 
     &__media-item--carousel {
