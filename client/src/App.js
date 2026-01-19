@@ -5,7 +5,7 @@ import ScrollToTop from "./ui/ScrollToTop";
 
 import Header from './components/Header/Header';
 import Footer from './components/Footer';
-import Resume from './components/Resume';
+// import Resume from './components/Resume';
 
 import Home from './pages/Home';
 import Projects from './pages/Projects';
@@ -46,7 +46,9 @@ function App() {
               <Route path="/*" element={<Error404 />} />
             </Routes>
             <Footer />
-        <Resume />
+            { 
+              // <Resume /> 
+            }
       </Router>
     </div>
   );
