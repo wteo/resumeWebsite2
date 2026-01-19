@@ -31,7 +31,7 @@ function Footer() {
                         <p className="footer__contact-detail">+61 458 369 510</p>
                     </div>
                 </div>
-                <p className="footer__copyright">© Wendy Teo 2025</p>
+                <p className="footer__copyright">© Wendy Teo {new Date().getFullYear()}</p>
             </ContentWrapper>
         </footer>
     );
