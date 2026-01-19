@@ -10,7 +10,7 @@ function HeroBanner() {
             <ContentContainer>
                 <div className="hero__content">
                     <p className="hero__content-title">
-                        <span>Full Stack Developer</span> specializing in <span>CRM integrations</span> and business automation systems
+                        Business Systems Integration Specialist | <span>CRM</span> + <span>Finance Automation</span>
                     </p>
                 </div>
             </ContentContainer>

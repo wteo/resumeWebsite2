@@ -7,14 +7,14 @@ import './Services.scss';
 function Services() {
 
     const categories = [{
-        category: 'CRM Integration & Business Automation',
-        servicelist: ['Custom Quote Systems', 'CRM Integration & Custom Objects', 'Workflow Automation', 'API Development', 'Business Process Optimization']
+        category: 'CRM & Finance Integration',
+        servicelist: ['HubSpot Custom Development & API Integration', 'Finance System Connections (Xero, QuickBooks, NetSuite)', 'Quote Generation & Sales Automation', 'Custom CRM Objects & Workflows', 'Multi-System Data Synchronization']
     }, {
-        category: 'Website Development',
-        servicelist: ['Custom Web Design', 'Website Development', 'Responsive Design', 'Custom Themes', 'UI/UX Design']
+        category: 'E-commerce Operations',
+        servicelist: ['Order Management System Integration', 'Fulfillment & Logistics Automation', 'Warehouse Management Connections', 'Inventory & Delivery Tracking Systems', 'Shopify Backend Integration']
     }, {
-        category: 'Platform Services',
-        servicelist: ['Website Migration', 'CMS Integration', 'Website Optimization', 'SEO Optimization', 'Content Migration']
+        category: 'Platform Support',
+        servicelist: ['Website Maintenance (Shopify, WordPress, HubSpot)', 'Platform Migrations', 'Performance Optimization', 'CMS Updates']
     }];
 
     return (

@@ -7,12 +7,12 @@ import Section from '../ui/Section';
 
 import './Process.scss';
 
-import blastAwayGuys from '../assets/images/BAG_desktop.png';
-import blastAwayGuysVideo from '../assets/videos/BAG_desktop.mp4';
-import etikette from '../assets/images/etikette.webp';
-import etiketteVideo from '../assets/videos/etikette.mp4';
-import automic from '../assets/images/automic.webp';
-import automicVideo from '../assets/videos/automic.mp4';
+import blastAwayGuysDesktop from '../assets/images/BAG_desktop.png';
+import blastAwayGuysDesktopVideo from '../assets/videos/BAG_desktop.mp4';
+import blastAwayGuysRoofTreatment from '../assets/images/BAG_roof_treatment.png';
+import blastAwayGuysRoofTreatmentVideo from '../assets/videos/BAG_roof_treatment.mp4';
+import blastAwayGuysAgreement from '../assets/images/BAG_agreement.png';
+import blastAwayGuysAgreementVideo from '../assets/videos/BAG_agreement.mp4';
 
 function Process() {
 
@@ -32,10 +32,19 @@ function Process() {
     useEffect(() => {
         checkScroll();
         const element = scrollRef.current;
+        
+        const handleResize = () => checkScroll();
+        window.addEventListener('resize', handleResize);
+        
         if (element) {
             element.addEventListener('scroll', checkScroll);
-            return () => element.removeEventListener('scroll', checkScroll);
+            return () => {
+                element.removeEventListener('scroll', checkScroll);
+                window.removeEventListener('resize', handleResize);
+            };
         }
+        
+        return () => window.removeEventListener('resize', handleResize);
     }, []);
 
     const scrollLeft = () => {
@@ -53,48 +62,48 @@ function Process() {
     const categories = [
         {
             category: 'Discovery & Planning',
-            description: 'Every successful project starts with understanding your business challenges and goals. In the discovery phase, I collaborate with you to define requirements, map existing workflows, and create a strategic plan—whether building a CRM integration, automating business processes, or developing a custom website. This foundation ensures the solution truly addresses your operational needs.',
+            description: 'Understanding your operational pain points and system architecture. I map existing workflows, identify integration points, and document technical requirements for connecting your CRM, finance, and operations systems. This phase ensures the automation actually solves your business problems, not just adds complexity.',
             tools: [
-                'Miro', 'Google Docs', 'Zoom', 'Jira',
+                'Miro', 'Google Docs', 'Zoom', 'Jira'
             ],
             caseStudy: {
-                src: blastAwayGuys,
-                alt: 'Automating quote workflows',
-                video: blastAwayGuysVideo,
+                src: blastAwayGuysDesktop,
+                alt: 'Quote workflow requirements mapping',
+                video: blastAwayGuysDesktopVideo,
                 url: '/projects/bag',
-                desc: 'Built a custom quote generation system with HubSpot CRM integration for Blast Away Guys, automating their entire sales workflow from quote to acceptance.'
+                desc: 'Mapped Blast Away Guys\' complex quote workflow with three service types: mandatory services, conditional dependencies (Roof Treatment requiring Single/Dual selection), and flexible add-ons requiring distinct business logic.'
             },
         },
         {
-            category: 'Design & Development',
-            description: 'This phase brings your solution to life, whether that\'s building API integrations, developing custom CRM workflows, or creating responsive websites. I combine frontend and backend development to deliver systems that are both user-friendly and technically robust. From data architecture to user interfaces, every component is built to work seamlessly together.',
+            category: 'Development & Integration',
+            description: 'Building the connections between your systems through custom API development and middleware. I handle authentication, data transformation, error handling, and business logic to ensure reliable system-to-system communication. Focus is backend integration architecture, not frontend interfaces.',
             tools: [
-                'Node.js', 'Express', 'HubSpot API', 'REST APIs', 'JavaScript', 'React', 'HTML', 'CSS', 'Figma', 'Shopify', 'WordPress', 'HubSpot CMS'
+                'Node.js', 'Express', 'HubSpot API', 'REST APIs', 'JavaScript', 'JSON', 'Git'
             ],
             caseStudy: {
-                src: etikette,
-                alt: 'Brighten your online presence!',
-                video: etiketteVideo,
-                url: '/projects/etikette',
-                desc: 'Partnered with a UI/UX designer to craft a custom Shopify theme for Etikette, a family-owned candle business, revitalizing their online storefront.'
+                src: blastAwayGuysRoofTreatment,
+                alt: 'Complex business logic implementation',
+                video: blastAwayGuysRoofTreatmentVideo,
+                url: '/projects/bag',
+                desc: 'Built Node.js backend API bridging quote interface to HubSpot CRM with product data caching, conditional selection enforcement, and real-time price calculation engine handling dependency validation.'
             },
         },
         {
-            category: 'Testing & Launch',
-            description: 'Before deployment, I rigorously test across devices, browsers, and use cases, validating API integrations, workflow automation, and user interfaces. Once everything performs optimally, I handle the launch and provide ongoing support to ensure your system continues running smoothly and adapts as your business evolves.',
-            tools: ['BrowserStack', 'Postman', 'Google Lighthouse / Analytics', 'GitHub', 'Netlify'],
+            category: 'Testing & Deployment',
+            description: 'Validating integrations through API testing, error scenario handling, and production load testing. Post-launch monitoring ensures data flows correctly and systems stay synchronized. Ongoing support handles edge cases and system updates as your business evolves.',
+            tools: ['Postman', 'Error Logging', 'GitHub', 'Deployment Pipelines'],
             caseStudy: {
-                src: automic,
-                alt: 'Migrating to a new platform?',
-                video: automicVideo,
-                url: '/projects/automic',
-                desc: 'Seamlessly transitioned Automic Group\'s website from WordPress to HubSpot, providing ongoing support for optimization.'
+                src: blastAwayGuysAgreement,
+                alt: 'CRM integration deployment',
+                video: blastAwayGuysAgreementVideo,
+                url: '/projects/bag',
+                desc: 'Deployed quote acceptance workflow creating custom HubSpot objects, establishing CRM associations, and updating customer profiles automatically—eliminating manual data entry and providing complete sales visibility.'
             },
         }
     ];
 
     return (
-        <Section sectionClassName="process" title="How I work">
+        <Section sectionClassName="process" title="How I Work">
             {showLeftArrow && <button className="process__arrow process__arrow--left" onClick={scrollLeft}>&lt;</button>}
             <div className="process__group" ref={scrollRef}>
                 {
@@ -110,7 +119,7 @@ function Process() {
                                 </video>
                             </div>
 
-                            <p className="process__image-text"><strong>{category.caseStudy.alt}</strong> {category.caseStudy.desc}</p>
+                            <p className="process__image-text"><strong>{category.caseStudy.alt}:</strong> {category.caseStudy.desc}</p>
                             <Link className="process__link" to={category.caseStudy.url}>Learn More</Link>
                         </div>
                     ))

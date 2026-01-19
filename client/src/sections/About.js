@@ -15,17 +15,22 @@ function About({ routeHandler }) {
                 <hr className="about__divider" />
                 <div className="about__group">
                     <div className="about__description">
-                        <h1>Quick Profile</h1>
+                        <h1>About Me</h1>
                         <p>
-                            I'm Wendy Teo, a web developer based in Sydney, Australia with over a decade of experience in accounts receivables and finance. After 10 years managing financial workflows and business operations, I transitioned to web development in 2021, bringing a unique perspective that bridges business processes and technical solutions. I gained valuable experience as a Web Developer Intern at Insurance Australia Group, focusing on website optimization.
+                            10+ years in finance operations (accounts receivable, credit control, quote-to-cash workflows at IBM, Samsung, Hanson, Link Group) taught me where business systems break. Now I fix them through API integration and automation.                        </p>
+                        <p>
+                            Since 2023, I've specialized in connecting CRM platforms (e.g. HubSpot) and finance systems to eliminate manual data entry, automate workflows, and reduce operational friction. Recent work includes custom quote generation systems with CRM integration and multi-system fulfillment automation for e-commerce operations.
                         </p>
                         <p>
-                            Since August 2023, I've been freelancing with a focus on CRM integrations and custom business automation systems. In particular, quote generation, workflow automation, and sales process optimization. I also build custom websites on platforms like Shopify, HubSpot, and WordPress. My background in finance allows me to understand the business challenges clients face and translate them into effective technical solutions.
+                            My finance background means I understand your pain points before you explain them. I've lived the inefficiencies. Now, I solve them.
                         </p>
                         <p>
-                            A fun fact about me: I'm multilingual and can speak four languages. These are English, Malay, Mandarin, and Hokkien. In my free time, I enjoy reading good books and exploring the outdoors through hiking and walking.
+                            My technical focus lies in HubSpot API, Shopify integrations, custom middleware, and business process automation.
                         </p>
-                        <a href="https://drive.google.com/file/d/1FY9URTPxcKEhpVrBAo9ZlLT9eBkX5w_Y/view?usp=sharing" target="_blank" rel="noopener noreferrer">Download CV</a>
+                        <p>
+                            Originally from Malaysia, now based in Sydney. I am multilingual (English, Malay, Mandarin, Hokkien), handling multiple clients across APAC. 
+                        </p>
+                        <a href="/contact">Get in Touch</a>
                     </div>
                     <div className="about__image-wrapper">
                         <img src={ profile } alt="Profile" className="about__image" />
