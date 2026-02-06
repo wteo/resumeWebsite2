@@ -22,6 +22,9 @@ import Blockchain from './articles/projects/Blockchain';
 import Gotsauss from './articles/projects/Gotsauss';
 import TLS from './articles/projects/TLS';
 
+// Diagram
+import SketchpadArchitecture from './components/SketchpadArchitecture';
+
 import './App.scss';
 
 function App() {
@@ -42,6 +45,7 @@ function App() {
                 <Route path="/projects/gotsauss" element={<Gotsauss />} />
                 <Route path="/projects/tls" element={<TLS />} />
               <Route path="/contact" element={<Contact />}/>
+              <Route path="/diagram" element={<SketchpadArchitecture />} />
               <Route path="/blogs" element={<Error404 />} />
               <Route path="/*" element={<Error404 />} />
             </Routes>
