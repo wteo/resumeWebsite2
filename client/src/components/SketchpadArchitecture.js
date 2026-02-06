@@ -74,7 +74,7 @@ const WobblyArrow = ({ x1, y1, x2, y2, color = PAPER.pencil, label = "", bidirec
           x={wobble1X}
           y={wobble1Y - 6}
           fill={PAPER.textLight}
-          fontSize="13"
+          fontSize="11"
           fontFamily={BodyFont}
           textAnchor="middle"
           transform={`rotate(${(() => { let a = Math.atan2(dy, dx) * 180 / Math.PI; return a > 90 || a < -90 ? a + 180 : a; })()}, ${wobble1X}, ${wobble1Y - 6})`}
@@ -145,7 +145,7 @@ const StickyNote = ({ x, y, width, height, color, title, subtitle, items, rotati
         x={x + 16}
         y={y + 26}
         fill={c.border}
-        fontSize="17"
+        fontSize="15"
         fontFamily={HandFont}
         fontWeight="700"
         letterSpacing="0.5"
@@ -158,7 +158,7 @@ const StickyNote = ({ x, y, width, height, color, title, subtitle, items, rotati
           x={x + 16}
           y={y + 43}
           fill={PAPER.textLight}
-          fontSize="12"
+          fontSize="11"
           fontFamily={BodyFont}
         >
           {subtitle}
@@ -174,7 +174,7 @@ const StickyNote = ({ x, y, width, height, color, title, subtitle, items, rotati
             x={x + 18}
             y={itemY}
             fill={PAPER.text}
-            fontSize="13"
+            fontSize="11.5"
             fontFamily={BodyFont}
             opacity="0.85"
           >
@@ -195,12 +195,12 @@ const SectionDivider = ({ y, label }) => (
       strokeDasharray="8,6"
       opacity="0.2"
     />
-    <rect x={40} y={y - 14} width={label.length * 11 + 20} height={28} rx="4" fill={PAPER.bg} />
+    <rect x={40} y={y - 14} width={label.length * 10 + 20} height={28} rx="4" fill={PAPER.bg} />
     <text
       x={50}
       y={y + 5}
       fill={PAPER.pencil}
-      fontSize="16"
+      fontSize="14"
       fontFamily={HandFont}
       fontWeight="700"
       letterSpacing="2"
@@ -227,7 +227,7 @@ const FlowStep = ({ x, y, label, sub, index, isLast }) => {
       <text
         x={x + 10} y={y + 16}
         fill={PAPER.textLight}
-        fontSize="12"
+        fontSize="10"
         fontFamily={BodyFont}
       >
         Step {index + 1}
@@ -235,7 +235,7 @@ const FlowStep = ({ x, y, label, sub, index, isLast }) => {
       <text
         x={x + 10} y={y + 36}
         fill={borderColors[index % borderColors.length]}
-        fontSize="16"
+        fontSize="14"
         fontFamily={HandFont}
         fontWeight="700"
       >
@@ -244,7 +244,7 @@ const FlowStep = ({ x, y, label, sub, index, isLast }) => {
       <text
         x={x + 10} y={y + 54}
         fill={PAPER.textLight}
-        fontSize="12"
+        fontSize="11"
         fontFamily={BodyFont}
       >
         {sub}
@@ -305,9 +305,6 @@ export default function SketchpadArchitecture() {
         .sketch-container {
           animation: fadeIn 0.6s ease-out;
         }
-        .sticky-hover:hover {
-          filter: brightness(0.98);
-        }
       `}</style>
 
       <div className="sketch-container" style={{
@@ -341,7 +338,7 @@ export default function SketchpadArchitecture() {
         {/* Title area */}
         <div style={{ padding: "30px 50px 10px", position: "relative" }}>
           <div style={{
-            fontSize: 14,
+            fontSize: 12,
             fontFamily: BodyFont,
             color: PAPER.textLight,
             marginBottom: 4,
@@ -350,7 +347,7 @@ export default function SketchpadArchitecture() {
             SYSTEM ARCHITECTURE ・ CASE STUDY
           </div>
           <h1 style={{
-            fontSize: 42,
+            fontSize: 36,
             fontFamily: HandFont,
             fontWeight: 700,
             color: PAPER.marker,
@@ -360,7 +357,7 @@ export default function SketchpadArchitecture() {
             Interactive Quote Platform
           </h1>
           <div style={{
-            fontSize: 18,
+            fontSize: 16,
             fontFamily: BodyFont,
             color: PAPER.textLight,
           }}>
@@ -705,7 +702,7 @@ export default function SketchpadArchitecture() {
                   <text
                     x={x + 12} y={1198}
                     fill={PAPER.textLight}
-                    fontSize="12"
+                    fontSize="10"
                     fontFamily={BodyFont}
                     letterSpacing="1"
                   >
@@ -714,7 +711,7 @@ export default function SketchpadArchitecture() {
                   <text
                     x={x + 12} y={1222}
                     fill={c.border}
-                    fontSize="17"
+                    fontSize="15"
                     fontFamily={HandFont}
                     fontWeight="700"
                   >
@@ -738,7 +735,7 @@ export default function SketchpadArchitecture() {
           borderTop: `1px dashed ${PAPER.lines}`,
           position: "relative",
         }}>
-          <span style={{ fontSize: 16, fontFamily: HandFont, color: PAPER.textLight, fontWeight: 700, marginRight: 8 }}>
+          <span style={{ fontSize: 14, fontFamily: HandFont, color: PAPER.textLight, fontWeight: 700, marginRight: 8 }}>
             Legend:
           </span>
           {[
@@ -756,24 +753,12 @@ export default function SketchpadArchitecture() {
                 border: `1.5px solid ${item.color.border}`,
                 boxShadow: `1px 1px 2px ${item.color.shadow}`,
               }} />
-              <span style={{ fontSize: 14, fontFamily: BodyFont, color: PAPER.text }}>
+              <span style={{ fontSize: 12, fontFamily: BodyFont, color: PAPER.text }}>
                 {item.label}
               </span>
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Instruction note */}
-      <div style={{
-        marginTop: 16,
-        fontSize: 14,
-        fontFamily: BodyFont,
-        color: PAPER.textLight,
-        opacity: 0.6,
-        textAlign: "center",
-      }}>
-        Tap any sticky note to expand details
       </div>
     </div>
   );
