@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
 
 // Project Articles
+import Hartwell from './articles/projects/Hartwell';
 import BAG from './articles/projects/BAG';
 import Etikette from './articles/projects/Etikette';
 import Play from './articles/projects/Play';
@@ -21,9 +22,6 @@ import Automic from './articles/projects/Automic';
 import Blockchain from './articles/projects/Blockchain';
 import Gotsauss from './articles/projects/Gotsauss';
 import TLS from './articles/projects/TLS';
-
-// Diagram
-import SketchpadArchitecture from './components/SketchpadArchitecture';
 
 import './App.scss';
 
@@ -36,6 +34,7 @@ function App() {
           <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
+                <Route path="/projects/hartwell" element={<Hartwell />} />
                 <Route path="/projects/bag" element={<BAG />} />
                 <Route path="/projects/etikette" element={<Etikette />} />
                 <Route path="/projects/play" element={<Play />} />
@@ -45,7 +44,6 @@ function App() {
                 <Route path="/projects/gotsauss" element={<Gotsauss />} />
                 <Route path="/projects/tls" element={<TLS />} />
               <Route path="/contact" element={<Contact />}/>
-              <Route path="/diagram" element={<SketchpadArchitecture />} />
               <Route path="/blogs" element={<Error404 />} />
               <Route path="/*" element={<Error404 />} />
             </Routes>
