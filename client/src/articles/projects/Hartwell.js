@@ -9,10 +9,10 @@ import '../templates/Article.scss';
 function Hartwell() {
 
     return (
-        <Section sectionClassName="article" title="Automating the entire CPQ and invoicing process for Hartwell Mechanical Services">
+        <Section sectionClassName="article" title="Automated Quote-to-CRM Pipeline for Harwell Mechanical Services">
             <Diagram />
         </Section>
     );
-}
+} 
 
 export default Hartwell;
