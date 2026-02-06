@@ -30,7 +30,7 @@ function Automic() {
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const assets = [{
-        src: BAGDesktopImage,
+        src: BAGDesktopVideo,
         alt: 'Desktop Quote Interface',
         video: BAGDesktopVideo,
         title: 'Desktop Quote Interface',
