@@ -21,7 +21,7 @@ function TechnicalCaseStudy() {
                 <Diagram />
             </Suspense>
             <p>Want to learn more?</p>
-            <a href={caseStudy}>Click here</a>
+            <a href={caseStudy} target="_blank" rel="noopener noreferrer">Click here</a>
         </div>
     );
 }
