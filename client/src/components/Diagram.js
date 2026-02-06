@@ -267,7 +267,6 @@ export default function SketchpadArchitecture() {
 
   return (
     <div style={{
-      minHeight: "100vh",
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
