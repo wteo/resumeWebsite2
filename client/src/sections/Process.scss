@@ -56,6 +56,7 @@
         border-radius: 8px;
         background-color: #00000032;
         object-fit: cover;
+        filter: drop-shadow(4px 4px 6px rgb(220, 220, 220));
     }
 
     &__image-text {
