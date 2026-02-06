@@ -13,7 +13,7 @@ import Contact from './pages/Contact';
 import Error404 from './pages/Error404';
 
 // Project Articles
-import Hartwell from './articles/projects/Hartwell';
+import Hartwell from './articles/projects/Hartwell/Hartwell';
 import BAG from './articles/projects/BAG';
 import Etikette from './articles/projects/Etikette';
 import Play from './articles/projects/Play';

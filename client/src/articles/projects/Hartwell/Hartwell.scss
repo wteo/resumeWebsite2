@@ -1,0 +1,30 @@
+@import '../../../sass/variables';
+
+.article__tab-container {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid $cta-color;
+    margin-bottom: 2rem;
+}
+
+.article__tab-button {
+    color: $alternate-text-color;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+    width: 50%;
+    font-family: "Averia Serif Libre", "Georgia", "Times New Roman";
+}
+
+.article__tab-button:hover {
+    color: $cta-color;
+}
+
+.article__tab-button.active {
+    color: $alternate-text-color;
+    border-bottom-color: $cta-color;
+    font-weight: 600;
+}
