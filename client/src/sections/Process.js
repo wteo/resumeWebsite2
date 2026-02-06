@@ -115,7 +115,7 @@ function Process() {
                             <div className="process__image-wrapper">
                                 <video className="process__video" autoPlay loop muted playsInline poster={category.caseStudy.src}>
                                     <source src={category.caseStudy.video} type="video/mp4" />
-                                    <img className="process__image" src={category.caseStudy.src} alt={category.caseStudy.alt} />
+                                    <img className="process__image" loading="lazy" src={category.caseStudy.src} alt={category.caseStudy.alt} />
                                 </video>
                             </div>
 

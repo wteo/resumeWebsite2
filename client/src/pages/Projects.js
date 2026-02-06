@@ -33,10 +33,10 @@ function Projects() {
                 </p>
                 <div className="projects__group">
                     <Link className="projects__image-wrapper--large" to="/projects/bag">
-                        <img className="projects__image" src={blastAwayGuys} alt="Blast Away Guys" />
+                        <img className="projects__image" loading="lazy" src={blastAwayGuys} alt="Blast Away Guys" />
                     </Link>
                     <div className="projects__image-wrapper--narrow projects__image-wrapper--wip" to="/projects/brightgreen">
-                        <img className="projects__image" src={brightgreen} alt="Brightgreen" />
+                        <img className="projects__image" loading="lazy" src={brightgreen} alt="Brightgreen" />
                         <p className="projects__image-description">Work in Progress</p>
                     </div>
                 </div>
@@ -47,7 +47,7 @@ function Projects() {
                 </p>
                 <div className="projects__group">
                     <div className="projects__image-wrapper--full-width projects__image-wrapper--wip" to="/projects/vinificant">
-                        <img className="projects__image" src={vinificant} alt="E-commerce Operations - Work in Progress" />
+                        <img className="projects__image" loading="lazy" src={vinificant} alt="E-commerce Operations - Work in Progress" />
                         <p className="projects__image-description big">Work in Progress</p>
                     </div>
                 </div>
@@ -60,27 +60,27 @@ function Projects() {
                     <Link className="projects__image-wrapper--large" to="/projects/etikette">
                         <video className="projects__video" autoPlay loop muted playsInline poster={etikette}>
                             <source src={etiketteVideo} type="video/mp4" />
-                            <img className="projects__image" src={etikette} alt="Etikette" />
+                            <img className="projects__image" loading="lazy" src={etikette} alt="Etikette" />
                         </video>
                     </Link>
                     <Link className="projects__image-wrapper--narrow" to="/projects/play">
-                        <img className="projects__image" src={play} alt="Play Innovations" />
+                        <img className="projects__image" loading="lazy" src={play} alt="Play Innovations" />
                     </Link>
                     <Link className="projects__image-wrapper cyan" to="/projects/plico">
-                        <img className="projects__image" src={plico} alt="Plico Energy" />
+                        <img className="projects__image" loading="lazy" src={plico} alt="Plico Energy" />
                     </Link>
                     <Link className="projects__image-wrapper--large" to="/projects/automic">
-                        <img className="projects__image zoom" src={automic} alt="Automic" />
+                        <img className="projects__image zoom" loading="lazy" src={automic} alt="Automic" />
                     </Link>
                     <Link className="projects__image-wrapper white" to="/projects/blockchain">
                         <img className="projects__image" src={blockchain} alt="Sydney Blockchain" />
                     </Link>
                     <Link className="projects__image-wrapper" to="/projects/gotsauss">
-                        <img className="projects__image" src={gotsauss} alt="Gotsauss" />
+                        <img className="projects__image" loading="lazy" src={gotsauss} alt="Gotsauss" />
                         <p className="projects__image-description">Anthony Attapattu</p>
                     </Link>
                     <Link className="projects__image-wrapper ocean" to="/projects/tls">
-                        <img className="projects__image" src={tls} alt="The Lazy Society" />
+                        <img className="projects__image" loading="lazy" src={tls} alt="The Lazy Society" />
                     </Link>
                 </div>
             </Section>

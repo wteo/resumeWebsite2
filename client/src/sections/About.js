@@ -33,7 +33,7 @@ function About({ routeHandler }) {
                         <a href="/contact">Get in Touch</a>
                     </div>
                     <div className="about__image-wrapper">
-                        <img src={ profile } alt="Profile" className="about__image" />
+                        <img src={ profile } loading="lazy" alt="Profile" className="about__image" />
                     </div>
                 </div>
             </ContentWrapper>

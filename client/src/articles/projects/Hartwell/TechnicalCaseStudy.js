@@ -1,8 +1,9 @@
-import React from 'react';
-
-import Diagram from '../../../components/Diagram';
+import { lazy, Suspense} from 'react';
 
 function TechnicalCaseStudy() {
+
+    const Diagram = lazy(() => import('../../../components/Diagram'));
+
     return (
         <div>
             <p><strong>System Overview</strong></p>
@@ -14,7 +15,9 @@ function TechnicalCaseStudy() {
                 HubSpot CRM for persistence, leveraging both standard objects (deals, contacts, companies, quotes, 
                 line items) and two custom objects (Accepted Quotes, Selected Products).
             </p>
-            <Diagram />
+            <Suspense fallback={<div>Loading...</div>}>
+                <Diagram />
+            </Suspense>
             <p>Want to learn more?</p>
             <a href="/">Click here</a>
         </div>

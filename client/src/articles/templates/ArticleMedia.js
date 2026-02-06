@@ -74,7 +74,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
               <div className="article__image-wrapper">
                 {
                   asset.video === null ?
-                    <img className={`article__image ${asset.alt.includes('mobile') ? "mobile" : ''}`} src={asset.src} alt={asset.alt} /> :
+                    <img className={`article__image ${asset.alt.includes('mobile') ? "mobile" : ''}`} src={asset.src} loading="lazy" alt={asset.alt} /> :
                     <video className="article__video" autoPlay loop muted playsInline poster={asset.src}>
                       <source src={asset.video} type="video/mp4" />
                       <img className="article__image" src={asset.src} alt={asset.alt} />

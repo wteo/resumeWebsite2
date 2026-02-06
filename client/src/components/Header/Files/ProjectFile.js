@@ -17,16 +17,16 @@ function ProjectFile() {
       <div className="file__content">
         <div className="file__grid">
           <div className="file__image-wrapper">
-            <img className="file__image" src={etikette} alt="Etikette Candles" />
+            <img className="file__image" loading="lazy" src={etikette} alt="Etikette Candles" />
           </div>
           <div className="file__image-wrapper">
-            <img className="file__image" src={automic} alt="Automic Group" />
+            <img className="file__image" loading="lazy" src={automic} alt="Automic Group" />
           </div>
           <div className="file__image-wrapper">
-            <img className="file__image" src={gotsauss} alt="Gotsauss" />
+            <img className="file__image" loading="lazy" src={gotsauss} alt="Gotsauss" />
           </div>
           <div className="file__image-wrapper">
-            <img className="file__image" src={play} alt="Play Innovation" />
+            <img className="file__image" loading="lazy" src={play} alt="Play Innovation" />
           </div>
         </div>
       </div>
