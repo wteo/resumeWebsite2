@@ -1,5 +1,7 @@
 import { lazy, Suspense} from 'react';
 
+import caseStudy from '../../../assets/case_study/hartwell_case_study_business.pdf';
+
 function TechnicalCaseStudy() {
 
     const Diagram = lazy(() => import('../../../components/Diagram'));
@@ -19,7 +21,7 @@ function TechnicalCaseStudy() {
                 <Diagram />
             </Suspense>
             <p>Want to learn more?</p>
-            <a href="/">Click here</a>
+            <a href={caseStudy}>Click here</a>
         </div>
     );
 }

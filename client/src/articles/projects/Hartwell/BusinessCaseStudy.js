@@ -5,6 +5,8 @@ import ArticleMedia from "../../templates/ArticleMedia";
 import hartwellImageDemo from '../../../assets/images/BAG_desktop.png';
 import hartwellImageVideo from '../../../assets/videos/BAG_desktop.mp4';
 
+import caseStudy from '../../../assets/case_study/hartwell_case_study_business.pdf';
+
 function BusinessCaseStudy() {
 
     const assets = [{
@@ -20,7 +22,7 @@ function BusinessCaseStudy() {
         <div className="article__description">
             <p><strong>Executive Summary</strong></p>
             <p>
-                A residential and commercial services company needed to move beyond
+                Hartwell Merchanical Services needed to move beyond
                 static PDF quotes that required manual follow-up, phone calls to
                 confirm selections, and error-prone re-keying of data into their CRM.
                 Their sales team was spending hours per week on administrative quote
@@ -36,7 +38,7 @@ function BusinessCaseStudy() {
                 and links everything together without any manual data entry.
             </p>
             <p>Want to learn more?</p>
-            <a href="/">Click here</a>
+            <a href={caseStudy}>Click here</a>
         </div>
         <ArticleMedia assets={assets} />
     </article>
