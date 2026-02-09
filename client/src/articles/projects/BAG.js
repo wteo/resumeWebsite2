@@ -7,7 +7,7 @@ import ArticleMedia from '../templates/ArticleMedia';
 import '../templates/Article.scss';
 
 // Design Layout
-import BAGDesktopImage from '../../assets/images/BAG_desktop.png';
+// import BAGDesktopImage from '../../assets/images/BAG_desktop.png';
 import BAGDesktopVideo from '../../assets/videos/BAG_desktop.mp4';
 // import BAGMobileImage from '../../assets/images/BAG_mobile.png';
 import BAGMobileVideo from '../../assets/videos/BAG_mobile.mp4';
@@ -32,7 +32,7 @@ function Automic() {
     const assets = [{
         src: BAGDesktopVideo,
         alt: 'Desktop Quote Interface',
-        video: BAGDesktopImage,
+        video: BAGDesktopVideo,
         title: 'Desktop Quote Interface',
         description: 'The desktop layout displays client information, categorized service tables, and a comprehensive pricing summary. The design incorporates clear visual hierarchy to separate mandatory services from optional upsells, making it easy for customers to understand their base package versus additional options. The interface maintains Blast Away Guys\' branding while guiding customers through the quote in a logical flow from included services to potential add-ons.'
     },{
