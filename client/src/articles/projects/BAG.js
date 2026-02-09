@@ -32,7 +32,7 @@ function Automic() {
     const assets = [{
         src: BAGDesktopVideo,
         alt: 'Desktop Quote Interface',
-        video: BAGDesktopVideo,
+        video: BAGDesktopImage,
         title: 'Desktop Quote Interface',
         description: 'The desktop layout displays client information, categorized service tables, and a comprehensive pricing summary. The design incorporates clear visual hierarchy to separate mandatory services from optional upsells, making it easy for customers to understand their base package versus additional options. The interface maintains Blast Away Guys\' branding while guiding customers through the quote in a logical flow from included services to potential add-ons.'
     },{
