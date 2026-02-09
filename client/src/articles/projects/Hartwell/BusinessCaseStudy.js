@@ -2,19 +2,15 @@ import React from "react";
 
 import ArticleMedia from "../../templates/ArticleMedia";
 
-import hartwellImageDemo from '../../../assets/images/BAG_desktop.png';
-import hartwellImageVideo from '../../../assets/videos/BAG_desktop.mp4';
-
 import caseStudy from '../../../assets/case_study/hartwell_case_study_business.pdf';
 
 function BusinessCaseStudy() {
 
     const assets = [{
-        src: hartwellImageDemo,
-        alt: 'Video Demo on Harwell Quote-to-CRM Pipeline',
-        video: hartwellImageVideo,
-        title: '',
-        description: 'Video Demo on Harwell Quote-to-CRM Pipeline'
+        embedUrl: "https://www.youtube.com/embed/SnFM1j7HHLs",
+        alt: "Project demo video",
+        title: "Interactive Quote Platform",
+        description: "Full automation walkthrough"
     }];
 
   return (

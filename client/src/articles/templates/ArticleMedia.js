@@ -73,12 +73,23 @@ function ArticleMedia({ assets, isCarousel = false }) {
             <div className={`article__media-item ${effectiveCarousel ? 'article__media-item--carousel' : ''}`} key={index}>
               <div className="article__image-wrapper">
                 {
-                  asset.video === null ?
-                    <img className={`article__image ${asset.alt.includes('mobile') ? "mobile" : ''}`} src={asset.src} loading="lazy" alt={asset.alt} /> :
+                  asset.embedUrl ? (
+                    <iframe
+                      className="article__video article__video--embed"
+                      src={asset.embedUrl}
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      title={asset.alt}
+                    />
+                  ) : asset.video ? (
                     <video className="article__video" autoPlay loop muted playsInline poster={asset.src}>
                       <source src={asset.video} type="video/mp4" />
                       <img className="article__image" src={asset.src} alt={asset.alt} />
                     </video>
+                  ) : (
+                    <img className={`article__image ${asset.alt.includes('mobile') ? "mobile" : ''}`} src={asset.src} loading="lazy" alt={asset.alt} />
+                  )
                 }
               </div>
               <p 
