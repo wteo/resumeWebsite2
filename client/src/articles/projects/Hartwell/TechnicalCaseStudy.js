@@ -1,6 +1,6 @@
 import { lazy, Suspense} from 'react';
 
-import caseStudy from '../../../assets/case_study/hartwell_case_study_business.pdf';
+import caseStudy from '../../../assets/case_study/hartwell_case_study_technical.pdf';
 
 function TechnicalCaseStudy() {
 
