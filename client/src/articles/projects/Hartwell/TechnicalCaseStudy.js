@@ -17,7 +17,11 @@ function TechnicalCaseStudy() {
                 HubSpot CRM for persistence, leveraging both standard objects (deals, contacts, companies, quotes, 
                 line items) and two custom objects (Accepted Quotes, Selected Products).
             </p>
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={
+                <div className="diagram-loading">
+                    <div className="spinner" />
+                </div>
+            }>
                 <Diagram />
             </Suspense>
             <p>Want to learn more?</p>
