@@ -9,7 +9,9 @@ function ArticleMedia({ assets, isCarousel = false }) {
   const [showRightArrow, setShowRightArrow] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
   const [loadedVideos, setLoadedVideos] = useState({});
-  const [loadedMedia, setLoadedMedia] = useState({});
+  const [loadedMedia, setLoadedMedia] = useState(
+    Object.fromEntries(assets.map((_, index) => [index, false]))
+  );
 
   const effectiveCarousel = isCarousel && !isMobile;
 
@@ -113,6 +115,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
                       title={asset.alt}
                       loading="lazy"
                       onLoad={() => setLoadedMedia(prev => ({ ...prev, [index]: true }))}
+                      style={{ opacity: loadedMedia[index] ? 1 : 0 }}
                     />
                   ) : asset.video ? (
                     <video 
@@ -125,6 +128,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
                       poster={asset.src}
                       preload="none"
                       onLoadedData={() => setLoadedMedia(prev => ({ ...prev, [index]: true }))}
+                      style={{ opacity: loadedMedia[index] ? 1 : 0 }}
                     >
                       { loadedVideos[index] && <source src={asset.video} type="video/mp4" /> }
                       <img className="article__image" src={asset.src} alt={asset.alt} />
@@ -136,6 +140,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
                       loading="lazy" 
                       alt={asset.alt}
                       onLoad={() => setLoadedMedia(prev => ({ ...prev, [index]: true }))}
+                      style={{ opacity: loadedMedia[index] ? 1 : 0 }}
                     />
                   )
                 }
