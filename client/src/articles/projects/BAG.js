@@ -7,20 +7,20 @@ import ArticleMedia from '../templates/ArticleMedia';
 import '../templates/Article.scss';
 
 // Design Layout
-import BAGDesktopImage from '../../assets/images/BAG_desktop.png';
+// import BAGDesktopImage from '../../assets/images/BAG_desktop.png';
 import BAGDesktopVideo from '../../assets/videos/BAG_desktop.mp4';
 import BAGMobileVideo from '../../assets/videos/BAG_mobile.mp4';
 
 // Demo on various components in quote functionalities
-import BAGServicesImage from '../../assets/images/BAG_services.png';
+// import BAGServicesImage from '../../assets/images/BAG_services.png';
 import BAGServicesVideo from '../../assets/videos/BAG_services.mp4';
-import BAGRoofTreatmentImage from '../../assets/images/BAG_roof_treatment.png';
+// import BAGRoofTreatmentImage from '../../assets/images/BAG_roof_treatment.png';
 import BAGRoofTreatmentVideo from '../../assets/videos/BAG_roof_treatment.mp4';
-import BAGUpsellsImage from '../../assets/images/BAG_upsells.png';
+// import BAGUpsellsImage from '../../assets/images/BAG_upsells.png';
 import BAGUpsellsVideo from '../../assets/videos/BAG_upsells.mp4';
-import BAGTotalCalculationImage from '../../assets/images/BAG_total_calculation.png';
+// import BAGTotalCalculationImage from '../../assets/images/BAG_total_calculation.png';
 import BAGTotalCalculationVideo from '../../assets/videos/BAG_total_calculation.mp4';
-import BAGAgreementImage from '../../assets/images/BAG_agreement.png';
+// import BAGAgreementImage from '../../assets/images/BAG_agreement.png';
 import BAGAgreementVideo from '../../assets/videos/BAG_agreement.mp4';
 
 function Automic() {
@@ -29,7 +29,7 @@ function Automic() {
 
     // To get the optimum size for images containing a mobile preview, always add the word "mobile" in the alt
     const assets = [{
-        src: BAGDesktopImage,
+        src: BAGDesktopVideo,
         alt: 'Desktop Quote Interface',
         video: BAGDesktopVideo,
         title: 'Desktop Quote Interface',
@@ -41,31 +41,31 @@ function Automic() {
         title: 'Mobile-Responsive Design',
         description: 'Mobile-optimized interface for sales presentations. Tables are simplified with the removal of quantity and unit price columns to give the quote a simpler and more linear appearance on mobile screens.'
     },{
-        src: BAGServicesImage,
+        src: BAGServicesVideo,
         alt: 'Services Table (Mandatory Line Items)',
         video: BAGServicesVideo,
         title: 'Services Table (Mandatory Line Items)',
         description: 'The Services table contains mandatory items that every quote must include. All checkboxes are pre-selected and disabled, visually communicating to customers that these core services are non-negotiable and included in the base price. Each line item displays service description, quantity, unit price, and line total, ensuring transparent pricing for the foundation of the service package.'
     },{
-        src: BAGRoofTreatmentImage,
+        src: BAGRoofTreatmentVideo,
         alt: 'Roof Treatment Table (Conditional Logic)',
         video: BAGRoofTreatmentVideo,
         title: 'Roof Treatment Table (Conditional Logic)',
         description: 'This demonstrates the conditional selection logic where Roof Treatment is an optional upsell that requires customers to choose either Single or Dual treatment if selected. The base Roof Treatment line item is priced at $0, with actual costs coming from the treatment type selection. The system enforces dependencies through validation logic—preventing customers from selecting Roof Treatment without choosing a type, and vice versa—while providing clear visual feedback to guide valid selections.'
     },{
-        src: BAGUpsellsImage,
+        src: BAGUpsellsVideo,
         alt: 'Upsells/Add-ons Table (Optional Services)',
         video: BAGUpsellsVideo,
         title: 'Upsells/Add-ons Table (Optional Services)',
         description: 'The Upsells table shows optional add-on services that the sales team manually adds to quotes based on customer needs. All items are unselected by default, giving customers complete freedom to choose any combination without restrictions. Each upsell includes detailed descriptions to help customers understand the service benefits, with clear pricing displayed for easy cost comparison before making selections.'
     },{
-        src: BAGTotalCalculationImage,
+        src: BAGTotalCalculationVideo,
         alt: 'Quote Total Calculation',
         video: BAGTotalCalculationVideo,
         title: 'Live Price Calculation Engine',
         description: 'The real-time price calculation updates instantly as customers make selections without requiring page refreshes. Every checkbox change triggers immediate recalculation of the subtotal, applies 15% GST, and displays the new total within milliseconds. The calculation engine handles complex scenarios like Roof Treatment dependencies, ensuring prices only reflect valid selections and giving customers instant feedback on how their choices affect the final price.'
     },{
-        src: BAGAgreementImage,
+        src: BAGAgreementVideo,
         alt: 'Quote Agreement',
         video: BAGAgreementVideo,
         title: 'Quote Acceptance and CRM Integration',
