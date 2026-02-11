@@ -165,6 +165,7 @@
 
 .article__image-wrapper {
   position: relative;
+  min-height: 400px;
 }
 
 .article__media-loading {
@@ -174,7 +175,6 @@
   align-items: center;
   justify-content: center;
   z-index: 1;
-  min-height: 400px;
 }
 
 .spinner {
