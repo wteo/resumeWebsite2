@@ -9,8 +9,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
   const [showRightArrow, setShowRightArrow] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
   const [loadedVideos, setLoadedVideos] = useState({});
-  const [loadedItems, setLoadedItems] = useState({});
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const [loadedMedia, setLoadedMedia] = useState({});
 
   const effectiveCarousel = isCarousel && !isMobile;
 
@@ -39,10 +38,6 @@ function ArticleMedia({ assets, isCarousel = false }) {
       const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       setShowLeftArrow(scrollLeft > 0);
       setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 1);
-      
-      const itemWidth = scrollRef.current.offsetWidth;
-      const index = Math.round(scrollLeft / itemWidth);
-      setCurrentIndex(index);
     }
   };
 
@@ -91,14 +86,6 @@ function ArticleMedia({ assets, isCarousel = false }) {
     }
   };
 
-  const handleMediaLoad = (index) => {
-    setLoadedItems(prev => ({ ...prev, [index]: true }));
-  };
-
-  const shouldShowLoading = (index) => {
-    return index === currentIndex && !loadedItems[index];
-  };
-
   return (
     <div className={`article__media ${effectiveCarousel ? 'article__media--carousel' : ''}`}>
       {effectiveCarousel && showLeftArrow && (
@@ -108,12 +95,13 @@ function ArticleMedia({ assets, isCarousel = false }) {
         {
           assets.map((asset, index) => (
             <div className={`article__media-item ${effectiveCarousel ? 'article__media-item--carousel' : ''}`} key={index}>
-              {shouldShowLoading(index) && (
-                <div className="article__loading-indicator">
-                  <div className="spinner"></div>
-                </div>
-              )}
               <div className="article__image-wrapper">
+                {!loadedMedia[index] && (
+                  <div className="article__media-loading">
+                    <div className="spinner" />
+                  </div>
+                )}
+                
                 {
                   asset.embedUrl ? (
                     <iframe
@@ -124,7 +112,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
                       allowFullScreen
                       title={asset.alt}
                       loading="lazy"
-                      onLoad={() => handleMediaLoad(index)}
+                      onLoad={() => setLoadedMedia(prev => ({ ...prev, [index]: true }))}
                     />
                   ) : asset.video ? (
                     <video 
@@ -136,8 +124,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
                       playsInline 
                       poster={asset.src}
                       preload="none"
-                      onLoadedData={() => handleMediaLoad(index)}
-                      onError={() => handleMediaLoad(index)}
+                      onLoadedData={() => setLoadedMedia(prev => ({ ...prev, [index]: true }))}
                     >
                       { loadedVideos[index] && <source src={asset.video} type="video/mp4" /> }
                       <img className="article__image" src={asset.src} alt={asset.alt} />
@@ -148,8 +135,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
                       src={asset.src} 
                       loading="lazy" 
                       alt={asset.alt}
-                      onLoad={() => handleMediaLoad(index)}
-                      onError={() => handleMediaLoad(index)}
+                      onLoad={() => setLoadedMedia(prev => ({ ...prev, [index]: true }))}
                     />
                   )
                 }
