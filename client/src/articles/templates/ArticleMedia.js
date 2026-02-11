@@ -2,12 +2,36 @@ import React, { useRef, useEffect, useState } from 'react';
 
 function ArticleMedia({ assets, isCarousel = false }) {
   const descriptionRefs = useRef([]);
+  const videoRefs = useRef([]);
   const scrollRef = useRef(null);
+
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1000);
+  const [loadedVideos, setLoadedVideos] = useState({});
+
   
   const effectiveCarousel = isCarousel && !isMobile;
+
+  useEffect(() => {
+    const observers = videoRefs.current.map((videoRef, index) => {
+      if (!videoRef || !assets[index]?.video) return null;
+      
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setLoadedVideos(prev => ({ ...prev, [index]: true }));
+          }
+        },
+        { rootMargin: '200px' }
+      );
+      
+      observer.observe(videoRef);
+      return observer;
+    });
+
+    return () => observers.forEach(obs => obs?.disconnect());
+  }, [assets]);
 
   const checkScroll = () => {
     if (scrollRef.current && effectiveCarousel) {
@@ -81,10 +105,20 @@ function ArticleMedia({ assets, isCarousel = false }) {
                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                       allowFullScreen
                       title={asset.alt}
+                      loading="lazy"
                     />
                   ) : asset.video ? (
-                    <video className="article__video" autoPlay loop muted playsInline poster={asset.src}>
-                      <source src={asset.video} type="video/mp4" />
+                    <video 
+                      ref={el => videoRefs.current[index] = el}
+                      className="article__video" 
+                      autoPlay={loadedVideos[index]}
+                      loop 
+                      muted 
+                      playsInline 
+                      poster={asset.src}
+                      preload="none"
+                    >
+                      { loadedVideos[index] && <source src={asset.video} type="video/mp4" /> }
                       <img className="article__image" src={asset.src} alt={asset.alt} />
                     </video>
                   ) : (
