@@ -97,7 +97,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
         {
           assets.map((asset, index) => (
             <div className={`article__media-item ${effectiveCarousel ? 'article__media-item--carousel' : ''}`} key={index}>
-              <div className="article__image-wrapper">
+              <div className="article__image-wrapper" style={{ minHeight: !loadedMedia[index] ? '400px' : 'auto' }}>
                 {!loadedMedia[index] && (
                   <div className="article__media-loading">
                     <div className="spinner" />
