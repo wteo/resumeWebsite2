@@ -6,8 +6,8 @@ import Section from '../ui/Section';
 import './Projects.scss';
 
 // CRM projects/Custom Quotes
+import hartwell from '../assets/images/hartwell.webp'
 import blastAwayGuys from '../assets/images/blast_away_guys.webp';
-import brightgreen from '../assets/images/brightgreen_neon_light_bg.jpeg';
 
 // E Commerce
 import vinificant from '../assets/images/vinificant_red_wine.webp';
@@ -32,13 +32,12 @@ function Projects() {
                     Custom API integrations connecting HubSpot, finance systems, and business applications. Automates quote-to-cash workflows, eliminates manual data entry between systems, and builds custom CRM functionality for sales process optimization. Backend integration work focused on reliable system-to-system communication.
                 </p>
                 <div className="projects__group">
-                    <Link className="projects__image-wrapper--large" to="/projects/bag">
+                    <Link className="projects__image-wrapper--large" to="/projects/hartwell">
+                        <img className="projects__image" loading="lazy" src={hartwell} alt="Hartwell Mechanical Services" />
+                    </Link>
+                    <Link className="projects__image-wrapper--narrow projects__image-wrapper" to="/projects/bag">
                         <img className="projects__image" loading="lazy" src={blastAwayGuys} alt="Blast Away Guys" />
                     </Link>
-                    <div className="projects__image-wrapper--narrow projects__image-wrapper--wip" to="/projects/brightgreen">
-                        <img className="projects__image" loading="lazy" src={brightgreen} alt="Brightgreen" />
-                        <p className="projects__image-description">Work in Progress</p>
-                    </div>
                 </div>
             </Section>
             <Section sectionClassName="projects" title="E-commerce Operations">
