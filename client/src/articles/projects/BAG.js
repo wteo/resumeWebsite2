@@ -36,7 +36,7 @@ function Automic() {
         description: 'The desktop layout displays client information, categorized service tables, and a comprehensive pricing summary. The design incorporates clear visual hierarchy to separate mandatory services from optional upsells, making it easy for customers to understand their base package versus additional options. The interface maintains Blast Away Guys\' branding while guiding customers through the quote in a logical flow from included services to potential add-ons.'
     },{
         src: BAGMobileVideo,
-        alt: 'Mobile-Responsive Design',
+        alt: 'Responsive Design (mobile)',
         video: BAGMobileVideo,
         title: 'Mobile-Responsive Design',
         description: 'Mobile-optimized interface for sales presentations. Tables are simplified with the removal of quantity and unit price columns to give the quote a simpler and more linear appearance on mobile screens.'
