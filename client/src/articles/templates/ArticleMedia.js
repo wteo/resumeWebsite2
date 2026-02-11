@@ -110,7 +110,7 @@ function ArticleMedia({ assets, isCarousel = false }) {
                   ) : asset.video ? (
                     <video 
                       ref={el => videoRefs.current[index] = el}
-                      className="article__video" 
+                      className={`article__video ${asset.alt.includes('mobile') ? "mobile" : ''}`} 
                       autoPlay={loadedVideos[index]}
                       loop 
                       muted 

@@ -80,10 +80,14 @@
 
     &__image, &__video {
         width: 97.5%;
-        object-fit: contain;
+        object-fit: cover;
         max-height: 450px;
         border-radius: 7.5px;
         filter: drop-shadow(4px 4px 6px rgb(220, 220, 220));
+    }
+
+    &__image.mobile, &__video.mobile {
+        object-fit: contain;
     }
 
     &__image-description {
@@ -139,6 +143,10 @@
     .article {
         &__media p {
             font-size: 0.85rem;
+        }
+
+        &__image, &__video {
+            filter: drop-shadow(2px 2px 3px rgb(220, 220, 220));
         }
     }
 }
