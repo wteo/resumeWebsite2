@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../../components/Seo';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -73,6 +74,12 @@ function Automic() {
     }];
 
     return (
+        <>
+        <Seo
+            title="Custom Quote System with HubSpot CRM Integration — Blast Away Guys"
+            path="/projects/bag"
+            description="Case study: Node.js backend and custom HubSpot CMS theme delivering an automated quote system for Blast Away Guys with conditional upsells, real-time pricing, and CRM record creation."
+        />
         <Section sectionClassName="article" title="Custom Quote System with HubSpot CRM Integration for Blast Away Guys">
             <article className="article__group">
                 <div className="article__description">
@@ -89,6 +96,7 @@ function Automic() {
                 <ArticleMedia assets={assets} isCarousel={true} />
             </article>
         </Section>
+        </>
     );
 }
 

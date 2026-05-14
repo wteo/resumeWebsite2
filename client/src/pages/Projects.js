@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import Seo from '../components/Seo';
 import Section from '../ui/Section';
 
 import './Projects.scss';
@@ -27,6 +28,11 @@ import gotsauss from '../assets/images/gotsauss.webp';
 function Projects() {
     return (
         <>
+            <Seo
+                title="Selected Works"
+                path="/projects"
+                description="Case studies of HubSpot custom integrations, Shopify backend automation, and platform migrations. Selected works by Wendy Teo, Business Systems Integration Specialist."
+            />
             <Section sectionClassName="projects" title="CRM & Finance Integration">
                 <p>
                     Custom API integrations connecting HubSpot, finance systems, and business applications. Automates quote-to-cash workflows, eliminates manual data entry between systems, and builds custom CRM functionality for sales process optimization. Backend integration work focused on reliable system-to-system communication.

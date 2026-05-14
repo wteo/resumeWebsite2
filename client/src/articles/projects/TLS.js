@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../../components/Seo';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -27,17 +28,23 @@ function TLS() {
     }];
 
     return (
+        <>
+        <Seo
+            title="React Landing Page for The Lazy Society — Cryptocurrency Community"
+            path="/projects/tls"
+            description="Case study: a unified React landing page bringing together blog, social, and Discord resources for The Lazy Society cryptocurrency community."
+        />
         <Section sectionClassName="article" title="Building a Unified Online Presence for The Lazy Society">
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        As a cryptocurrency enthusiast, I discovered "The Lazy Society" (TLS), an online community focused on educating people about 
-                        cryptocurrency basics and trading. Despite having numerous resources spread across blogs, social media, and a Discord channel, 
+                        As a cryptocurrency enthusiast, I discovered "The Lazy Society" (TLS), an online community focused on educating people about
+                        cryptocurrency basics and trading. Despite having numerous resources spread across blogs, social media, and a Discord channel,
                         TLS lacked a unified landing page to streamline access and improve user experience.
                     </p>
                     <p>
-                        To address this, I designed and developed a custom landing page from scratch using React, creating a comprehensive hub for all 
-                        TLS information. This project was part of my web development learning journey, done voluntarily at no cost to the community, 
+                        To address this, I designed and developed a custom landing page from scratch using React, creating a comprehensive hub for all
+                        TLS information. This project was part of my web development learning journey, done voluntarily at no cost to the community,
                         and which I continue to maintain it to this day.
                     </p>
                     <Tags list="Tools Used" arr={tags} />
@@ -46,6 +53,7 @@ function TLS() {
                 <ArticleMedia assets={assets} />
             </article>
         </Section>
+        </>
     );
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../../components/Seo';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -27,21 +28,27 @@ function Blockchain() {
     }];
 
     return (
+        <>
+        <Seo
+            title="Blockchain Sydney — Minimal WordPress Landing Page"
+            path="/projects/blockchain"
+            description="Case study: minimal no-code WordPress landing page for Blockchain Sydney, including About, contact form, vision statement, and events sections."
+        />
         <Section sectionClassName="article" title="Blockchain Sydney: Creating a minimal landing page in WordPress">
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        Blockchain Sydney needed a simple landing page to inform visitors about their organization, with easy content management. 
+                        Blockchain Sydney needed a simple landing page to inform visitors about their organization, with easy content management.
                         WordPress was chosen for its user-friendliness, using only a couple of plugins, including a form builder.
                     </p>
                     <p>
-                        I managed the entire no-code process, from design and development to deployment. 
-                        The landing page features a clean, minimalist design with a color scheme of blue and white, black for text, and 
+                        I managed the entire no-code process, from design and development to deployment.
+                        The landing page features a clean, minimalist design with a color scheme of blue and white, black for text, and
                         green for call-to-action buttons.
                     </p>
                     <p>
-                        The website includes standard sections such as an About page, contact form, and vision statement, as well as an information 
-                        page on upcoming and past events, tailored for a small yet growing community group.                    
+                        The website includes standard sections such as an About page, contact form, and vision statement, as well as an information
+                        page on upcoming and past events, tailored for a small yet growing community group.
                     </p>
                     <Tags list="Tools Used" arr={tags} />
                     <p>Website: <a target="_blank" rel="noopener noreferrer" href={url}>{url}</a></p>
@@ -49,6 +56,7 @@ function Blockchain() {
                 <ArticleMedia assets={assets} />
             </article>
         </Section>
+        </>
     );
 }
 

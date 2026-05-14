@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../../components/Seo';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -56,6 +57,12 @@ function Etikette() {
     }];
 
     return (
+        <>
+        <Seo
+            title="Modernizing Etikette's Online Presence — Shopify Theme Customization"
+            path="/projects/etikette"
+            description="Case study: Shopify theme customization for Etikette Candles, including background-colour flexibility, custom JavaScript pagination, and full responsive redesign."
+        />
         <Section sectionClassName="article" title="Modernizing Etikette's Online Presence">
             <article className="article__group">
                 <div className="article__description">
@@ -78,6 +85,7 @@ function Etikette() {
                 <ArticleMedia assets={assets} />
             </article>
         </Section>
+        </>
     );
 }
 

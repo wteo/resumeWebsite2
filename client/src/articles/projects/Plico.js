@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../../components/Seo';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -41,6 +42,12 @@ function Plico() {
     }];
 
     return (
+        <>
+        <Seo
+            title="Location Modal & UI Enhancements for Plico Energy — HubSpot CMS"
+            path="/projects/plico"
+            description="Case study: location-aware modal and ongoing HubSpot CMS UI work for Plico Energy, including mobile navigation, accordions, and carousels."
+        />
         <Section sectionClassName="article" title="Creating a Modal & Further UI Enhancements for Plico Energy">
             <article className="article__group">
                 <div className="article__description">
@@ -56,6 +63,7 @@ function Plico() {
                 <ArticleMedia assets={assets} />
             </article>
         </Section>
+        </>
     );
 }
 

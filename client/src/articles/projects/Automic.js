@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../../components/Seo';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -34,6 +35,12 @@ function Automic() {
     }];
 
     return (
+        <>
+        <Seo
+            title="WordPress to HubSpot Migration — Automic Group"
+            path="/projects/automic"
+            description="Case study: cost-effective WordPress to HubSpot migration for Automic Group, prioritizing a no-code approach with targeted custom code for animations and a global header Login Button."
+        />
         <Section sectionClassName="article" title="Cost-Effective WordPress to HubSpot Migration for Automic Group">
             <article className="article__group">
                 <div className="article__description">
@@ -54,6 +61,7 @@ function Automic() {
                 <ArticleMedia assets={assets} />
             </article>
         </Section>
+        </>
     );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Form from '../components/Form';
+import Seo from '../components/Seo';
 
 import Section from '../ui/Section';
 
@@ -10,6 +11,11 @@ import './Contact.scss';
 function Contact() {
     return (
         <Section sectionClassName="contact" title="Get in Touch">
+            <Seo
+                title="Contact"
+                path="/contact"
+                description="Get in touch with Wendy Teo for HubSpot integrations, Shopify automation, and CRM-to-finance system projects. Based in Sydney, serving SMEs across APAC."
+            />
             <div className="contact__group">
                 <div className="contact__description">
                     <p>

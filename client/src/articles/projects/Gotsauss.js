@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../../components/Seo';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -40,17 +41,23 @@ function Gotsauss() {
     }];
 
     return (
+        <>
+        <Seo
+            title="VueJS Landing Page for Personal Trainer Anthony Attapattu"
+            path="/projects/gotsauss"
+            description="Case study: VueJS landing page for personal trainer Anthony Attapattu with MailJet form integration, hosted on Netlify."
+        />
         <Section sectionClassName="article" title="Landing Page for Personal Trainer Anthony Attapattu">
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        Anthony Attapattu, a professional training coach, needed a landing page to attract clients and showcase his services with 
-                        minimal ongoing maintenance. Since a Content Management System (CMS) wasn't necessary, I chose VueJS for its quick setup and 
+                        Anthony Attapattu, a professional training coach, needed a landing page to attract clients and showcase his services with
+                        minimal ongoing maintenance. Since a Content Management System (CMS) wasn't necessary, I chose VueJS for its quick setup and
                         fast response time.
                     </p>
                     <p>
-                        After an initial call to understand his needs, I created a wireframe aligned with his brand. 
-                        Following a few design revisions, I developed the landing page, which highlights his profile, services, client testimonials, 
+                        After an initial call to understand his needs, I created a wireframe aligned with his brand.
+                        Following a few design revisions, I developed the landing page, which highlights his profile, services, client testimonials,
                         and includes a contact form, with weekly updates via Zoom or email.
                     </p>
                     <p>
@@ -62,6 +69,7 @@ function Gotsauss() {
                 <ArticleMedia assets={assets} />
             </article>
         </Section>
+        </>
     );
 }
 

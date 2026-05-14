@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import Seo from '../../../components/Seo';
 import Section from '../../../ui/Section';
 import BusinessCaseStudy from './BusinessCaseStudy';
 import TechnicalCaseStudy from './TechnicalCaseStudy';
@@ -13,6 +14,12 @@ function Hartwell() {
     const [isCaseStudyTechnical, setIsCaseStudyTechnical] = useState(false);
 
     return (
+        <>
+        <Seo
+            title="Automated Quote-to-CRM Pipeline — Hartwell Mechanical Services"
+            path="/projects/hartwell"
+            description="Case study: Interactive Quote Platform transforming HubSpot-generated quotes into self-service web experiences for Hartwell Mechanical Services, with automatic CRM record creation and 50/50 deposit-balance invoicing."
+        />
         <Section sectionClassName="article" title="Automated Quote-to-CRM Pipeline for Harwell Mechanical Services">
             <div className="article__tab-container">
                 <button 
@@ -31,7 +38,8 @@ function Hartwell() {
             { !isCaseStudyTechnical && <BusinessCaseStudy /> }
             { isCaseStudyTechnical && <TechnicalCaseStudy /> }
         </Section>
+        </>
     );
-} 
+}
 
 export default Hartwell;

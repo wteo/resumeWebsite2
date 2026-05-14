@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Seo from '../../components/Seo';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -27,15 +28,21 @@ function Play() {
     }];
 
     return (
+        <>
+        <Seo
+            title="Custom Code saves Play Innovation AUD$15K — HubSpot CMS"
+            path="/projects/play"
+            description="Case study: HubSpot CMS custom code restoring drag-and-drop functionality lost after a subscription downgrade, saving Play Innovation approximately AUD$15,000 annually."
+        />
         <Section sectionClassName="article" title="Custom Code saves Play Innovation AUD$15K">
             <article className="article__group">
                 <div className="article__description">
                     <p>
-                        To reduce costs, Play Innovation downgraded their Hubspot subscription, which led to the loss of key drag-and-drop 
+                        To reduce costs, Play Innovation downgraded their Hubspot subscription, which led to the loss of key drag-and-drop
                         features within their theme editor, such as editable blog templates and Call-to-Action buttons.
                     </p>
                     <p>
-                        To main the website's design and functionality, I implemented custom solutions through careful code customization. 
+                        To main the website's design and functionality, I implemented custom solutions through careful code customization.
                         Without compromising their brand's look and feel, this approach saved Play Innovation approximately AUD$15,000 annually.
                     </p>
                     <Tags list="Tools Used" arr={tags} />
@@ -44,6 +51,7 @@ function Play() {
                 <ArticleMedia assets={assets} />
             </article>
         </Section>
+        </>
     );
 }
 

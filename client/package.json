@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-helmet-async": "^3.0.0",
     "react-router": "^6.26.1",
     "react-router-dom": "^6.26.1",
     "react-scripts": "^5.0.1",
@@ -16,8 +17,37 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "postbuild": "react-snap",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
+  },
+  "reactSnap": {
+    "include": [
+      "/",
+      "/projects",
+      "/projects/hartwell",
+      "/projects/bag",
+      "/projects/etikette",
+      "/projects/play",
+      "/projects/plico",
+      "/projects/automic",
+      "/projects/blockchain",
+      "/projects/gotsauss",
+      "/projects/tls",
+      "/contact",
+      "/404"
+    ],
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ],
+    "skipThirdPartyRequests": true,
+    "concurrency": 1,
+    "inlineCss": false,
+    "minifyHtml": {
+      "collapseWhitespace": false,
+      "removeComments": true
+    }
   },
   "eslintConfig": {
     "extends": [
@@ -29,7 +59,8 @@
     "production": [
       ">0.2%",
       "not dead",
-      "not op_mini all"
+      "not op_mini all",
+      "chrome >= 70"
     ],
     "development": [
       "last 1 chrome version",
@@ -38,6 +69,7 @@
     ]
   },
   "devDependencies": {
+    "react-snap": "^1.23.0",
     "sass": "^1.77.8"
   }
 }
