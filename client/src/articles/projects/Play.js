@@ -34,7 +34,7 @@ function Play() {
             path="/projects/play"
             description="Case study: HubSpot CMS custom code restoring drag-and-drop functionality lost after a subscription downgrade, saving Play Innovation approximately AUD$15,000 annually."
         />
-        <Section sectionClassName="article" title="Custom Code saves Play Innovation AUD$15K">
+        <Section sectionClassName="article" headingLevel="h1" title="Custom Code saves Play Innovation AUD$15K">
             <article className="article__group">
                 <div className="article__description">
                     <p>

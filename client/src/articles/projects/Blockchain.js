@@ -34,7 +34,7 @@ function Blockchain() {
             path="/projects/blockchain"
             description="Case study: minimal no-code WordPress landing page for Blockchain Sydney, including About, contact form, vision statement, and events sections."
         />
-        <Section sectionClassName="article" title="Blockchain Sydney: Creating a minimal landing page in WordPress">
+        <Section sectionClassName="article" headingLevel="h1" title="Blockchain Sydney: Creating a minimal landing page in WordPress">
             <article className="article__group">
                 <div className="article__description">
                     <p>

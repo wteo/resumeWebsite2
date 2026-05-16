@@ -10,7 +10,7 @@ import './Contact.scss';
 
 function Contact() {
     return (
-        <Section sectionClassName="contact" title="Get in Touch">
+        <Section sectionClassName="contact" headingLevel="h1" title="Get in Touch">
             <Seo
                 title="Contact"
                 path="/contact"

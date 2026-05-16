@@ -34,7 +34,7 @@ function TLS() {
             path="/projects/tls"
             description="Case study: a unified React landing page bringing together blog, social, and Discord resources for The Lazy Society cryptocurrency community."
         />
-        <Section sectionClassName="article" title="Building a Unified Online Presence for The Lazy Society">
+        <Section sectionClassName="article" headingLevel="h1" title="Building a Unified Online Presence for The Lazy Society">
             <article className="article__group">
                 <div className="article__description">
                     <p>

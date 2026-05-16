@@ -47,7 +47,7 @@ function Gotsauss() {
             path="/projects/gotsauss"
             description="Case study: VueJS landing page for personal trainer Anthony Attapattu with MailJet form integration, hosted on Netlify."
         />
-        <Section sectionClassName="article" title="Landing Page for Personal Trainer Anthony Attapattu">
+        <Section sectionClassName="article" headingLevel="h1" title="Landing Page for Personal Trainer Anthony Attapattu">
             <article className="article__group">
                 <div className="article__description">
                     <p>

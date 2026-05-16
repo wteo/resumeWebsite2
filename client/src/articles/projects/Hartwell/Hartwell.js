@@ -20,7 +20,7 @@ function Hartwell() {
             path="/projects/hartwell"
             description="Case study: Interactive Quote Platform transforming HubSpot-generated quotes into self-service web experiences for Hartwell Mechanical Services, with automatic CRM record creation and 50/50 deposit-balance invoicing."
         />
-        <Section sectionClassName="article" title="Automated Quote-to-CRM Pipeline for Harwell Mechanical Services">
+        <Section sectionClassName="article" headingLevel="h1" title="Automated Quote-to-CRM Pipeline for Hartwell Mechanical Services">
             <div className="article__tab-container">
                 <button 
                     className={`article__tab-button ${!isCaseStudyTechnical ? 'active' : ''}`}

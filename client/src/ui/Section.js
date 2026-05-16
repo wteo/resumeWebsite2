@@ -4,12 +4,13 @@ import ContentWrapper from './ContentWrapper';
 
 import './Section.scss';
 
-function Section({ sectionClassName, title, children }) {
+function Section({ sectionClassName, title, children, headingLevel = 'h2' }) {
+  const Heading = headingLevel;
   return (
     <section className={sectionClassName}>
       <ContentWrapper>
       <div className={`${sectionClassName}__content`}>
-        <h1 className={`${sectionClassName}__title`}>{title}</h1>
+        <Heading className={`${sectionClassName}__title`}>{title}</Heading>
         <hr className={`${sectionClassName}__divider`} />
         {children}
       </div>

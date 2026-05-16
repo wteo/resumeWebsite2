@@ -41,7 +41,7 @@ function Automic() {
             path="/projects/automic"
             description="Case study: cost-effective WordPress to HubSpot migration for Automic Group, prioritizing a no-code approach with targeted custom code for animations and a global header Login Button."
         />
-        <Section sectionClassName="article" title="Cost-Effective WordPress to HubSpot Migration for Automic Group">
+        <Section sectionClassName="article" headingLevel="h1" title="Cost-Effective WordPress to HubSpot Migration for Automic Group">
             <article className="article__group">
                 <div className="article__description">
                     <p>

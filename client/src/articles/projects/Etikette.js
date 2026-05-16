@@ -63,7 +63,7 @@ function Etikette() {
             path="/projects/etikette"
             description="Case study: Shopify theme customization for Etikette Candles, including background-colour flexibility, custom JavaScript pagination, and full responsive redesign."
         />
-        <Section sectionClassName="article" title="Modernizing Etikette's Online Presence">
+        <Section sectionClassName="article" headingLevel="h1" title="Modernizing Etikette's Online Presence">
             <article className="article__group">
                 <div className="article__description">
                     <p>

@@ -48,7 +48,7 @@ function Plico() {
             path="/projects/plico"
             description="Case study: location-aware modal and ongoing HubSpot CMS UI work for Plico Energy, including mobile navigation, accordions, and carousels."
         />
-        <Section sectionClassName="article" title="Creating a Modal & Further UI Enhancements for Plico Energy">
+        <Section sectionClassName="article" headingLevel="h1" title="Creating a Modal & Further UI Enhancements for Plico Energy">
             <article className="article__group">
                 <div className="article__description">
                     <p>

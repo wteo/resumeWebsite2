@@ -24,8 +24,8 @@ function Header() {
             <header className="header">
                 <ContentWrapper>
                     <div className="header__container">
-                        <Link to="/">
-                            <h1 className="header__title" style={{ opacity: isHomePage ? '0' : '1' }}>Wendy Teo</h1>
+                        <Link to="/" aria-label="Wendy Teo — home">
+                            <span className="header__title" style={{ opacity: isHomePage ? '0' : '1' }}>Wendy Teo</span>
                         </Link>
                         <ul className="header__menu-list">
                             <li className={`header__menu-item ${location.pathname === '/' ? 'active' : ''}`}>

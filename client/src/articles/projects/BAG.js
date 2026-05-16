@@ -80,7 +80,7 @@ function Automic() {
             path="/projects/bag"
             description="Case study: Node.js backend and custom HubSpot CMS theme delivering an automated quote system for Blast Away Guys with conditional upsells, real-time pricing, and CRM record creation."
         />
-        <Section sectionClassName="article" title="Custom Quote System with HubSpot CRM Integration for Blast Away Guys">
+        <Section sectionClassName="article" headingLevel="h1" title="Custom Quote System with HubSpot CRM Integration for Blast Away Guys">
             <article className="article__group">
                 <div className="article__description">
                     <p>
