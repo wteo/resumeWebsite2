@@ -40,7 +40,7 @@ function Experience() {
         <section className="experience">
             <ContentWrapper>
                 <div className="experience__content">
-                    <h1 className="experience__title">Experience</h1>
+                    <h2 className="experience__title">Experience</h2>
                     <Accordion experiences={experiences} />
                 </div>
             </ContentWrapper>

@@ -10,12 +10,12 @@ function About({ routeHandler }) {
     return (
         <section className="about">
             <ContentWrapper>
-                <h1 className="about__title">Wendy Teo</h1>
+                <p className="about__title">Wendy Teo</p>
                 <hr className="about__divider" />
                 <hr className="about__divider" />
                 <div className="about__group">
                     <div className="about__description">
-                        <h1>About Me</h1>
+                        <h2>About Me</h2>
                         <p>
                             10+ years in finance operations (accounts receivable, credit control, quote-to-cash workflows at IBM, Samsung, Hanson, Link Group) taught me where business systems break. Now I fix them through API integration and automation.                        </p>
                         <p>

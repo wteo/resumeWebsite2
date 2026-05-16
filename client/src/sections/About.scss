@@ -6,8 +6,9 @@
     padding: 80px 50px 50px;
 
     &__title {
+        color: $alternate-text-color;
         font-weight: 900;
-        font-size: 4rem;
+        font-size: 3.25rem;
         font-family: 'Georgia', 'Times New Roman';
         letter-spacing: 3px;
         text-transform: uppercase;
@@ -30,7 +31,7 @@
         line-height: 1.6;
         width: 85%;
 
-        h1 {
+        h2 {
             margin: 0;
         }
     }
@@ -44,15 +45,6 @@
         object-fit: cover;
         filter: brightness(0.95);
         border-radius: 7.5px;
-    }
-}
-
-@media only screen and (max-width: 1000px) {
-    .about {
-
-        &__title {
-            font-size: 3.25rem;
-        }
     }
 }
 

@@ -9,9 +9,9 @@ function HeroBanner() {
         <section className="hero">
             <ContentContainer>
                 <div className="hero__content">
-                    <p className="hero__content-title">
+                    <h1 className="hero__content-title">
                         Business Systems Integration Specialist | <span>CRM</span> + <span>Finance Automation</span>
-                    </p>
+                    </h1>
                 </div>
             </ContentContainer>
         </section>

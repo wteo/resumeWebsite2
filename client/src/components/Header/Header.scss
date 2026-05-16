@@ -29,6 +29,8 @@
     }
 
     &__title {
+        display: block;
+        color: $alternate-text-color;
         font-weight: 900;
         font-size: 3rem;
         line-height: 1.6;
