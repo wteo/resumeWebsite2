@@ -10,18 +10,18 @@ function Social() {
     const socials = [{
         url: 'https://linkedin.com/in/wendy-teo-36821461',
         src: linkedin,
-        alt: 'LinkedIn'
+        alt: 'Wendy Teo on LinkedIn'
     },{
         url: 'https://github.com/wteo/',
         src: gitHub,
-        alt: 'Github'
+        alt: 'Wendy Teo on GitHub'
     }];
 
     return (
         <div className="social">
             { socials.map((social, index) => (
                 <a className="social__image-wrapper" key={index} href={social.url} target="_blank" rel="noreferrer">
-                    <img className="social__image" loading="lazy" src={social.src} alt={social.alt} />
+                    <img className="social__image" loading="lazy" width="64" height="64" src={social.src} alt={social.alt} />
                 </a>
             ))}
         </div>

@@ -68,9 +68,11 @@ function Process() {
             ],
             caseStudy: {
                 src: blastAwayGuysDesktop,
-                alt: 'Quote workflow requirements mapping',
+                alt: 'Blast Away Guys quote workflow requirements mapping in Miro',
                 video: blastAwayGuysDesktopVideo,
                 url: '/projects/bag',
+                width: 1800,
+                height: 1000,
                 desc: 'Mapped Blast Away Guys\' complex quote workflow with three service types: mandatory services, conditional dependencies (Roof Treatment requiring Single/Dual selection), and flexible add-ons requiring distinct business logic.'
             },
         },
@@ -82,9 +84,11 @@ function Process() {
             ],
             caseStudy: {
                 src: blastAwayGuysRoofTreatment,
-                alt: 'Complex business logic implementation',
+                alt: 'Node.js backend API integration with HubSpot CRM — conditional pricing logic',
                 video: blastAwayGuysRoofTreatmentVideo,
                 url: '/projects/bag',
+                width: 2026,
+                height: 1120,
                 desc: 'Built Node.js backend API bridging quote interface to HubSpot CRM with product data caching, conditional selection enforcement, and real-time price calculation engine handling dependency validation.'
             },
         },
@@ -94,9 +98,11 @@ function Process() {
             tools: ['Postman', 'Error Logging', 'GitHub', 'Deployment Pipelines'],
             caseStudy: {
                 src: blastAwayGuysAgreement,
-                alt: 'CRM integration deployment',
+                alt: 'Quote acceptance creating HubSpot custom objects and CRM associations',
                 video: blastAwayGuysAgreementVideo,
                 url: '/projects/bag',
+                width: 2074,
+                height: 1070,
                 desc: 'Deployed quote acceptance workflow creating custom HubSpot objects, establishing CRM associations, and updating customer profiles automatically—eliminating manual data entry and providing complete sales visibility.'
             },
         }
@@ -115,7 +121,7 @@ function Process() {
                             <div className="process__image-wrapper">
                                 <video className="process__video" autoPlay loop muted playsInline poster={category.caseStudy.src}>
                                     <source src={category.caseStudy.video} type="video/mp4" />
-                                    <img className="process__image" loading="lazy" src={category.caseStudy.src} alt={category.caseStudy.alt} />
+                                    <img className="process__image" loading="lazy" width={category.caseStudy.width} height={category.caseStudy.height} src={category.caseStudy.src} alt={category.caseStudy.alt} />
                                 </video>
                             </div>
 

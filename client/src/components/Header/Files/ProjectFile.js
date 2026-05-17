@@ -17,16 +17,16 @@ function ProjectFile() {
       <div className="file__content">
         <div className="file__grid">
           <div className="file__image-wrapper">
-            <img className="file__image" loading="lazy" src={etikette} alt="Etikette Candles" />
+            <img className="file__image" loading="lazy" width="1857" height="1160" src={etikette} alt="Etikette Candles — Shopify theme customization" />
           </div>
           <div className="file__image-wrapper">
-            <img className="file__image" loading="lazy" src={automic} alt="Automic Group" />
+            <img className="file__image" loading="lazy" width="2370" height="1439" src={automic} alt="Automic Group — WordPress to HubSpot migration" />
           </div>
           <div className="file__image-wrapper">
-            <img className="file__image" loading="lazy" src={gotsauss} alt="Gotsauss" />
+            <img className="file__image" loading="lazy" width="1214" height="1820" src={gotsauss} alt="Anthony Attapattu — VueJS landing page" />
           </div>
           <div className="file__image-wrapper">
-            <img className="file__image" loading="lazy" src={play} alt="Play Innovation" />
+            <img className="file__image" loading="lazy" width="1132" height="637" src={play} alt="Play Innovation — HubSpot CMS custom code" />
           </div>
         </div>
       </div>
