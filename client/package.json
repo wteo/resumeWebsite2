@@ -34,8 +34,7 @@
       "/projects/blockchain",
       "/projects/gotsauss",
       "/projects/tls",
-      "/contact",
-      "/404"
+      "/contact"
     ],
     "puppeteerArgs": [
       "--no-sandbox",
