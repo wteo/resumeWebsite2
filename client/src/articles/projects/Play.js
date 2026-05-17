@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../../components/Seo';
+import { articleSchema, breadcrumbSchema } from '../../schemas';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -33,6 +34,18 @@ function Play() {
             title="Custom Code saves Play Innovation AUD$15K — HubSpot CMS"
             path="/projects/play"
             description="Case study: HubSpot CMS custom code restoring drag-and-drop functionality lost after a subscription downgrade, saving Play Innovation approximately AUD$15,000 annually."
+            jsonLd={[
+                articleSchema({
+                    headline: 'Custom Code saves Play Innovation AUD$15K',
+                    description: 'HubSpot CMS custom code restoring drag-and-drop functionality lost after a subscription downgrade, saving Play Innovation approximately AUD$15,000 annually.',
+                    path: '/projects/play'
+                }),
+                breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' },
+                    { name: 'Play Innovation', path: '/projects/play' }
+                ])
+            ]}
         />
         <Section sectionClassName="article" headingLevel="h1" title="Custom Code saves Play Innovation AUD$15K">
             <article className="article__group">

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../../components/Seo';
+import { articleSchema, breadcrumbSchema } from '../../schemas';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -33,6 +34,18 @@ function Blockchain() {
             title="Blockchain Sydney — Minimal WordPress Landing Page"
             path="/projects/blockchain"
             description="Case study: minimal no-code WordPress landing page for Blockchain Sydney, including About, contact form, vision statement, and events sections."
+            jsonLd={[
+                articleSchema({
+                    headline: 'Blockchain Sydney: A Minimal WordPress Landing Page',
+                    description: 'Minimal no-code WordPress landing page for Blockchain Sydney, including About, contact form, vision statement, and events sections.',
+                    path: '/projects/blockchain'
+                }),
+                breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' },
+                    { name: 'Blockchain Sydney', path: '/projects/blockchain' }
+                ])
+            ]}
         />
         <Section sectionClassName="article" headingLevel="h1" title="Blockchain Sydney: Creating a minimal landing page in WordPress">
             <article className="article__group">

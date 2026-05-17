@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../../components/Seo';
+import { articleSchema, breadcrumbSchema } from '../../schemas';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -46,6 +47,18 @@ function Gotsauss() {
             title="VueJS Landing Page for Personal Trainer Anthony Attapattu"
             path="/projects/gotsauss"
             description="Case study: VueJS landing page for personal trainer Anthony Attapattu with MailJet form integration, hosted on Netlify."
+            jsonLd={[
+                articleSchema({
+                    headline: 'VueJS Landing Page for Personal Trainer Anthony Attapattu',
+                    description: 'VueJS landing page for personal trainer Anthony Attapattu with MailJet form integration, hosted on Netlify.',
+                    path: '/projects/gotsauss'
+                }),
+                breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' },
+                    { name: 'Anthony Attapattu', path: '/projects/gotsauss' }
+                ])
+            ]}
         />
         <Section sectionClassName="article" headingLevel="h1" title="Landing Page for Personal Trainer Anthony Attapattu">
             <article className="article__group">

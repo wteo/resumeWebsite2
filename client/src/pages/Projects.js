@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import Seo from '../components/Seo';
+import { breadcrumbSchema } from '../schemas';
 import Section from '../ui/Section';
 
 import './Projects.scss';
@@ -32,6 +33,10 @@ function Projects() {
                 title="Selected Works"
                 path="/projects"
                 description="Case studies of HubSpot custom integrations, Shopify backend automation, and platform migrations. Selected works by Wendy Teo, Business Systems Integration Specialist."
+                jsonLd={breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' }
+                ])}
             />
             <Section sectionClassName="projects" headingLevel="h1" title="CRM & Finance Integration">
                 <p>

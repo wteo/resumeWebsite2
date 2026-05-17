@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../../components/Seo';
+import { articleSchema, breadcrumbSchema } from '../../schemas';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -40,6 +41,18 @@ function Automic() {
             title="WordPress to HubSpot Migration — Automic Group"
             path="/projects/automic"
             description="Case study: cost-effective WordPress to HubSpot migration for Automic Group, prioritizing a no-code approach with targeted custom code for animations and a global header Login Button."
+            jsonLd={[
+                articleSchema({
+                    headline: 'Cost-Effective WordPress to HubSpot Migration for Automic Group',
+                    description: 'Cost-effective WordPress to HubSpot migration, prioritising a no-code approach with targeted custom code for animations and a global header Login Button.',
+                    path: '/projects/automic'
+                }),
+                breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' },
+                    { name: 'Automic Group', path: '/projects/automic' }
+                ])
+            ]}
         />
         <Section sectionClassName="article" headingLevel="h1" title="Cost-Effective WordPress to HubSpot Migration for Automic Group">
             <article className="article__group">

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../../components/Seo';
+import { articleSchema, breadcrumbSchema } from '../../schemas';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -79,6 +80,18 @@ function Automic() {
             title="Custom Quote System with HubSpot CRM Integration — Blast Away Guys"
             path="/projects/bag"
             description="Case study: Node.js backend and custom HubSpot CMS theme delivering an automated quote system for Blast Away Guys with conditional upsells, real-time pricing, and CRM record creation."
+            jsonLd={[
+                articleSchema({
+                    headline: 'Custom Quote System with HubSpot CRM Integration for Blast Away Guys',
+                    description: 'Node.js backend and custom HubSpot CMS theme delivering an automated quote system with conditional upsells, real-time pricing, and CRM record creation.',
+                    path: '/projects/bag'
+                }),
+                breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' },
+                    { name: 'Blast Away Guys', path: '/projects/bag' }
+                ])
+            ]}
         />
         <Section sectionClassName="article" headingLevel="h1" title="Custom Quote System with HubSpot CRM Integration for Blast Away Guys">
             <article className="article__group">

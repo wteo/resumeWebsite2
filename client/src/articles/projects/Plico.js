@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../../components/Seo';
+import { articleSchema, breadcrumbSchema } from '../../schemas';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -47,6 +48,18 @@ function Plico() {
             title="Location Modal & UI Enhancements for Plico Energy — HubSpot CMS"
             path="/projects/plico"
             description="Case study: location-aware modal and ongoing HubSpot CMS UI work for Plico Energy, including mobile navigation, accordions, and carousels."
+            jsonLd={[
+                articleSchema({
+                    headline: 'Location Modal & UI Enhancements for Plico Energy',
+                    description: 'Location-aware modal and ongoing HubSpot CMS UI work for Plico Energy, including mobile navigation, accordions, and carousels.',
+                    path: '/projects/plico'
+                }),
+                breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' },
+                    { name: 'Plico Energy', path: '/projects/plico' }
+                ])
+            ]}
         />
         <Section sectionClassName="article" headingLevel="h1" title="Creating a Modal & Further UI Enhancements for Plico Energy">
             <article className="article__group">

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../../components/Seo';
+import { articleSchema, breadcrumbSchema } from '../../schemas';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -33,6 +34,18 @@ function TLS() {
             title="React Landing Page for The Lazy Society — Cryptocurrency Community"
             path="/projects/tls"
             description="Case study: a unified React landing page bringing together blog, social, and Discord resources for The Lazy Society cryptocurrency community."
+            jsonLd={[
+                articleSchema({
+                    headline: 'React Landing Page for The Lazy Society',
+                    description: 'A unified React landing page bringing together blog, social, and Discord resources for The Lazy Society cryptocurrency community.',
+                    path: '/projects/tls'
+                }),
+                breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' },
+                    { name: 'The Lazy Society', path: '/projects/tls' }
+                ])
+            ]}
         />
         <Section sectionClassName="article" headingLevel="h1" title="Building a Unified Online Presence for The Lazy Society">
             <article className="article__group">

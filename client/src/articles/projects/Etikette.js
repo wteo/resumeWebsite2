@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Seo from '../../components/Seo';
+import { articleSchema, breadcrumbSchema } from '../../schemas';
 import Section from '../../ui/Section';
 import Tags from '../../components/Tag';
 import ArticleMedia from '../templates/ArticleMedia';
@@ -62,6 +63,18 @@ function Etikette() {
             title="Modernizing Etikette's Online Presence — Shopify Theme Customization"
             path="/projects/etikette"
             description="Case study: Shopify theme customization for Etikette Candles, including background-colour flexibility, custom JavaScript pagination, and full responsive redesign."
+            jsonLd={[
+                articleSchema({
+                    headline: "Modernizing Etikette's Online Presence",
+                    description: 'Shopify theme customization for Etikette Candles, including background-colour flexibility, custom JavaScript pagination, and full responsive redesign.',
+                    path: '/projects/etikette'
+                }),
+                breadcrumbSchema([
+                    { name: 'Home', path: '/' },
+                    { name: 'Selected Works', path: '/projects' },
+                    { name: 'Etikette Candles', path: '/projects/etikette' }
+                ])
+            ]}
         />
         <Section sectionClassName="article" headingLevel="h1" title="Modernizing Etikette's Online Presence">
             <article className="article__group">
