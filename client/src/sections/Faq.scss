@@ -1,0 +1,7 @@
+@import '../sass/mixins';
+@import '../sass/variables';
+
+.faq {
+    @include section-layout(50px, 50px 20px);
+    @include section-title;
+}

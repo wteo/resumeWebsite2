@@ -91,6 +91,21 @@ export function breadcrumbSchema(items) {
   };
 }
 
+export function faqPageSchema(faqs) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map(faq => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.answer
+      }
+    }))
+  };
+}
+
 export function articleSchema({ headline, description, path, image, datePublished }) {
   return {
     '@context': 'https://schema.org',
